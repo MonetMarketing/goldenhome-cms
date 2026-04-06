@@ -1,0 +1,28 @@
+{
+  "label": "OUR PRODUCTS",
+  "heading": "Kitchen Cabinets",
+  "intro": "Factory-direct kitchen cabinetry in three distinct series — each offering a unique aesthetic with consistent quality, KCMA certification, and 2-week local delivery from our Aurora warehouse.",
+  "series": [
+    {
+      "id": "classic",
+      "name": "Classic Series",
+      "door_count": "8 door colours available",
+      "desc": "Timeless shaker-style doors with a clean, versatile profile. Available in a curated palette of matte and gloss finishes.",
+      "image": "/images/cabinet-classic.jpg"
+    },
+    {
+      "id": "delight",
+      "name": "Delight Series",
+      "door_count": "10 door colours available",
+      "desc": "Contemporary flat-panel doors with a sleek, modern aesthetic. Perfect for minimalist and transitional kitchen designs.",
+      "image": "/images/cabinet-deluxe.jpg"
+    },
+    {
+      "id": "grand",
+      "name": "Grand Series",
+      "door_count": "19 door colours available · More AGT colours on request",
+      "desc": "More choices from AGT colours are available now. Scant 3/4 inch thick MDF board, with PET laminate on the exterior and melamine laminate on the interior, ABS banding of matching colour on all edges.",
+      "image": "/images/cabinet-grand.jpg"
+    }
+  ]
+}

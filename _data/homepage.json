@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "eyebrow": "Factory-Direct Cabinetry — Aurora, Ontario",
+    "heading1": "Crafted for",
+    "heading2": "Canadian Homes",
+    "sub": "Premium factory-direct cabinetry with 2-week local delivery. Serving contractors, designers, and homeowners across Canada.",
+    "image": "/images/hero-main.webp",
+    "btn1_text": "Explore Our Products",
+    "btn1_link": "kitchen-cabinets.html",
+    "btn2_text": "Get Free Design Quote",
+    "btn2_link": "about-us.html#subscribe"
+  },
+  "services": [
+    { "title": "Factory-Direct Sourcing", "desc": "We manufacture every cabinet in our own facilities, eliminating middlemen and passing savings directly to our dealers and clients." },
+    { "title": "Local Canadian Inventory", "desc": "Our Aurora warehouse stocks over 10,000 units at all times, enabling fast turnaround for residential and commercial projects." },
+    { "title": "Design Consultation", "desc": "Our in-house design team provides complimentary 3D renderings and personalized product recommendations for every project." },
+    { "title": "Warranty & After-Sales", "desc": "All products are backed by our 5-year structural warranty and 1-year finish warranty, with dedicated after-sales support." }
+  ],
+  "stats": [
+    { "num": "25+", "label": "Years of Craft" },
+    { "num": "1000+", "label": "Cabinet Products" },
+    { "num": "2 wk", "label": "Local Delivery" },
+    { "num": "100%", "label": "KCMA Certified" }
+  ],
+  "story": {
+    "p1": "GoldenHome has been delivering high-quality cabinetry solutions since 1999, building a strong global foundation across multiple markets. Today, GoldenHome Cabinetry Eastern Canada brings that experience closer to home through a growing local manufacturing and supply network based in Ontario.",
+    "p2": "With integrated warehousing and local production capabilities, we are able to support projects with greater speed, flexibility, and consistency. From in-stock cabinetry to locally customized solutions, our approach is designed to meet the needs of contractors, designers, and homeowners across Canada.",
+    "image": "/images/gallery-kitchen.jpg",
+    "image_tag": "Aurora, Ontario Distribution Centre"
+  },
+  "products_section": {
+    "label": "OUR PRODUCTS",
+    "heading1": "1000s of Cabinet",
+    "heading2": "Products",
+    "btn_text": "View All Styles"
+  },
+  "product_cards": [
+    { "title": "Kitchen Cabinets", "desc": "From classic shaker to contemporary flat-panel, our kitchen cabinet lines offer versatile styles for every design vision.", "image": "/images/gallery-1.webp", "link": "kitchen-cabinets.html" },
+    { "title": "Closet & Storage", "desc": "Maximize every inch with our modular closet systems, designed for bedrooms, walk-ins, and utility spaces.", "image": "/images/gallery-2.webp", "link": "closet.html" },
+    { "title": "Bathroom Vanities", "desc": "Elegant vanity collections that combine smart storage with refined aesthetics for any bathroom style.", "image": "/images/gallery-3.webp", "link": "vanities.html" },
+    { "title": "Custom Solutions", "desc": "Need something unique? Our team works with you to create custom cabinetry tailored to your exact specifications.", "image": "/images/gallery-4.webp", "link": "contact-us.html" }
+  ],
+  "cta": {
+    "heading": "Ready to Start Your Project?",
+    "sub": "Get a free design consultation and quote from our expert team.",
+    "btn_text": "Get Free Design Quote",
+    "btn_link": "about-us.html#subscribe"
+  }
+}

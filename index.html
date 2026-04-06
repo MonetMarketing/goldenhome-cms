@@ -1,0 +1,1643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GoldenHome Cabinetry Canada — Precision Crafted. Locally Delivered.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Playfair+Display:wght@400;500;600;700&family=Jost:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      color: #111111;
+      background: #ffffff;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== DESIGN TOKENS ===== */
+    :root {
+      --white: #ffffff;
+      --off-white: #F7F7F5;
+      --light-gray: #EBEBEB;
+      --mid-gray: #888888;
+      --dark: #111111;
+      --navy: #1B2A4A;
+      --navy-light: #2C4A8C;
+      --section-pad: 110px 0;
+      --container: 1200px;
+    }
+
+    /* ===== TYPOGRAPHY ===== */
+    .label {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: #2C4A8C;
+      display: block;
+      margin-bottom: 18px;
+    }
+    h1, h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+    }
+    h3, h4 {
+      font-family: 'Jost', sans-serif;
+      font-weight: 600;
+      line-height: 1.25;
+      letter-spacing: 0.01em;
+    }
+    h1 { font-size: clamp(52px, 6.5vw, 88px); }
+    h2 { font-size: clamp(38px, 4.2vw, 60px); }
+    h3 { font-size: 18px; }
+    /* Thin weight for rhythm contrast — wrap keywords in <em> */
+    h1 em, h2 em {
+      font-style: italic;
+      font-weight: 300;
+    }
+    p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.8; color: #444; }
+
+    /* ===== LAYOUT ===== */
+    .container {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 48px;
+    }
+    section { padding: var(--section-pad); }
+
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      padding: 14px 28px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      border: none;
+    }
+    .btn-primary {
+      background: var(--dark);
+      color: var(--white);
+    }
+    .btn-primary:hover { background: #1B2A4A; }
+    .btn-outline {
+      background: transparent;
+      color: var(--dark);
+      border: 1.5px solid #CCCCCC;
+    }
+    .btn-outline:hover { background: #1B2A4A; border-color: #1B2A4A; color: var(--white); }
+    .btn-white {
+      background: var(--white);
+      color: var(--dark);
+    }
+    .btn-white:hover { background: var(--off-white); color: #1B2A4A; }
+    .btn-arrow::after { content: '→'; font-size: 16px; }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .nav-inner {
+      max-width: var(--container);
+      margin: 0 auto;
+      padding: 0 48px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo img {
+      height: 44px;
+      width: auto;
+      object-fit: contain;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      color: #444;
+      letter-spacing: 0.02em;
+    }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta {
+      background: var(--navy);
+      color: var(--white) !important;
+      padding: 10px 22px;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+    }
+    .nav-cta:hover { background: var(--navy-light) !important; color: var(--white) !important; }
+
+    /* ===== DROPDOWN ===== */
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown > a::after { content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); display: inline-block; transition: transform 0.2s; }
+    .nav-dropdown:hover > a::after { transform: rotate(-135deg) translateY(-2px); }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--light-gray); min-width: 220px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); z-index: 200; margin-top: 8px; }
+    .dropdown-menu::before { content: ''; position: absolute; top: -12px; left: 0; right: 0; height: 12px; background: transparent; }
+    .nav-dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 13px 20px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; color: #444; border-bottom: 1px solid var(--light-gray); transition: all 0.15s; }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .dropdown-menu a:hover { background: var(--off-white); color: var(--navy); padding-left: 26px; }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding: 0;
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 120px 64px 80px 48px;
+      max-width: 680px;
+      margin-left: auto;
+    }
+    .hero-eyebrow {
+      font-family: 'Jost', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--navy);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 28px;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1.5px;
+      background: var(--navy);
+    }
+    .hero h1 {
+      margin-bottom: 28px;
+      color: var(--dark);
+    }
+    .hero-sub {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #555;
+      max-width: 480px;
+      margin-bottom: 48px;
+    }
+    .hero-actions {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .hero-right::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(255,255,255,0.08), transparent);
+    }
+
+    /* ===== SERVICES ===== */
+    .services { background: var(--off-white); }
+    .services-header {
+      max-width: 600px;
+      margin-bottom: 72px;
+    }
+    .services-header h2 { margin-bottom: 20px; }
+    .services-header p { font-size: 17px; }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+    }
+    .service-card {
+      background: var(--white);
+      padding: 48px 36px;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 3px;
+      height: 0;
+      background: var(--navy);
+      transition: height 0.3s ease;
+    }
+    .service-card:hover::before { height: 100%; }
+    .service-num {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      color: var(--navy);
+      opacity: 0.5;
+      margin-bottom: 32px;
+    }
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 16px;
+      color: var(--dark);
+    }
+    .service-card p { font-size: 14px; line-height: 1.7; color: #666; }
+
+    /* ===== ABOUT ===== */
+    .about { background: var(--white); }
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+    .about-text .label { margin-bottom: 20px; }
+    .about-text h2 { margin-bottom: 28px; }
+    .about-text p { margin-bottom: 20px; font-size: 17px; }
+    .about-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      margin-top: 56px;
+      padding-top: 48px;
+      border-top: 1px solid var(--light-gray);
+    }
+    .stat-num {
+      font-family: 'Jost', sans-serif;
+      font-size: 44px;
+      font-weight: 400;
+      color: var(--dark);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--mid-gray);
+      font-weight: 500;
+      letter-spacing: 0.04em;
+    }
+    .about-image {
+      position: relative;
+    }
+    .about-image img {
+      width: 100%;
+      height: 580px;
+      object-fit: cover;
+    }
+    .about-image-tag {
+      position: absolute;
+      bottom: 32px;
+      left: -32px;
+      background: var(--navy);
+      color: var(--white);
+      padding: 20px 28px;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    /* ===== CABINET STYLES ===== */
+    .cabinet-styles { background: var(--off-white); }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 64px;
+    }
+    .section-header-left { max-width: 560px; }
+    .section-header-left h2 { margin-top: 16px; }
+    .cabinet-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+    .cabinet-card {
+      background: var(--white);
+      overflow: hidden;
+    }
+    .cabinet-card-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+    .cabinet-card-body {
+      padding: 28px 28px 32px;
+    }
+    .cabinet-tag {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 10px;
+      display: block;
+    }
+    .cabinet-card-body h3 { font-family: 'Jost', sans-serif; font-size: 20px; font-weight: 700; line-height: 1.2; letter-spacing: 0.01em; margin-bottom: 14px; color: var(--dark); }
+    .cabinet-card-body p { font-size: 14px; color: #666; line-height: 1.6; }
+
+    /* ===== WHY CHOOSE US ===== */
+    .why-us {
+      background: var(--dark);
+      color: var(--white);
+    }
+    .why-us .label { color: rgba(255,255,255,0.4); }
+    .why-us h2 { color: var(--white); margin-top: 16px; margin-bottom: 72px; max-width: 520px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .why-card {
+      padding: 48px 40px 48px 0;
+      border-right: 1px solid rgba(255,255,255,0.1);
+    }
+    .why-card:last-child { border-right: none; padding-right: 0; }
+    .why-card:first-child { padding-left: 0; }
+    .why-card + .why-card { padding-left: 40px; }
+    .why-icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1.5px solid rgba(255,255,255,0.2);
+    }
+    .why-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: #7EB3E0;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .why-card h3 {
+      font-size: 18px;
+      color: var(--white);
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .why-card p { font-size: 14px; color: rgba(255,255,255,0.55); line-height: 1.7; }
+
+    /* ===== PROCESS ===== */
+    .process { background: var(--white); }
+    .process-header { max-width: 560px; margin-bottom: 80px; }
+    .process-header h2 { margin-top: 16px; white-space: nowrap; }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 2px solid var(--dark);
+    }
+    .process-step {
+      padding: 48px 40px 48px 0;
+      border-right: 1px solid var(--light-gray);
+    }
+    .process-step:last-child { border-right: none; }
+    .process-step:first-child { padding-left: 0; }
+    .process-step + .process-step { padding-left: 40px; }
+    .step-num {
+      font-family: 'Jost', sans-serif;
+      font-size: 56px;
+      font-weight: 700;
+      color: var(--light-gray);
+      line-height: 1;
+      margin-bottom: 24px;
+      letter-spacing: -0.04em;
+    }
+    .process-step h3 { font-size: 18px; margin-bottom: 14px; color: var(--dark); }
+    .process-step p { font-size: 14px; color: #666; line-height: 1.7; }
+
+    /* ===== REVIEWS ===== */
+    .reviews { background: var(--off-white); }
+    .reviews-header { max-width: 560px; margin-bottom: 64px; }
+    .reviews-header h2 { margin-top: 16px; }
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+    }
+    .review-card {
+      background: var(--white);
+      padding: 48px 48px 44px;
+    }
+    .review-stars {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 24px;
+    }
+    .review-stars span {
+      color: var(--navy);
+      font-size: 16px;
+    }
+    .review-text {
+      font-size: 17px;
+      line-height: 1.75;
+      color: #333;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+    .review-text::before { content: '\201C'; }
+    .review-text::after { content: '\201D'; }
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding-top: 28px;
+      border-top: 1px solid var(--light-gray);
+    }
+    .review-avatar {
+      width: 44px;
+      height: 44px;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Jost', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      flex-shrink: 0;
+    }
+    .review-name {
+      font-family: 'Jost', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--dark);
+      display: block;
+    }
+    .review-location {
+      font-size: 13px;
+      color: var(--mid-gray);
+    }
+
+    /* ===== PROJECTS ===== */
+    .projects { background: var(--white); }
+    .projects-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 56px;
+    }
+    .projects-header-left { max-width: 480px; }
+    .projects-header-left h2 { margin-top: 16px; white-space: nowrap; }
+    .projects-masonry {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      grid-template-rows: 280px 280px;
+      gap: 4px;
+    }
+    .project-item { overflow: hidden; position: relative; cursor: pointer; }
+    .project-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    /* 6-photo layout: col1=big(span2rows), col2-3=2x2 grid, row2-col1=wide(span2cols) */
+    .project-item:nth-child(1) {
+      grid-row: 1 / 3;
+      grid-column: 1 / 2;
+    }
+    .project-item:nth-child(2) {
+      grid-row: 1 / 2;
+      grid-column: 2 / 3;
+    }
+    .project-item:nth-child(3) {
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+    }
+    .project-item:nth-child(4) {
+      grid-row: 1 / 2;
+      grid-column: 4 / 5;
+    }
+    .project-item:nth-child(5) {
+      grid-row: 2 / 3;
+      grid-column: 2 / 4;
+    }
+    .project-item:nth-child(6) {
+      grid-row: 2 / 3;
+      grid-column: 4 / 5;
+    }
+    .project-overlay {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(17,17,17,0.7), transparent);
+      padding: 24px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .project-item:hover .project-overlay { opacity: 1; }
+    .project-overlay span {
+      font-family: 'Jost', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--white);
+    }
+
+    /* ===== CTA BANNER ===== */
+    .cta-banner {
+      background: var(--navy);
+      padding: 100px 0;
+    }
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 60px;
+      align-items: center;
+    }
+    .cta-banner h2 {
+      color: var(--white);
+      font-size: clamp(28px, 3vw, 42px);
+      max-width: 560px;
+    }
+    .cta-banner p {
+      color: rgba(255,255,255,0.65);
+      font-size: 17px;
+      margin-top: 16px;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: #0A0A0A;
+      color: rgba(255,255,255,0.6);
+      padding: 80px 0 40px;
+    }
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 60px;
+      padding-bottom: 60px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      margin-bottom: 40px;
+    }
+    .footer-logo img {
+      height: 40px;
+      width: auto;
+      object-fit: contain;
+      margin-bottom: 20px;
+    }
+    .footer-tagline {
+      font-size: 14px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.4);
+      max-width: 260px;
+      margin-bottom: 28px;
+    }
+    .footer-social {
+      display: flex;
+      gap: 12px;
+    }
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.5);
+      transition: all 0.2s;
+    }
+    .footer-social a svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+    .footer-social a:hover { border-color: rgba(255,255,255,0.4); color: rgba(255,255,255,0.9); }
+    .footer-col h4 {
+      font-family: 'Jost', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+    }
+    .footer-col ul li a:hover { color: rgba(255,255,255,0.9); }
+    .footer-contact-item {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .footer-copy {
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+    }
+    .footer-legal {
+      display: flex;
+      gap: 24px;
+    }
+    .footer-legal a {
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+    }
+    .footer-legal a:hover { color: rgba(255,255,255,0.6); }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { max-width: 100%; padding: 140px 32px 60px; margin: 0; }
+      .hero-right { height: 400px; }
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .cabinet-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .why-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); padding: 40px 0; }
+      .why-card + .why-card { padding-left: 0; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .process-step { padding: 40px 0; border-right: none; border-bottom: 1px solid var(--light-gray); }
+      .process-step + .process-step { padding-left: 0; }
+      .about-inner { grid-template-columns: 1fr; gap: 60px; }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+      .cta-inner { grid-template-columns: 1fr; gap: 32px; }
+    }
+    @media (max-width: 768px) {
+      :root { --section-pad: 72px 0; }
+      h1 { font-size: 36px; }
+      h2 { font-size: 28px; }
+      .nav-links { display: none; }
+      .services-grid { grid-template-columns: 1fr; }
+      .cabinet-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .projects-masonry { grid-template-columns: 1fr; }
+      .project-item:nth-child(1) { height: 300px; }
+      .project-item:nth-child(n) { height: 240px; }
+      .section-header { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .footer-top { grid-template-columns: 1fr; }
+      .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html#" class="nav-logo">
+        <img src="images/logo-dark.png" alt="GoldenHome Cabinetry" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#" onclick="return false;">Products</a>
+          <div class="dropdown-menu">
+            <a href='kitchen-cabinets.html'>Kitchen Cabinets</a>
+            <a href='closet.html'>Closet</a>
+            <a href='vanities.html'>Vanities</a>
+          </div>
+        </li>
+        <li><a href='projects.html'>Projects</a></li>
+        <li class="nav-dropdown">
+          <a href="index.html#" onclick="return false;">Support</a>
+          <div class="dropdown-menu">
+            <a href='instruction-guidelines.html'>Instruction Guidelines</a>
+            <a href='order-return-policy.html'>Order &amp; Return Policy</a>
+            <a href='warranty-certification.html'>Warranty &amp; Certification</a>
+            <a href='catalog-spec-book.html'>Catalog &amp; Spec Book</a>
+            <a href='material-standards.html'>Material Standards</a>
+          </div>
+        </li>
+                <li class="nav-dropdown">
+          <a href="#" onclick="return false;">Contact</a>
+          <div class="dropdown-menu">
+            <a href="contact-us.html">Contact Us</a>
+            <a href="about-us.html">About Us</a>
+          </div>
+        </li>
+                <li><a href="about-us.html#subscribe" class="nav-cta">Free Design Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-left">
+      <h1>Stock Speed. <em>Custom</em> Precision.</h1>
+      <p class="hero-sub">Cabinetry designed for your space and delivered from our Toronto warehouse.</p>
+      <div class="hero-actions">
+        <a class='btn btn-primary btn-arrow' href='kitchen-cabinets.html'>Explore Products</a>
+        <a class='btn btn-outline' href='projects.html'>View Gallery</a>
+      </div>
+    </div>
+    <div class="hero-right">
+      <img src="images/hero-main.webp" alt="Modern custom kitchen cabinets" />
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="label">What We Offer</span>
+        <h2>Our <em>Products</em></h2>
+        <p></p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-num">01</div>
+          <h3>Kitchen</h3>
+          <p>Modern frameless cabinetry with clean European style, wide finish options, and the flexibility to fit real homes.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">02</div>
+          <h3>Vanity</h3>
+          <p>Moisture-resistant materials and refined finishes that bring both function and elegance to everyday bathroom spaces.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">03</div>
+          <h3>Closet</h3>
+          <p>From walk-in wardrobes to compact bedroom closets, our systems keep your space organized and the look clean.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-num">04</div>
+          <h3>Semi-Custom Whole-Home Cabinetry</h3>
+          <p>Standard dimensions with expanded possibilities — more finishes, materials, and design combinations within a structured system.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CABINET STYLES -->
+  <section class="cabinet-styles">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-header-left">
+          <span class="label">Our Products</span>
+          <h2 style="white-space:nowrap;"><span style="font-family:'Jost',sans-serif;font-weight:400">1000s</span> of <em>Cabinet Products</em></h2>
+        </div>
+        <a class='btn btn-outline' href='kitchen-cabinets.html'>View All Styles</a>
+      </div>
+      <div class="cabinet-grid">
+        <div class="cabinet-card">
+          <img class="cabinet-card-img" src="images/cabinet-classic.jpg" alt="Classic Cabinet Style" />
+          <div class="cabinet-card-body">
+            <h3>Classic Series</h3>
+            <p>Our Classic Series is a reliable in-stock cabinetry system with timeless finishes and consistent sizing, built to support both everyday projects and semi-custom upgrades.</p>
+          </div>
+        </div>
+        <div class="cabinet-card">
+          <img class="cabinet-card-img" src="images/cabinet-deluxe.jpg" alt="Deluxe Cabinet Style" />
+          <div class="cabinet-card-body">
+            <h3>Delight Series</h3>
+            <p>The Delight Series offers a step up in both finish and design, with a wider selection of colors and materials to suit more refined interiors. It brings added flexibility while maintaining the efficiency and consistency of our core cabinet system.</p>
+          </div>
+        </div>
+        <div class="cabinet-card">
+          <img class="cabinet-card-img" src="images/cabinet-grand.jpg" alt="Grand Cabinet Style" />
+          <div class="cabinet-card-body">
+            <h3>Grand Series</h3>
+            <p>The Grand Series focuses on more modern, design-forward finishes, including a curated selection from AGT and EGGER. It expands the palette with richer textures and contemporary tones, giving designers more freedom to create distinctive spaces.</p>
+          </div>
+        </div>
+        <div class="cabinet-card">
+          <img class="cabinet-card-img" src="images/luxury-series.webp" alt="Luxury Series Cabinet Style" />
+          <div class="cabinet-card-body">
+            <h3>Luxury Series</h3>
+            <p>New in 2026, the Luxury Series represents our most elevated offering we have so far, featuring advanced lacquer finishes and the new Slim Shaker profile. With refined details and a more sophisticated look, it is designed for projects that demand a higher level of finish and visual impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="container">
+      <div class="about-inner">
+        <div class="about-text">
+          <span class="label">Our Story</span>
+          <h2>Frameless <em>reinvented</em> for Canadian homes</h2>
+          <p>GoldenHome has been delivering high-quality cabinetry solutions since 1999, building a strong global foundation across multiple markets. Today, GoldenHome Cabinetry Eastern Canada brings that experience closer to home through a growing local manufacturing and supply network based in Ontario.</p>
+          <p>With integrated warehousing and local production capabilities, we are able to support projects with greater speed, flexibility, and consistency. From in-stock cabinetry to locally customized solutions, our approach is designed to meet the needs of contractors, designers, and homeowners across Canada.</p>
+          <div class="about-stats">
+            <div>
+              <div class="stat-num">25+</div>
+              <div class="stat-label">Years of Craft</div>
+            </div>
+            <div>
+              <div class="stat-num">1000+</div>
+              <div class="stat-label">Cabinet Products</div>
+            </div>
+            <div>
+              <div class="stat-num">2 wk</div>
+              <div class="stat-label">Local Delivery</div>
+            </div>
+            <div>
+              <div class="stat-num">100%</div>
+              <div class="stat-label">KCMA Certified</div>
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="images/gallery-kitchen.jpg" alt="GoldenHome craftsmanship" />
+          <div class="about-image-tag">Est. in Canada · Locally Installed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us">
+    <div class="container">
+      <span class="label">Why Choose Us</span>
+      <h2>Built on <em>quality,</em> backed by service</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          </div>
+          <h3>Best Quality</h3>
+          <p>Built with reliable materials and consistent craftsmanship, our cabinetry is designed to perform well over time while maintaining a clean and refined look.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="0"/><path d="M3 9h18M9 21V9"/></svg>
+          </div>
+          <h3>Free Design</h3>
+          <p>Our team provides professional design support at no cost, helping you plan layouts, choose finishes, and make confident decisions for your space.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3>Best Affordability</h3>
+          <p>We offer a balanced solution between price and performance, delivering quality cabinetry with flexible options that fit a wide range of budgets.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="1"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+          </div>
+          <h3>Stock Inventory</h3>
+          <p>Popular styles stocked in our local Toronto warehouse — ready for fast delivery across the GTA in as little as two weeks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS -->
+  <section class="process">
+    <div class="container">
+      <div class="process-header">
+        <span class="label">How It Works</span>
+        <h2>Your kitchen, <em>in four steps</em></h2>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-num">01</div>
+          <h3>Request a Quote</h3>
+          <p>To get started simply fill out the cabinet quote form online. Our sales will contact you and send you a free quote based on your requirements.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">02</div>
+          <h3>Design Consultation</h3>
+          <p>Our team will guide you through a design consultation to finalize cabinet sizes, layout, and finish selections for your space.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">03</div>
+          <h3>Production &amp; Delivery</h3>
+          <p>Once your order is confirmed, we will prepare your items and arrange pickup or delivery, with fast turnaround supported by our local Toronto inventory.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-num">04</div>
+          <h3>Professional Assembly</h3>
+          <p>Professional assembly is available through our team or trusted partners to ensure a smooth and precise installation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS -->
+  <section class="reviews">
+    <div class="container">
+      <div class="reviews-header">
+        <span class="label">Client Stories</span>
+        <h2>What our <em>customers say</em></h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="review-text">"Quality is excellent. I had previously ordered a kitchen cabinet with drawers and was looking to order other packages of washroom cabinets, as the quality of the products is excellent. Last week, Kevin assisted me with the complex details of my purchase. His product knowledge, communication skills, and professional and friendly manner..."</p>
+          <div class="review-author">
+            <div class="review-avatar">E</div>
+            <div>
+              <span class="review-name">Emily Harris</span>
+              <span class="review-location">Toronto, ON</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="review-text">"Patient and Helpful. It was my first time I was working with Golden Homes and I am extremely satisfied with the product and service provided by Golden Homes. Professional people, helpful, with great customer service. Highly recommend. Special thanks to Andy Luo. He was very patient, provided prompt responses, helpful and provided amazing..."</p>
+          <div class="review-author">
+            <div class="review-avatar">A</div>
+            <div>
+              <span class="review-name">Amir Bijarchi</span>
+              <span class="review-location">Markham, ON</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="review-text">"Great overall. I worked with Goldenhome Cabinetry on the design for my customer. Thankful for their free design service, their design advisor Karlie is patient and professional in helping me to choose vanity and cabinets for my current project. She also made cost-saving..."</p>
+          <div class="review-author">
+            <div class="review-avatar">E</div>
+            <div>
+              <span class="review-name">Emma Reyes</span>
+              <span class="review-location">Mississauga, ON</span>
+            </div>
+          </div>
+        </div>
+        <div class="review-card">
+          <div class="review-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+          <p class="review-text">"Patient and helpful. I want to recommend Nicole and Ivy for all their help and patience. I struggled with deciding on what type, style, and vanity size to purchase. I called Nicole numerous times in the past week. Each time she was so patient and helpful. She knows the products well and wasn't just trying to make a sale. I highly recommend their designer..."</p>
+          <div class="review-author">
+            <div class="review-avatar">H</div>
+            <div>
+              <span class="review-name">Haoxuan Bai</span>
+              <span class="review-location">Aurora, ON</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section class="projects">
+    <div class="container">
+      <div class="projects-header">
+        <div class="projects-header-left">
+          <span class="label">Recent Work</span>
+          <h2>Spaces <em>We've Transformed</em></h2>
+        </div>
+        <a class='btn btn-outline btn-arrow' href='projects.html'>View All Projects</a>
+      </div>
+      <div class="projects-masonry">
+        <div class="project-item" onclick="openLightbox('images/gallery-3.webp','Blue Island Kitchen — Toronto, ON')">
+          <img src="images/gallery-3.webp" alt="Blue Island Kitchen" />
+          <div class="project-overlay"><span>Toronto, ON</span></div>
+        </div>
+        <div class="project-item" onclick="openLightbox('images/gallery-5.webp','Modern White Kitchen — Mississauga, ON')">
+          <img src="images/gallery-5.webp" alt="Modern White Kitchen" />
+          <div class="project-overlay"><span>Mississauga, ON</span></div>
+        </div>
+        <div class="project-item" onclick="openLightbox('images/gallery-4.webp','Classic Shaker Kitchen — Gravenhurst, ON')">
+          <img src="images/gallery-4.webp" alt="Classic Shaker Kitchen" />
+          <div class="project-overlay"><span>Gravenhurst, ON</span></div>
+        </div>
+        <div class="project-item" onclick="openLightbox('images/gallery-1.webp','White Shaker Kitchen — Aurora, ON')">
+          <img src="images/gallery-1.webp" alt="White Shaker Kitchen" />
+          <div class="project-overlay"><span>Aurora, ON</span></div>
+        </div>
+        <div class="project-item" onclick="openLightbox('images/gallery-2.webp','Coffee Bar Cabinetry — Barrie, ON')">
+          <img src="images/gallery-2.webp" alt="Coffee Bar Cabinetry" />
+          <div class="project-overlay"><span>Barrie, ON</span></div>
+        </div>
+        <div class="project-item" onclick="openLightbox('images/gallery-6.webp','Modern White Kitchen — Niagara Falls, ON')">
+          <img src="images/gallery-6.webp" alt="Modern White Kitchen Niagara Falls" />
+          <div class="project-overlay"><span>Niagara Falls, ON</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner" id="contact">
+    <div class="container">
+      <div class="cta-inner">
+        <div>
+          <h2>Ready to <em>explore</em> your options?</h2>
+          <p>Request a free design quote and discover the materials, styles, and finishes that suit your vision.</p>
+        </div>
+        <a href="about-us.html#subscribe" class="btn btn-white btn-arrow">Get Free Design Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <img src="images/logo-white.png" alt="GoldenHome Cabinetry" />
+          </div>
+          <p class="footer-tagline">Precision Crafted. Locally Delivered. Serving Canadian homeowners since 2018.</p>
+          <div class="footer-social">
+            <!-- Instagram -->
+            <a href="index.html#" title="Instagram">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <!-- Facebook -->
+            <a href="index.html#" title="Facebook">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <!-- X (Twitter) -->
+            <a href="index.html#" title="X">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <!-- YouTube -->
+            <a href="index.html#" title="YouTube">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html#">Home</a></li>
+            <li class="nav-dropdown">
+          <a href="#" onclick="return false;">Products</a>
+          <div class="dropdown-menu">
+            <a href='kitchen-cabinets.html'>Kitchen Cabinets</a>
+            <a href='closet.html'>Closet</a>
+            <a href='vanities.html'>Vanities</a>
+          </div>
+        </li>
+            <li><a href='projects.html'>Projects</a></li>
+            <li><a href='instruction-guidelines.html'>Support</a></li>
+                    <li class="nav-dropdown">
+          <a href="#" onclick="return false;">Contact</a>
+          <div class="dropdown-menu">
+            <a href="contact-us.html">Contact Us</a>
+            <a href="about-us.html">About Us</a>
+          </div>
+        </li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="index.html#">Kitchen Cabinets</a></li>
+            <li><a href="index.html#">Closet &amp; Storage</a></li>
+            <li><a href="index.html#">Bathroom Vanities</a></li>
+            <li><a href='about-us.html#subscribe'>Free Design Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p class="footer-contact-item">Phone: (905)727-8800</p>
+          <p class="footer-contact-item">Email: info@goldenhomecabinetry.ca</p>
+          <p class="footer-contact-item">Unit 3 - 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 GoldenHome Cabinetry Canada. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="index.html#">Privacy Policy</a>
+          <a href="index.html#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+<!-- ===== ANNOTATION SYSTEM ===== -->
+<style>
+  /* Toolbar */
+  #annotation-toolbar {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    font-family: 'Jost', sans-serif;
+  }
+  #annotation-toggle {
+    width: 52px;
+    height: 52px;
+    background: #2C4A8C;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(26,58,92,0.35);
+    transition: background 0.2s;
+  }
+  #annotation-toggle:hover { background: #2A5080; }
+  #annotation-toggle.active { background: #c0392b; }
+  #annotation-count-badge {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background: #e74c3c;
+    color: #fff;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  #annotation-panel {
+    background: #fff;
+    border: 1px solid #EBEBEB;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+    width: 320px;
+    max-height: 480px;
+    overflow-y: auto;
+    display: none;
+    flex-direction: column;
+  }
+  #annotation-panel.visible { display: flex; }
+  .ann-panel-header {
+    padding: 18px 20px 14px;
+    border-bottom: 1px solid #EBEBEB;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ann-panel-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #111;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .ann-panel-clear {
+    font-size: 12px;
+    color: #888;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-family: 'Jost', sans-serif;
+  }
+  .ann-panel-clear:hover { color: #c0392b; }
+  #annotation-list {
+    padding: 12px 0;
+    flex: 1;
+  }
+  .ann-empty {
+    padding: 24px 20px;
+    font-size: 13px;
+    color: #aaa;
+    text-align: center;
+  }
+  .ann-item {
+    padding: 14px 20px;
+    border-bottom: 1px solid #F5F5F5;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .ann-item:hover { background: #F7F7F5; }
+  .ann-item-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .ann-item-num {
+    width: 22px;
+    height: 22px;
+    background: #2C4A8C;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 11px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .ann-item-section {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .ann-item-text {
+    font-size: 13px;
+    color: #333;
+    line-height: 1.5;
+  }
+  .ann-item-time {
+    font-size: 11px;
+    color: #bbb;
+    margin-top: 4px;
+  }
+  .ann-item-delete {
+    margin-left: auto;
+    background: none;
+    border: none;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0 4px;
+  }
+  .ann-item-delete:hover { color: #c0392b; }
+  /* Mode indicator */
+  #annotation-mode-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #2C4A8C;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Jost', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    z-index: 9998;
+    display: none;
+    pointer-events: none;
+  }
+  #annotation-mode-bar.visible { display: block; }
+  /* Cursor in annotation mode */
+  body.annotation-mode { cursor: crosshair !important; }
+  body.annotation-mode * { cursor: crosshair !important; }
+  /* Pins */
+  .ann-pin {
+    position: absolute;
+    z-index: 9000;
+    transform: translate(-50%, -100%);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: all;
+  }
+  .ann-pin-bubble {
+    background: #2C4A8C;
+    color: #fff;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    box-shadow: 0 3px 12px rgba(26,58,92,0.4);
+    border: 2px solid #fff;
+    transition: transform 0.15s;
+  }
+  .ann-pin:hover .ann-pin-bubble { transform: scale(1.15); }
+  .ann-pin-tail {
+    width: 2px;
+    height: 8px;
+    background: #2C4A8C;
+  }
+  /* Input popup */
+  #annotation-popup {
+    position: fixed;
+    z-index: 9997;
+    background: #fff;
+    border: 1px solid #EBEBEB;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+    padding: 16px;
+    width: 280px;
+    display: none;
+  }
+  #annotation-popup.visible { display: block; }
+  #annotation-popup textarea {
+    width: 100%;
+    border: 1px solid #EBEBEB;
+    padding: 10px 12px;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    resize: none;
+    outline: none;
+    color: #111;
+    height: 80px;
+  }
+  #annotation-popup textarea:focus { border-color: #2C4A8C; }
+  .ann-popup-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    justify-content: flex-end;
+  }
+  .ann-popup-cancel {
+    background: none;
+    border: 1px solid #EBEBEB;
+    padding: 7px 14px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    cursor: pointer;
+  }
+  .ann-popup-save {
+    background: #2C4A8C;
+    border: none;
+    padding: 7px 16px;
+    font-family: 'Jost', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+  }
+  .ann-popup-save:hover { background: #2A5080; }
+  .ann-popup-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #2C4A8C;
+    margin-bottom: 8px;
+  }
+</style>
+
+<!-- Mode Bar -->
+<div id="annotation-mode-bar">✏ COMMENT MODE — Click anywhere on the page to leave a comment. Press ESC to exit.</div>
+
+<!-- Popup Input -->
+<div id="annotation-popup">
+  <div class="ann-popup-label">Add Comment</div>
+  <textarea id="annotation-input" placeholder="Describe what you'd like to change here..."></textarea>
+  <div class="ann-popup-actions">
+    <button class="ann-popup-cancel" id="ann-cancel">Cancel</button>
+    <button class="ann-popup-save" id="ann-save">Save</button>
+  </div>
+</div>
+
+<!-- Toolbar -->
+<div id="annotation-toolbar">
+  <div id="annotation-panel">
+    <div class="ann-panel-header">
+      <span class="ann-panel-title">Comments</span>
+      <button class="ann-panel-clear" id="ann-clear-all">Clear all</button>
+    </div>
+    <div id="annotation-list">
+      <div class="ann-empty">No comments yet.<br>Click the pencil icon to start.</div>
+    </div>
+  </div>
+  <div style="position:relative;">
+    <button id="annotation-toggle" title="Toggle comment mode">✏</button>
+    <div id="annotation-count-badge">0</div>
+  </div>
+</div>
+
+<script>
+(function() {
+  let annotationMode = false;
+  let annotations = JSON.parse(localStorage.getItem('gh_annotations') || '[]');
+  let pendingX = 0, pendingY = 0, pendingScrollY = 0;
+  let counter = annotations.length;
+
+  const toggle = document.getElementById('annotation-toggle');
+  const modeBar = document.getElementById('annotation-mode-bar');
+  const popup = document.getElementById('annotation-popup');
+  const input = document.getElementById('annotation-input');
+  const panel = document.getElementById('annotation-panel');
+  const list = document.getElementById('annotation-list');
+  const badge = document.getElementById('annotation-count-badge');
+
+  // Restore saved annotations
+  annotations.forEach(a => renderPin(a));
+  updatePanel();
+
+  // Toggle annotation mode
+  toggle.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (popup.classList.contains('visible')) {
+      closePopup();
+      return;
+    }
+    annotationMode = !annotationMode;
+    document.body.classList.toggle('annotation-mode', annotationMode);
+    modeBar.classList.toggle('visible', annotationMode);
+    toggle.classList.toggle('active', annotationMode);
+    toggle.textContent = annotationMode ? '✕' : '✏';
+    if (!annotationMode) {
+      panel.classList.toggle('visible');
+    } else {
+      panel.classList.remove('visible');
+    }
+  });
+
+  // Click on page to place pin
+  document.addEventListener('click', function(e) {
+    if (!annotationMode) return;
+    if (e.target.closest('#annotation-toolbar') || e.target.closest('#annotation-popup') || e.target.closest('.ann-pin')) return;
+    e.preventDefault();
+    e.stopPropagation();
+    pendingX = e.clientX + window.scrollX;
+    pendingY = e.clientY + window.scrollY;
+    pendingScrollY = window.scrollY;
+
+    // Position popup near click
+    let px = e.clientX + 16;
+    let py = e.clientY - 20;
+    if (px + 296 > window.innerWidth) px = e.clientX - 296;
+    if (py + 160 > window.innerHeight) py = e.clientY - 160;
+    popup.style.left = px + 'px';
+    popup.style.top = py + 'px';
+    popup.classList.add('visible');
+    input.value = '';
+    setTimeout(() => input.focus(), 50);
+  });
+
+  // Save comment
+  document.getElementById('ann-save').addEventListener('click', saveComment);
+  input.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter' && (e.metaKey || e.ctrlKey)) saveComment();
+    if (e.key === 'Escape') closePopup();
+  });
+  document.getElementById('ann-cancel').addEventListener('click', closePopup);
+
+  function saveComment() {
+    const text = input.value.trim();
+    if (!text) return;
+    counter++;
+    // Detect section
+    const el = document.elementFromPoint(pendingX - window.scrollX, pendingY - pendingScrollY + window.scrollY);
+    const section = el ? (el.closest('section, nav, footer') || document.body) : document.body;
+    const sectionLabel = section.tagName === 'NAV' ? 'Navigation' :
+                         section.tagName === 'FOOTER' ? 'Footer' :
+                         (section.querySelector('.label, h2') || {}).textContent || 'Page';
+
+    const ann = {
+      id: Date.now(),
+      num: counter,
+      x: pendingX,
+      y: pendingY,
+      text: text,
+      section: sectionLabel.trim().substring(0, 30),
+      time: new Date().toLocaleTimeString([], {hour:'2-digit', minute:'2-digit'})
+    };
+    annotations.push(ann);
+    save();
+    renderPin(ann);
+    updatePanel();
+    closePopup();
+  }
+
+  function renderPin(ann) {
+    const pin = document.createElement('div');
+    pin.className = 'ann-pin';
+    pin.dataset.id = ann.id;
+    pin.style.left = ann.x + 'px';
+    pin.style.top = ann.y + 'px';
+    pin.innerHTML = `<div class="ann-pin-bubble">${ann.num}</div><div class="ann-pin-tail"></div>`;
+    pin.title = ann.text;
+    pin.addEventListener('click', function(e) {
+      e.stopPropagation();
+      // Highlight in panel
+      panel.classList.add('visible');
+      annotationMode = false;
+      document.body.classList.remove('annotation-mode');
+      modeBar.classList.remove('visible');
+      toggle.classList.remove('active');
+      toggle.textContent = '✏';
+      const item = list.querySelector(`[data-id="${ann.id}"]`);
+      if (item) { item.scrollIntoView({behavior:'smooth', block:'nearest'}); item.style.background='#EEF4FF'; setTimeout(()=>item.style.background='',1000); }
+    });
+    document.body.appendChild(pin);
+  }
+
+  function updatePanel() {
+    if (annotations.length === 0) {
+      list.innerHTML = '<div class="ann-empty">No comments yet.<br>Click the pencil icon to start.</div>';
+      badge.style.display = 'none';
+      return;
+    }
+    badge.style.display = 'flex';
+    badge.textContent = annotations.length;
+    list.innerHTML = annotations.map(a => `
+      <div class="ann-item" data-id="${a.id}" onclick="scrollToPin(${a.id})">
+        <div class="ann-item-header">
+          <div class="ann-item-num">${a.num}</div>
+          <span class="ann-item-section">${a.section}</span>
+          <button class="ann-item-delete" onclick="deleteAnn(event,${a.id})">✕</button>
+        </div>
+        <div class="ann-item-text">${a.text}</div>
+        <div class="ann-item-time">${a.time}</div>
+      </div>
+    `).join('');
+  }
+
+  window.scrollToPin = function(id) {
+    const pin = document.querySelector(`.ann-pin[data-id="${id}"]`);
+    if (pin) window.scrollTo({top: parseInt(pin.style.top) - 200, behavior: 'smooth'});
+  };
+
+  window.deleteAnn = function(e, id) {
+    e.stopPropagation();
+    annotations = annotations.filter(a => a.id !== id);
+    const pin = document.querySelector(`.ann-pin[data-id="${id}"]`);
+    if (pin) pin.remove();
+    save();
+    updatePanel();
+  };
+
+  document.getElementById('ann-clear-all').addEventListener('click', function() {
+    if (!confirm('Clear all comments?')) return;
+    annotations = [];
+    counter = 0;
+    document.querySelectorAll('.ann-pin').forEach(p => p.remove());
+    save();
+    updatePanel();
+  });
+
+  function closePopup() {
+    popup.classList.remove('visible');
+    input.value = '';
+  }
+
+  function save() {
+    localStorage.setItem('gh_annotations', JSON.stringify(annotations));
+  }
+
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      if (popup.classList.contains('visible')) { closePopup(); return; }
+      if (annotationMode) {
+        annotationMode = false;
+        document.body.classList.remove('annotation-mode');
+        modeBar.classList.remove('visible');
+        toggle.classList.remove('active');
+        toggle.textContent = '✏';
+      }
+    }
+  });
+})();
+</script>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.88);z-index:9999;align-items:center;justify-content:center;flex-direction:column;gap:16px;" onclick="closeLightbox()">
+  <button onclick="closeLightbox()" style="position:absolute;top:24px;right:32px;background:none;border:none;color:#fff;font-size:36px;cursor:pointer;line-height:1;">&times;</button>
+  <img id="lightbox-img" src="index.html" alt="" style="max-width:90vw;max-height:82vh;object-fit:contain;display:block;" onclick="event.stopPropagation()" />
+  <p id="lightbox-caption" style="color:rgba(255,255,255,0.7);font-family:'Jost',sans-serif;font-size:14px;letter-spacing:0.08em;text-transform:uppercase;"></p>
+</div>
+<script>
+function openLightbox(src, caption) {
+  var lb = document.getElementById('lightbox');
+  document.getElementById('lightbox-img').src = src;
+  document.getElementById('lightbox-caption').textContent = caption || '';
+  lb.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLightbox(); });
+</script>
+
+</body>
+</html>

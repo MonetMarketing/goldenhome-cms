@@ -1,0 +1,15 @@
+{
+  "site_name": "GoldenHome Cabinetry Canada",
+  "logo_dark": "/images/logo-dark.png",
+  "logo_white": "/images/logo-white.png",
+  "footer_tagline": "Precision Crafted. Locally Delivered.",
+  "footer_links": [
+    { "label": "Kitchen Cabinets", "url": "kitchen-cabinets.html" },
+    { "label": "Closet & Storage", "url": "closet.html" },
+    { "label": "Bathroom Vanities", "url": "vanities.html" },
+    { "label": "Contact Us", "url": "contact-us.html" },
+    { "label": "About Us", "url": "about-us.html" },
+    { "label": "Warranty", "url": "warranty-certification.html" },
+    { "label": "Order & Return Policy", "url": "order-return-policy.html" }
+  ]
+}

@@ -1,0 +1,177 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Allow editors to upload images
+media_library:
+  name: uploadcare
+  config:
+    publicKey: demopublickey
+
+collections:
+  # ─── HOMEPAGE ───────────────────────────────────────────────────────────────
+  - name: "homepage"
+    label: "Homepage"
+    files:
+      - name: "homepage"
+        label: "Homepage Content"
+        file: "_data/homepage.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow Text", name: "eyebrow", widget: "string" }
+              - { label: "Heading Line 1 (bold)", name: "heading1", widget: "string" }
+              - { label: "Heading Line 2 (italic)", name: "heading2", widget: "string" }
+              - { label: "Subheading", name: "sub", widget: "text" }
+              - { label: "Hero Image", name: "image", widget: "image" }
+              - { label: "Primary Button Text", name: "btn1_text", widget: "string" }
+              - { label: "Primary Button Link", name: "btn1_link", widget: "string" }
+              - { label: "Secondary Button Text", name: "btn2_text", widget: "string" }
+              - { label: "Secondary Button Link", name: "btn2_link", widget: "string" }
+
+          - label: "Our Services (4 cards)"
+            name: "services"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+
+          - label: "Our Story Stats (4 numbers)"
+            name: "stats"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Number", name: "num", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+          - label: "Our Story Text"
+            name: "story"
+            widget: "object"
+            fields:
+              - { label: "Paragraph 1", name: "p1", widget: "text" }
+              - { label: "Paragraph 2", name: "p2", widget: "text" }
+              - { label: "Story Image", name: "image", widget: "image" }
+              - { label: "Image Tag Text", name: "image_tag", widget: "string" }
+
+          - label: "Our Products Section"
+            name: "products_section"
+            widget: "object"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Heading (bold part)", name: "heading1", widget: "string" }
+              - { label: "Heading (italic part)", name: "heading2", widget: "string" }
+              - { label: "View All Button Text", name: "btn_text", widget: "string" }
+
+          - label: "Product Cards (4 cards)"
+            name: "product_cards"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Link", name: "link", widget: "string" }
+
+          - label: "CTA Banner"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "sub", widget: "text" }
+              - { label: "Button Text", name: "btn_text", widget: "string" }
+              - { label: "Button Link", name: "btn_link", widget: "string" }
+
+  # ─── CONTACT US ─────────────────────────────────────────────────────────────
+  - name: "contact_us"
+    label: "Contact Us Page"
+    files:
+      - name: "contact_us"
+        label: "Contact Us Content"
+        file: "_data/contact_us.json"
+        fields:
+          - { label: "Page Label", name: "label", widget: "string" }
+          - { label: "Heading (bold part)", name: "heading1", widget: "string" }
+          - { label: "Heading (italic part)", name: "heading2", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - label: "Company Info"
+            name: "company"
+            widget: "object"
+            fields:
+              - { label: "Showroom Name", name: "showroom_name", widget: "string" }
+              - { label: "Address Line 1", name: "address1", widget: "string" }
+              - { label: "Address Line 2", name: "address2", widget: "string" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "Business Hours Line 1", name: "hours1", widget: "string" }
+              - { label: "Business Hours Line 2", name: "hours2", widget: "string" }
+
+  # ─── ABOUT US ───────────────────────────────────────────────────────────────
+  - name: "about_us"
+    label: "About Us Page"
+    files:
+      - name: "about_us"
+        label: "About Us Content"
+        file: "_data/about_us.json"
+        fields:
+          - { label: "Page Label", name: "label", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro Paragraph", name: "intro", widget: "text" }
+          - label: "Key Stats (4 numbers)"
+            name: "stats"
+            widget: "list"
+            max: 4
+            fields:
+              - { label: "Number", name: "num", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+          - label: "Factory Gallery Images"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+
+  # ─── KITCHEN CABINETS ───────────────────────────────────────────────────────
+  - name: "kitchen_cabinets"
+    label: "Kitchen Cabinets Page"
+    files:
+      - name: "kitchen_cabinets"
+        label: "Kitchen Cabinets Content"
+        file: "_data/kitchen_cabinets.json"
+        fields:
+          - { label: "Page Label", name: "label", widget: "string" }
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - label: "Series (Classic / Delight / Grand)"
+            name: "series"
+            widget: "list"
+            fields:
+              - { label: "Series ID (classic/delight/grand)", name: "id", widget: "string" }
+              - { label: "Series Name", name: "name", widget: "string" }
+              - { label: "Door Count Label", name: "door_count", widget: "string" }
+              - { label: "Description", name: "desc", widget: "text" }
+              - { label: "Cabinet Image", name: "image", widget: "image" }
+
+  # ─── GENERAL SETTINGS ───────────────────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - name: "settings"
+        label: "Global Settings"
+        file: "_data/settings.json"
+        fields:
+          - { label: "Site Name", name: "site_name", widget: "string" }
+          - { label: "Logo (dark)", name: "logo_dark", widget: "image" }
+          - { label: "Logo (white)", name: "logo_white", widget: "image" }
+          - { label: "Footer Tagline", name: "footer_tagline", widget: "string" }
+          - label: "Footer Navigation Links"
+            name: "footer_links"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }

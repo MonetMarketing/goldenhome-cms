@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us — GoldenHome Cabinetry Canada</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=DM+Serif+Display:ital@0;1&family=Jost:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.75; color: #111; background: #fff; -webkit-font-smoothing: antialiased; }
+    img { display: block; max-width: 100%; }
+    a { text-decoration: none; color: inherit; }
+
+    :root {
+      --white: #ffffff;
+      --off-white: #F7F7F5;
+      --light-gray: #EBEBEB;
+      --mid-gray: #888888;
+      --dark: #111111;
+      --navy: #1B2A4A;
+      --navy-light: #2C4A8C;
+      --container: 1200px;
+    }
+
+    .label {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: #2C4A8C; display: block; margin-bottom: 18px;
+    }
+    h1, h2 { font-family: 'Cormorant Garamond', serif; font-weight: 600; line-height: 1.08; letter-spacing: -0.01em; }
+    h3, h4 { font-family: 'Jost', sans-serif; font-weight: 600; line-height: 1.25; letter-spacing: 0.01em; }
+    h1 { font-size: clamp(52px, 6.5vw, 88px); }
+    h2 { font-size: clamp(38px, 4.2vw, 60px); }
+    h3 { font-size: 18px; }
+    h1 em, h2 em { font-style: italic; font-weight: 300; }
+    p { font-family: 'Inter', sans-serif; font-size: 16px; line-height: 1.8; color: #444; }
+
+    .container { max-width: var(--container); margin: 0 auto; padding: 0 48px; }
+    section { padding: 100px 0; }
+
+    /* ===== NAVIGATION ===== */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(255,255,255,0.96); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--light-gray);
+    }
+    .nav-inner {
+      max-width: var(--container); margin: 0 auto; padding: 0 48px;
+      height: 72px; display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo img { height: 44px; width: auto; object-fit: contain; }
+    .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .nav-links a { font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500; color: #444; letter-spacing: 0.02em; }
+    .nav-links a:hover { color: var(--navy); }
+    .nav-cta { background: var(--navy); color: var(--white) !important; padding: 10px 22px; font-size: 13px !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: var(--navy-light) !important; color: var(--white) !important; }
+    .nav-dropdown { position: relative; }
+    .nav-dropdown > a { display: flex; align-items: center; gap: 5px; }
+    .nav-dropdown > a::after { content: ''; width: 6px; height: 6px; border-right: 1.5px solid currentColor; border-bottom: 1.5px solid currentColor; transform: rotate(45deg) translateY(-2px); display: inline-block; transition: transform 0.2s; }
+    .nav-dropdown:hover > a::after { transform: rotate(-135deg) translateY(-2px); }
+    .dropdown-menu { display: none; position: absolute; top: 100%; left: 50%; transform: translateX(-50%); background: #fff; border: 1px solid var(--light-gray); min-width: 220px; box-shadow: 0 12px 40px rgba(0,0,0,0.08); z-index: 200; margin-top: 8px; }
+    .dropdown-menu::before { content: ''; position: absolute; top: -12px; left: 0; right: 0; height: 12px; background: transparent; }
+    .nav-dropdown:hover .dropdown-menu { display: block; }
+    .dropdown-menu a { display: block; padding: 13px 20px; font-family: 'Jost', sans-serif; font-size: 13px; font-weight: 500; color: #444; border-bottom: 1px solid var(--light-gray); transition: all 0.15s; }
+    .dropdown-menu a:last-child { border-bottom: none; }
+    .dropdown-menu a:hover { background: var(--off-white); color: var(--navy); padding-left: 26px; }
+    .dropdown-menu a.active { color: var(--navy); font-weight: 600; background: var(--off-white); }
+
+    /* ===== PAGE HERO ===== */
+    .page-hero {
+      margin-top: 72px;
+      background: var(--navy);
+      padding: 0;
+      min-height: 240px;
+      display: flex;
+      align-items: center;
+    }
+    .page-hero-inner {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 72px 48px;
+      width: 100%;
+      max-width: var(--container);
+      margin: 0 auto;
+    }
+    .page-hero-inner h1 {
+      color: #fff;
+      font-size: clamp(52px, 6vw, 80px);
+      margin-bottom: 0;
+      flex-shrink: 0;
+    }
+    .page-hero-inner h1 em { color: rgba(255,255,255,0.65); }
+
+    /* ===== CONTACT SECTION ===== */
+    .contact-section { padding: 100px 0; background: #fff; }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 80px;
+      align-items: flex-start;
+    }
+
+    /* Form side */
+    .contact-form-side .section-intro { margin-bottom: 48px; }
+    .contact-form-side h2 { margin-bottom: 16px; }
+    .contact-form-side p { max-width: 480px; }
+
+    .form-group { margin-bottom: 24px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 24px; }
+    .form-group label, .form-row label {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #888; margin-bottom: 10px;
+    }
+    .form-group input,
+    .form-group textarea,
+    .form-row input {
+      width: 100%;
+      border: 1.5px solid var(--light-gray);
+      background: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 15px;
+      color: #111;
+      padding: 14px 18px;
+      outline: none;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+    }
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-row input:focus { border-color: var(--navy); }
+    .form-group textarea { resize: vertical; min-height: 140px; line-height: 1.7; }
+
+    /* File upload */
+    .file-upload-group { margin-bottom: 24px; }
+    .file-upload-group label {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 11px; font-weight: 600;
+      letter-spacing: 0.14em; text-transform: uppercase;
+      color: #888; margin-bottom: 10px;
+    }
+    .file-upload-area {
+      border: 1.5px dashed var(--light-gray);
+      background: var(--off-white);
+      padding: 28px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+      position: relative;
+    }
+    .file-upload-area:hover { border-color: var(--navy); background: #f0f0ee; }
+    .file-upload-area input[type="file"] {
+      position: absolute; inset: 0; width: 100%; height: 100%;
+      opacity: 0; cursor: pointer;
+    }
+    .file-upload-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: #fff;
+      border: 1.5px solid var(--light-gray);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .file-upload-icon svg { width: 18px; height: 18px; }
+    .file-upload-text { flex: 1; }
+    .file-upload-text strong {
+      display: block;
+      font-family: 'Jost', sans-serif;
+      font-size: 13px; font-weight: 600;
+      color: #111; margin-bottom: 3px;
+    }
+    .file-upload-text span {
+      font-size: 12px; color: #888;
+    }
+    .file-upload-names {
+      margin-top: 10px;
+      font-size: 12px; color: var(--navy);
+      font-family: 'Inter', sans-serif;
+      min-height: 0;
+    }
+
+    .btn-send {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--navy); color: #fff;
+      font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 600;
+      letter-spacing: 0.06em; padding: 16px 36px;
+      border: none; cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-send:hover { background: var(--navy-light); }
+
+    /* Info side */
+    .contact-info-side { padding-top: 8px; }
+    .info-block { margin-bottom: 36px; }
+    .info-block-label {
+      font-family: 'Jost', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--navy-light); margin-bottom: 10px;
+    }
+    .info-block-value {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px; color: #111; line-height: 1.7;
+    }
+    .info-block-value a { color: #111; transition: color 0.15s; }
+    .info-block-value a:hover { color: var(--navy); }
+    .info-divider { border: none; border-top: 1px solid var(--light-gray); margin: 36px 0; }
+    .hours-row { font-size: 15px; color: #444; line-height: 1.6; }
+    .hours-row span { color: #888; font-size: 14px; display: block; margin-top: 2px; }
+
+    /* Inline map */
+    .map-inline {
+      margin-top: 36px;
+      border: 1px solid var(--light-gray);
+      overflow: hidden;
+      position: relative;
+    }
+    .map-inline iframe {
+      width: 100%; height: 220px;
+      border: none; display: block;
+    }
+    .map-inline-link {
+      display: flex; align-items: center; gap: 8px;
+      padding: 12px 16px;
+      background: var(--off-white);
+      border-top: 1px solid var(--light-gray);
+      font-family: 'Jost', sans-serif;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      color: var(--navy);
+      transition: background 0.15s;
+    }
+    .map-inline-link:hover { background: #ececea; }
+    .map-inline-link svg { width: 14px; height: 14px; flex-shrink: 0; }
+
+    /* ===== FOOTER ===== */
+    footer { background: #0A0A0A; color: rgba(255,255,255,0.65); padding: 80px 0 40px; }
+    .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; padding-bottom: 56px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+    .footer-logo { margin-bottom: 20px; }
+    .footer-logo img { height: 40px; }
+    .footer-tagline { font-size: 14px; line-height: 1.7; color: rgba(255,255,255,0.55); max-width: 280px; }
+    .footer-social { display: flex; gap: 16px; margin-top: 28px; }
+    .footer-social a { width: 36px; height: 36px; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; transition: all 0.2s; }
+    .footer-social a:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.4); }
+    .footer-social svg { width: 15px; height: 15px; fill: rgba(255,255,255,0.6); }
+    .footer-col h4 { font-family: 'Jost', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #fff; margin-bottom: 20px; }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li { margin-bottom: 10px; }
+    .footer-col ul li a { font-size: 14px; color: rgba(255,255,255,0.55); transition: color 0.15s; }
+    .footer-col ul li a:hover { color: #fff; }
+    .footer-contact-item { font-size: 13px; color: rgba(255,255,255,0.55); margin-bottom: 10px; line-height: 1.6; }
+    .footer-bottom { display: flex; align-items: center; justify-content: space-between; padding: 24px 0; }
+    .footer-copy { font-size: 13px; color: rgba(255,255,255,0.35); }
+    .footer-legal { display: flex; gap: 24px; }
+    .footer-legal a { font-size: 13px; color: rgba(255,255,255,0.35); transition: color 0.15s; }
+    .footer-legal a:hover { color: rgba(255,255,255,0.7); }
+
+    /* ===== TOAST ===== */
+    .toast {
+      position: fixed; bottom: 40px; left: 50%; transform: translateX(-50%) translateY(20px);
+      background: #111; color: #fff;
+      font-family: 'Jost', sans-serif; font-size: 14px; font-weight: 500;
+      padding: 16px 32px; z-index: 9998;
+      opacity: 0; pointer-events: none;
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+    .toast-icon { width: 20px; height: 20px; border-radius: 50%; background: #2C4A8C; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .toast-icon svg { width: 11px; height: 11px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <img src="images/logo-dark.png" alt="GoldenHome Cabinetry" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li class="nav-dropdown">
+          <a href="#" onclick="return false;">Products</a>
+          <div class="dropdown-menu">
+            <a href="products.html">Kitchen Cabinets</a>
+            <a href="products.html#closets">Closet &amp; Storage</a>
+            <a href="products.html#vanities">Bathroom Vanities</a>
+          </div>
+        </li>
+        <li><a href="projects.html">Projects</a></li>
+        <li class="nav-dropdown">
+          <a href="#" onclick="return false;">Support</a>
+          <div class="dropdown-menu">
+            <a href="instruction-guidelines.html">Instruction Guidelines</a>
+            <a href="order-return-policy.html">Order &amp; Return Policy</a>
+            <a href="warranty-certification.html">Warranty &amp; Certification</a>
+            <a href="catalog-spec-book.html">Catalog &amp; Spec Book</a>
+            <a href="material-standards.html">Material Standards</a>
+          </div>
+        </li>
+        <li class="nav-dropdown">
+          <a href="#" onclick="return false;" style="color: var(--navy); font-weight: 600;">Contact</a>
+          <div class="dropdown-menu">
+            <a href="contact-us.html" class="active">Contact Us</a>
+            <a href="about-us.html">About Us</a>
+          </div>
+        </li>
+        <li><a href="about-us.html#subscribe" class="nav-cta">Free Design Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner">
+      <h1>Contact <em>Us</em></h1>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT FORM + INFO ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Left: Form -->
+        <div class="contact-form-side">
+          <div class="section-intro">
+            <span class="label">Get in Touch</span>
+            <h2>Become Our <em>Dealer</em></h2>
+            <p style="margin-top: 16px;">Have a question about our products, a project inquiry, or need design advice? Fill out the form and our team will get back to you within one business day.</p>
+          </div>
+          <form id="contactForm" onsubmit="handleContactSubmit(event)">
+            <div class="form-row">
+              <div>
+                <label for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required />
+              </div>
+              <div>
+                <label for="cf-phone">Phone Number</label>
+                <input type="tel" id="cf-phone" name="phone" placeholder="(905) 000-0000" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="cf-email">Email Address</label>
+              <input type="email" id="cf-email" name="email" placeholder="jane@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="cf-role">I Am A</label>
+              <select id="cf-role" name="role" required style="width:100%;padding:14px 16px;border:1px solid #ddd;background:#fff;font-family:'Inter',sans-serif;font-size:15px;color:#111;appearance:none;-webkit-appearance:none;background-image:url(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23888' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E\");background-repeat:no-repeat;background-position:right 16px center;cursor:pointer;">
+                <option value="" disabled selected>Select your role…</option>
+                <option value="builder">Builder</option>
+                <option value="contractor">Contractor</option>
+                <option value="kitchen_bath_retail">Kitchen/Bath Retail Store</option>
+                <option value="interior_designer">Interior Designer</option>
+                <option value="home_owner">Home Owner</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" placeholder="Tell us about your project or question…" required></textarea>
+            </div>
+            <!-- File Upload -->
+            <div class="file-upload-group">
+              <label>Attachments <span style="font-weight:400;letter-spacing:0;text-transform:none;font-size:11px;color:#aaa;">(Optional — drawings, floor plans, reference images)</span></label>
+              <div class="file-upload-area" id="uploadArea">
+                <input type="file" id="cf-files" name="files" multiple accept=".pdf,.jpg,.jpeg,.png,.dwg,.dxf,.zip" onchange="showFileNames('cf-files','fileNames')" />
+                <div class="file-upload-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#888" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                    <polyline points="17 8 12 3 7 8"/>
+                    <line x1="12" y1="3" x2="12" y2="15"/>
+                  </svg>
+                </div>
+                <div class="file-upload-text">
+                  <strong>Upload Files</strong>
+                  <span>Click to browse or drag &amp; drop — PDF, JPG, PNG, DWG, ZIP (max 20 MB each)</span>
+                </div>
+              </div>
+              <div class="file-upload-names" id="fileNames"></div>
+            </div>
+            <button type="submit" class="btn-send">
+              Send Message
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M2 8h12M9 3l5 5-5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Right: Contact Info + Map -->
+        <div class="contact-info-side">
+
+          <div class="info-block">
+            <div class="info-block-label">Aurora Showroom</div>
+            <div class="info-block-value">Unit 3 – 250 Don Hillock Dr #3<br />Aurora, ON L4G 0G9</div>
+          </div>
+
+          <!-- Inline Map — below address -->
+          <div class="map-inline">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2872.2!2d-79.4567!3d44.0097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ad3b7c2b3b3b3%3A0x1234567890abcdef!2s250%20Don%20Hillock%20Dr%20%233%2C%20Aurora%2C%20ON%20L4G%200G9%2C%20Canada!5e0!3m2!1sen!2sca!4v1710000000000!5m2!1sen!2sca"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="GoldenHome Cabinetry Aurora Location">
+            </iframe>
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=250+Don+Hillock+Dr+%233+Aurora+ON+L4G+0G9"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="map-inline-link"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              Open in Google Maps
+            </a>
+          </div>
+
+          <hr class="info-divider" />
+
+          <div class="info-block">
+            <div class="info-block-label">Phone</div>
+            <div class="info-block-value"><a href="tel:9057278800">(905) 727-8800</a></div>
+          </div>
+
+          <div class="info-block">
+            <div class="info-block-label">Email</div>
+            <div class="info-block-value"><a href="mailto:info@goldenhomecabinetry.ca">info@goldenhomecabinetry.ca</a></div>
+          </div>
+
+          <hr class="info-divider" />
+
+          <div class="info-block">
+            <div class="info-block-label">Business Hours</div>
+            <div class="hours-row">Monday – Friday<span>9:00 AM – 5:00 PM</span></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-logo">
+            <img src="images/logo-white.png" alt="GoldenHome Cabinetry" />
+          </div>
+          <p class="footer-tagline">Precision Crafted. Locally Delivered. Serving Canadian homeowners since 2018.</p>
+          <div class="footer-social">
+            <a href="#" title="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" title="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#" onclick="return false;">Products</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="instruction-guidelines.html">Support</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul>
+            <li><a href="products.html">Kitchen Cabinets</a></li>
+            <li><a href="products.html#closets">Closet &amp; Storage</a></li>
+            <li><a href="products.html#vanities">Bathroom Vanities</a></li>
+            <li><a href="about-us.html#subscribe">Free Design Quote</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <p class="footer-contact-item">Phone: (905) 727-8800</p>
+          <p class="footer-contact-item">Email: info@goldenhomecabinetry.ca</p>
+          <p class="footer-contact-item">Unit 3 – 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-copy">© 2026 GoldenHome Cabinetry Canada. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- TOAST -->
+  <div class="toast" id="toast">
+    <div class="toast-icon">
+      <svg viewBox="0 0 12 10" fill="none"><path d="M1 5l3.5 3.5L11 1" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <span id="toast-msg">Message sent successfully!</span>
+  </div>
+
+  <script>
+    function showFileNames(inputId, displayId) {
+      var input = document.getElementById(inputId);
+      var display = document.getElementById(displayId);
+      if (input.files.length === 0) {
+        display.textContent = '';
+        return;
+      }
+      var names = Array.from(input.files).map(function(f) { return f.name; });
+      display.textContent = names.length + ' file(s) selected: ' + names.join(', ');
+    }
+
+    function showToast(msg) {
+      var toast = document.getElementById('toast');
+      document.getElementById('toast-msg').textContent = msg;
+      toast.classList.add('show');
+      setTimeout(function() { toast.classList.remove('show'); }, 4000);
+    }
+
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      showToast('Your message has been sent. We\'ll be in touch within one business day.');
+      e.target.reset();
+      document.getElementById('fileNames').textContent = '';
+    }
+  </script>
+</body>
+</html>
