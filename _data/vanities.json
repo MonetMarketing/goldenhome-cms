@@ -1,14 +1,31 @@
 {
-  "hero": {
-    "label": "Our Products",
-    "heading": "Products",
-    "sub": ""
-  },
-  "collections": [],
-  "cta": {
-    "heading": "Ready toexploreyour options?",
-    "sub": "Request a free design quote and discover the materials, styles, and finishes that suit your vision.",
-    "btn_text": "Get Free Design Quote",
-    "btn_link": "index.html#contact"
-  }
+  "page_title": "Products",
+  "page_intro": "Discover our collection of premium bathroom vanities.",
+  "collections": [
+    {
+      "name": "Glossy White",
+      "image": "/images/vanities/glossy-white-1.jpg",
+      "description": "Clean, modern glossy white finish"
+    },
+    {
+      "name": "Dark Wood",
+      "image": "/images/vanities/dark-wood-1.jpg",
+      "description": "Rich, warm dark wood tones"
+    },
+    {
+      "name": "Rustic Oak",
+      "image": "/images/vanities/rustic-oak-1.jpg",
+      "description": "Natural rustic oak finish"
+    },
+    {
+      "name": "Walnut",
+      "image": "/images/vanities/walnut-1.jpg",
+      "description": "Classic walnut wood finish"
+    },
+    {
+      "name": "White Shaker",
+      "image": "/images/vanities/white-shaker-1.jpg",
+      "description": "Timeless white shaker style"
+    }
+  ]
 }
