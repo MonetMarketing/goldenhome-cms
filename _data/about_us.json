@@ -1,18 +1,23 @@
 {
-  "label": "ABOUT GOLDENHOME",
-  "heading": "Built on Quality, Driven by Innovation",
+  "label": "About GoldenHome",
+  "heading": "Canada Distributor",
   "intro": "GoldenHome Cabinetry was founded in 1999 with a singular vision: to bring factory-direct quality cabinetry to North American homeowners and contractors at transparent, competitive pricing. Our manufacturing facilities span over 8,900,000 square feet and are equipped with state-of-the-art HOMAG precision machinery.",
   "stats": [
-    { "num": "8,900K+", "label": "Sq Ft Factory" },
-    { "num": "10K+", "label": "Local Inventory Units" },
-    { "num": "12+", "label": "Product Series" },
-    { "num": "50+", "label": "Countries Served" }
-  ],
-  "gallery": [
-    { "image": "/images/about-factory-1.jpg", "alt": "GoldenHome factory floor" },
-    { "image": "/images/about-factory-2.jpg", "alt": "Cabinet production line" },
-    { "image": "/images/about-factory-3.jpg", "alt": "Quality control" },
-    { "image": "/images/about-factory-4.jpg", "alt": "Finished cabinets" },
-    { "image": "/images/about-factory-5.jpg", "alt": "Showroom display" }
+    {
+      "num": "8,900K+",
+      "label": "Sq Ft Factory"
+    },
+    {
+      "num": "10K+",
+      "label": "Units in Stock"
+    },
+    {
+      "num": "12+",
+      "label": "Years in Canada"
+    },
+    {
+      "num": "50+",
+      "label": "Door Styles"
+    }
   ]
 }

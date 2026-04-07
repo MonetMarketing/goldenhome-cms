@@ -1,49 +1,41 @@
 {
   "hero": {
-    "eyebrow": "Factory-Direct Cabinetry — Aurora, Ontario",
-    "heading1": "Crafted for",
-    "heading2": "Canadian Homes",
-    "sub": "Premium factory-direct cabinetry with 2-week local delivery. Serving contractors, designers, and homeowners across Canada.",
+    "heading": "Stock Speed. Custom Precision.",
+    "sub": "Cabinetry designed for your space and delivered from our Toronto warehouse.",
     "image": "/images/hero-main.webp",
-    "btn1_text": "Explore Our Products",
-    "btn1_link": "kitchen-cabinets.html",
-    "btn2_text": "Get Free Design Quote",
-    "btn2_link": "about-us.html#subscribe"
+    "btn1_text": "Explore Products",
+    "btn1_link": "/kitchen-cabinets",
+    "btn2_text": "View Gallery",
+    "btn2_link": "/projects"
   },
   "services": [
-    { "title": "Factory-Direct Sourcing", "desc": "We manufacture every cabinet in our own facilities, eliminating middlemen and passing savings directly to our dealers and clients." },
-    { "title": "Local Canadian Inventory", "desc": "Our Aurora warehouse stocks over 10,000 units at all times, enabling fast turnaround for residential and commercial projects." },
-    { "title": "Design Consultation", "desc": "Our in-house design team provides complimentary 3D renderings and personalized product recommendations for every project." },
-    { "title": "Warranty & After-Sales", "desc": "All products are backed by our 5-year structural warranty and 1-year finish warranty, with dedicated after-sales support." }
+    { "title": "Kitchen", "desc": "Modern frameless cabinetry with clean European style, wide finish options, and the flexibility to fit real homes." },
+    { "title": "Vanity", "desc": "Moisture-resistant materials and refined finishes that bring both function and elegance to everyday bathroom spaces." },
+    { "title": "Closet", "desc": "From walk-in wardrobes to compact bedroom closets, our systems keep your space organized and the look clean." },
+    { "title": "Semi-Custom Whole-Home Cabinetry", "desc": "Standard dimensions with expanded possibilities — more finishes, materials, and design combinations within a structured system." }
   ],
+  "cabinet_series": [
+    { "title": "Classic Series", "desc": "Our Classic Series is a reliable in-stock cabinetry system with timeless finishes and consistent sizing, built to support both everyday projects and semi-custom upgrades.", "image": "/images/cabinet-classic.jpg" },
+    { "title": "Delight Series", "desc": "The Delight Series offers a step up in both finish and design, with a wider selection of colors and materials to suit more refined interiors. It brings added flexibility while maintaining the efficiency and consistency of our core cabinet system.", "image": "/images/cabinet-deluxe.jpg" },
+    { "title": "Grand Series", "desc": "The Grand Series focuses on more modern, design-forward finishes, including a curated selection from AGT and EGGER. It expands the palette with richer textures and contemporary tones, giving designers more freedom to create distinctive spaces.", "image": "/images/cabinet-grand.jpg" },
+    { "title": "Luxury Series", "desc": "New in 2026, the Luxury Series represents our most elevated offering we have so far, featuring advanced lacquer finishes and the new Slim Shaker profile. With refined details and a more sophisticated look, it is designed for projects that demand a higher level of finish and visual impact.", "image": "/images/luxury-series.webp" }
+  ],
+  "story": {
+    "p1": "GoldenHome has been delivering high-quality cabinetry solutions since 1999, building a strong global foundation across multiple markets. Today, GoldenHome Cabinetry Eastern Canada brings that experience closer to home through a growing local manufacturing and supply network based in Ontario.",
+    "p2": "With integrated warehousing and local production capabilities, we are able to support projects with greater speed, flexibility, and consistency. From in-stock cabinetry to locally customized solutions, our approach is designed to meet the needs of contractors, designers, and homeowners across Canada.",
+    "image": "/images/gallery-kitchen.jpg",
+    "image_tag": "Est. in Canada · Locally Installed"
+  },
   "stats": [
     { "num": "25+", "label": "Years of Craft" },
     { "num": "1000+", "label": "Cabinet Products" },
     { "num": "2 wk", "label": "Local Delivery" },
     { "num": "100%", "label": "KCMA Certified" }
   ],
-  "story": {
-    "p1": "GoldenHome has been delivering high-quality cabinetry solutions since 1999, building a strong global foundation across multiple markets. Today, GoldenHome Cabinetry Eastern Canada brings that experience closer to home through a growing local manufacturing and supply network based in Ontario.",
-    "p2": "With integrated warehousing and local production capabilities, we are able to support projects with greater speed, flexibility, and consistency. From in-stock cabinetry to locally customized solutions, our approach is designed to meet the needs of contractors, designers, and homeowners across Canada.",
-    "image": "/images/gallery-kitchen.jpg",
-    "image_tag": "Aurora, Ontario Distribution Centre"
-  },
-  "products_section": {
-    "label": "OUR PRODUCTS",
-    "heading1": "1000s of Cabinet",
-    "heading2": "Products",
-    "btn_text": "View All Styles"
-  },
-  "product_cards": [
-    { "title": "Kitchen Cabinets", "desc": "From classic shaker to contemporary flat-panel, our kitchen cabinet lines offer versatile styles for every design vision.", "image": "/images/gallery-1.webp", "link": "kitchen-cabinets.html" },
-    { "title": "Closet & Storage", "desc": "Maximize every inch with our modular closet systems, designed for bedrooms, walk-ins, and utility spaces.", "image": "/images/gallery-2.webp", "link": "closet.html" },
-    { "title": "Bathroom Vanities", "desc": "Elegant vanity collections that combine smart storage with refined aesthetics for any bathroom style.", "image": "/images/gallery-3.webp", "link": "vanities.html" },
-    { "title": "Custom Solutions", "desc": "Need something unique? Our team works with you to create custom cabinetry tailored to your exact specifications.", "image": "/images/gallery-4.webp", "link": "contact-us.html" }
-  ],
   "cta": {
-    "heading": "Ready to Start Your Project?",
-    "sub": "Get a free design consultation and quote from our expert team.",
+    "heading": "Ready to explore your options?",
+    "sub": "Request a free design quote and discover the materials, styles, and finishes that suit your vision.",
     "btn_text": "Get Free Design Quote",
-    "btn_link": "about-us.html#subscribe"
+    "btn_link": "/about-us#subscribe"
   }
 }

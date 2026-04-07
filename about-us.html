@@ -500,9 +500,9 @@
     <div class="container">
 
       <div class="about-header">
-        <span class="label">About GoldenHome</span>
-        <h2>Canada <em>Distributor</em></h2>
-        <p style="margin-top: 20px;">In 2018, GoldenHome proudly announced the Grand Opening of its first Distribution Center in Canada — Toronto Distribution Center. This expansion allows GoldenHome to extend its reach to more customers in Canada, and firmly establish the GoldenHome Cabinet brand offering beautiful, high-quality modern cabinetry at affordable prices to more families.</p>
+        <span class="label" data-cms-about="label">About GoldenHome</span>
+        <h2 data-cms-about="heading">Canada <em>Distributor</em></h2>
+        <p class="about-intro" style="margin-top: 20px;">In 2018, GoldenHome proudly announced the Grand Opening of its first Distribution Center in Canada — Toronto Distribution Center. This expansion allows GoldenHome to extend its reach to more customers in Canada, and firmly establish the GoldenHome Cabinet brand offering beautiful, high-quality modern cabinetry at affordable prices to more families.</p>
       </div>
 
       <!-- Stats — DM Serif Display, weight 400 -->
@@ -523,6 +523,7 @@
           <div class="about-stat-number">50<sup>+</sup></div>
           <div class="about-stat-label">Door Styles</div>
         </div>
+        <!-- Stats are bound via loadAboutUs() from cms-data-loader.js -->
       </div>
 
       <!-- Factory Photos -->
@@ -676,8 +677,8 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <p class="footer-contact-item">Phone: (905) 727-8800</p>
-          <p class="footer-contact-item">Email: info@goldenhomecabinetry.ca</p>
-          <p class="footer-contact-item">Unit 3 – 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
+          <p class="footer-contact-item" data-cms="footer-email">Email: info@goldenhomecabinetry.ca</p>
+          <p class="footer-contact-item" data-cms="footer-address">Unit 3 – 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -740,5 +741,7 @@
       document.getElementById('sfFileNames').textContent = '';
     }
   </script>
+  <script src="/cms-data-loader.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', loadAboutUs);</script>
 </body>
 </html>

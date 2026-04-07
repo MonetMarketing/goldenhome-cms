@@ -2,14 +2,15 @@
   "site_name": "GoldenHome Cabinetry Canada",
   "logo_dark": "/images/logo-dark.png",
   "logo_white": "/images/logo-white.png",
-  "footer_tagline": "Precision Crafted. Locally Delivered.",
-  "footer_links": [
-    { "label": "Kitchen Cabinets", "url": "kitchen-cabinets.html" },
-    { "label": "Closet & Storage", "url": "closet.html" },
-    { "label": "Bathroom Vanities", "url": "vanities.html" },
-    { "label": "Contact Us", "url": "contact-us.html" },
-    { "label": "About Us", "url": "about-us.html" },
-    { "label": "Warranty", "url": "warranty-certification.html" },
-    { "label": "Order & Return Policy", "url": "order-return-policy.html" }
-  ]
+  "footer_tagline": "Precision Crafted. Locally Delivered. Serving Canadian homeowners since 2018.",
+  "footer_copyright": "© 2026 GoldenHome Cabinetry Canada. All rights reserved.",
+  "phone": "(905) 727-8800",
+  "email": "info@goldenhomecabinetry.ca",
+  "address": "Unit 3 - 250 Don Hillock Dr #3, Aurora, ON L4G 0G9",
+  "hours_days": "Monday – Friday",
+  "hours_time": "9:00 AM – 5:00 PM",
+  "social_instagram": "/#",
+  "social_facebook": "/#",
+  "social_twitter": "/#",
+  "social_youtube": "/#"
 }

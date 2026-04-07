@@ -764,15 +764,15 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-left">
-      <h1>Stock Speed. <em>Custom</em> Precision.</h1>
-      <p class="hero-sub">Cabinetry designed for your space and delivered from our Toronto warehouse.</p>
+      <h1 id="cms-hero-heading">Stock Speed. <em>Custom</em> Precision.</h1>
+      <p class="hero-sub" id="cms-hero-sub">Cabinetry designed for your space and delivered from our Toronto warehouse.</p>
       <div class="hero-actions">
-        <a class='btn btn-primary btn-arrow' href='/kitchen-cabinets'>Explore Products</a>
-        <a class='btn btn-outline' href='/projects'>View Gallery</a>
+        <a class='btn btn-primary btn-arrow' id="cms-hero-btn1" href='/kitchen-cabinets'>Explore Products</a>
+        <a class='btn btn-outline' id="cms-hero-btn2" href='/projects'>View Gallery</a>
       </div>
     </div>
     <div class="hero-right">
-      <img src="images/hero-main.webp" alt="Modern custom kitchen cabinets" />
+      <img id="cms-hero-img" src="images/hero-main.webp" alt="Modern custom kitchen cabinets" />
     </div>
   </section>
 
@@ -1128,9 +1128,9 @@
         </div>
         <div class="footer-col">
           <h4>Contact</h4>
-          <p class="footer-contact-item">Phone: (905)727-8800</p>
-          <p class="footer-contact-item">Email: info@goldenhomecabinetry.ca</p>
-          <p class="footer-contact-item">Unit 3 - 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
+          <p class="footer-contact-item" data-cms="footer-phone">Phone: (905)727-8800</p>
+          <p class="footer-contact-item" data-cms="footer-email">Email: info@goldenhomecabinetry.ca</p>
+          <p class="footer-contact-item" data-cms="footer-address">Unit 3 - 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -1651,6 +1651,8 @@ document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLigh
       });
     }
   </script>
+  <script src="/cms-data-loader.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', loadHomepage);</script>
 
 </body>
 </html>

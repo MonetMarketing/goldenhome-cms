@@ -1,23 +1,19 @@
 backend:
   name: git-gateway
   branch: main
-
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-
 site_url: https://goldenhome-cms-test.netlify.app
 display_url: https://goldenhome-cms-test.netlify.app
 logo_url: /images/logo-dark.png
-
 locale: "en"
-
 collections:
   # ═══════════════════════════════════════════════════════════════════════════
   #  HOMEPAGE
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "homepage"
     label: "Homepage"
-    description: "Main landing page — hero banner, services, statistics, brand story, product cards, and call-to-action."
+    description: "Main landing page — hero banner, product categories, cabinet series, brand story, statistics, and call-to-action."
     files:
       - name: "homepage"
         label: "Homepage Content"
@@ -26,42 +22,41 @@ collections:
           - label: "Hero Banner"
             name: "hero"
             widget: "object"
-            summary: "{{fields.heading1}} {{fields.heading2}}"
-            collapsed: true
+            summary: "{{fields.heading}}"
+            collapsed: false
             fields:
-              - { label: "Eyebrow Text", name: "eyebrow", widget: "string", hint: "Small text above the main heading (e.g., 'Factory-Direct Cabinetry — Aurora, Ontario')", required: true }
-              - { label: "Heading Line 1 (Bold)", name: "heading1", widget: "string", hint: "First line of the hero heading, displayed in bold", required: true }
-              - { label: "Heading Line 2 (Italic)", name: "heading2", widget: "string", hint: "Second line of the hero heading, displayed in italic", required: true }
-              - { label: "Subheading", name: "sub", widget: "text", hint: "Short paragraph below the heading describing the value proposition", required: true }
-              - { label: "Hero Image", name: "image", widget: "image", hint: "Main hero background image. Recommended: 1920x1080px, landscape.", required: true }
-              - { label: "Primary Button Text", name: "btn1_text", widget: "string", hint: "Text for the main CTA button", required: true }
-              - { label: "Primary Button Link", name: "btn1_link", widget: "string", hint: "URL the primary button links to", required: true }
-              - { label: "Secondary Button Text", name: "btn2_text", widget: "string", hint: "Text for the secondary/outline button" }
-              - { label: "Secondary Button Link", name: "btn2_link", widget: "string", hint: "URL the secondary button links to" }
+              - { label: "Main Heading", name: "heading", widget: "string", hint: "The large headline on the hero (e.g., 'Stock Speed. Custom Precision.')", required: true }
+              - { label: "Subheading", name: "sub", widget: "text", hint: "Short paragraph below the heading", required: true }
+              - { label: "Hero Image", name: "image", widget: "image", hint: "Main hero image. Recommended: 1920x1080px, landscape.", required: true }
+              - { label: "Primary Button Text", name: "btn1_text", widget: "string", required: true }
+              - { label: "Primary Button Link", name: "btn1_link", widget: "string", hint: "URL (e.g., /kitchen-cabinets)", required: true }
+              - { label: "Secondary Button Text", name: "btn2_text", widget: "string" }
+              - { label: "Secondary Button Link", name: "btn2_link", widget: "string", hint: "URL (e.g., /projects)" }
 
-          - label: "Services Cards"
+          - label: "Product Categories (Services Section)"
             name: "services"
             widget: "list"
-            hint: "Four service highlight cards shown below the hero."
+            hint: "Four product category cards shown in the 'Our Products' section below the hero."
             max: 4
             min: 4
             summary: "{{fields.title}}"
             collapsed: true
             fields:
-              - { label: "Service Title", name: "title", widget: "string", required: true }
-              - { label: "Service Description", name: "desc", widget: "text", required: true }
+              - { label: "Category Title", name: "title", widget: "string", required: true }
+              - { label: "Category Description", name: "desc", widget: "text", required: true }
 
-          - label: "Key Statistics"
-            name: "stats"
+          - label: "Cabinet Series Cards"
+            name: "cabinet_series"
             widget: "list"
-            hint: "Four key numbers displayed in the Our Story section."
+            hint: "Four cabinet series cards (Classic, Delight, Grand, Luxury) shown in the products grid."
             max: 4
             min: 4
-            summary: "{{fields.num}} — {{fields.label}}"
+            summary: "{{fields.title}}"
             collapsed: true
             fields:
-              - { label: "Number", name: "num", widget: "string", hint: "The statistic (e.g., '25+', '1000+')", required: true }
-              - { label: "Label", name: "label", widget: "string", hint: "What the number represents", required: true }
+              - { label: "Series Name", name: "title", widget: "string", required: true }
+              - { label: "Series Description", name: "desc", widget: "text", required: true }
+              - { label: "Series Image", name: "image", widget: "image", hint: "Card image. Recommended: 600x400px", required: true }
 
           - label: "Brand Story"
             name: "story"
@@ -70,31 +65,20 @@ collections:
             fields:
               - { label: "Paragraph 1", name: "p1", widget: "text", required: true }
               - { label: "Paragraph 2", name: "p2", widget: "text" }
-              - { label: "Story Image", name: "image", widget: "image", hint: "Recommended: 800x600px" }
-              - { label: "Image Caption", name: "image_tag", widget: "string", hint: "Short caption overlaid on the image" }
+              - { label: "Story Image", name: "image", widget: "image", hint: "Recommended: 800x580px" }
+              - { label: "Image Caption Tag", name: "image_tag", widget: "string", hint: "Short text overlaid on the image (e.g., 'Est. in Canada · Locally Installed')" }
 
-          - label: "Products Section Header"
-            name: "products_section"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Label", name: "label", widget: "string" }
-              - { label: "Heading (Bold Part)", name: "heading1", widget: "string", required: true }
-              - { label: "Heading (Italic Part)", name: "heading2", widget: "string" }
-              - { label: "View All Button Text", name: "btn_text", widget: "string" }
-
-          - label: "Product Cards"
-            name: "product_cards"
+          - label: "Key Statistics"
+            name: "stats"
             widget: "list"
-            hint: "Product showcase cards with title, description, image, and link."
+            hint: "Four key numbers displayed in the Brand Story section."
             max: 4
-            summary: "{{fields.title}}"
+            min: 4
+            summary: "{{fields.num}} — {{fields.label}}"
             collapsed: true
             fields:
-              - { label: "Product Title", name: "title", widget: "string", required: true }
-              - { label: "Product Description", name: "desc", widget: "text", required: true }
-              - { label: "Product Image", name: "image", widget: "image", hint: "Recommended: 600x400px", required: true }
-              - { label: "Link URL", name: "link", widget: "string" }
+              - { label: "Number", name: "num", widget: "string", hint: "The statistic (e.g., '25+', '1000+')", required: true }
+              - { label: "Label", name: "label", widget: "string", required: true }
 
           - label: "Call-to-Action Banner"
             name: "cta"
@@ -107,378 +91,50 @@ collections:
               - { label: "Button Link", name: "btn_link", widget: "string", required: true }
 
   # ═══════════════════════════════════════════════════════════════════════════
-  #  PRODUCTS OVERVIEW
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "products"
-    label: "Products Overview"
-    description: "Products landing page — kitchen cabinet series, door colour swatches, closet collections, and vanity collections."
-    files:
-      - name: "products"
-        label: "Products Page Content"
-        file: "_data/products.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string", hint: "Breadcrumb text (e.g., 'Our Products')" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Kitchen Cabinet Series"
-            name: "kitchen_series"
-            widget: "list"
-            summary: "{{fields.name}}"
-            collapsed: true
-            fields:
-              - { label: "Series ID", name: "id", widget: "string", hint: "Lowercase identifier (e.g., 'classic')", required: true }
-              - { label: "Series Name", name: "name", widget: "string", required: true }
-              - { label: "Tagline", name: "tagline", widget: "string", hint: "Short tagline for the series" }
-              - { label: "Description", name: "desc", widget: "text", required: true }
-              - { label: "Series Image", name: "image", widget: "image", required: true }
-              - { label: "Door Colours", name: "door_colours", widget: "list", hint: "Door colour swatches for this series", summary: "{{fields.name}}", collapsed: true, fields: [{ label: "Colour Name", name: "name", widget: "string", required: true }, { label: "Swatch Image", name: "image", widget: "image", required: true }] }
-
-          - label: "Closet Collections"
-            name: "closets"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Heading", name: "heading", widget: "string", required: true }
-              - { label: "Section Description", name: "desc", widget: "text" }
-              - label: "Collections"
-                name: "items"
-                widget: "list"
-                summary: "{{fields.name}}"
-                collapsed: true
-                fields:
-                  - { label: "Collection Name", name: "name", widget: "string", required: true }
-                  - { label: "Description", name: "desc", widget: "text" }
-                  - { label: "Main Image", name: "image", widget: "image", required: true }
-                  - { label: "Gallery Images", name: "gallery", widget: "list", fields: [{ label: "Image", name: "image", widget: "image" }] }
-
-          - label: "Vanity Collections"
-            name: "vanities"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Heading", name: "heading", widget: "string", required: true }
-              - { label: "Section Description", name: "desc", widget: "text" }
-              - label: "Collections"
-                name: "items"
-                widget: "list"
-                summary: "{{fields.name}}"
-                collapsed: true
-                fields:
-                  - { label: "Collection Name", name: "name", widget: "string", required: true }
-                  - { label: "Description", name: "desc", widget: "text" }
-                  - { label: "Main Image", name: "image", widget: "image", required: true }
-                  - { label: "Gallery Images", name: "gallery", widget: "list", fields: [{ label: "Image", name: "image", widget: "image" }] }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  KITCHEN CABINETS
+  #  KITCHEN CABINETS PAGE
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "kitchen_cabinets"
-    label: "Kitchen Cabinets"
-    description: "Kitchen Cabinets product page — page heading, intro text, and cabinet series details."
+    label: "Kitchen Cabinets Page"
+    description: "Content for the Kitchen Cabinets product page — page intro and series descriptions."
     files:
       - name: "kitchen_cabinets"
         label: "Kitchen Cabinets Content"
         file: "_data/kitchen_cabinets.json"
         fields:
-          - { label: "Page Label", name: "label", widget: "string", hint: "Uppercase label (e.g., 'OUR PRODUCTS')", required: true }
+          - { label: "Section Label", name: "label", widget: "string", hint: "Small uppercase label (e.g., 'Kitchen Cabinetry')", required: true }
           - { label: "Page Heading", name: "heading", widget: "string", required: true }
-          - { label: "Intro Text", name: "intro", widget: "text", required: true }
+          - { label: "Page Introduction", name: "intro", widget: "text", required: true }
           - label: "Cabinet Series"
             name: "series"
             widget: "list"
-            summary: "{{fields.name}} — {{fields.door_count}}"
+            hint: "Descriptions for each cabinet series tab. The 'id' must match: classic, delight, grand, or luxury."
+            max: 4
+            min: 4
+            summary: "{{fields.name}}"
             collapsed: true
             fields:
-              - { label: "Series ID", name: "id", widget: "string", hint: "Lowercase identifier (e.g., 'classic'). Do not change unless necessary.", required: true }
+              - { label: "Series ID", name: "id", widget: "string", hint: "Must be: classic, delight, grand, or luxury", required: true }
               - { label: "Series Name", name: "name", widget: "string", required: true }
-              - { label: "Door Count", name: "door_count", widget: "string", hint: "e.g., '8 door colours available'", required: true }
-              - { label: "Description", name: "desc", widget: "text", required: true }
-              - { label: "Series Image", name: "image", widget: "image", required: true }
+              - { label: "Series Description", name: "desc", widget: "text", required: true }
 
   # ═══════════════════════════════════════════════════════════════════════════
-  #  CLOSET & STORAGE
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "closet"
-    label: "Closet & Storage"
-    description: "Closet & Storage product page — collections, descriptions, and gallery images."
-    files:
-      - name: "closet"
-        label: "Closet & Storage Content"
-        file: "_data/closet.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Closet Collections"
-            name: "collections"
-            widget: "list"
-            summary: "{{fields.name}}"
-            collapsed: true
-            fields:
-              - { label: "Collection Name", name: "name", widget: "string", required: true }
-              - { label: "Description", name: "desc", widget: "text" }
-              - { label: "Main Image", name: "image", widget: "image", required: true }
-              - { label: "Gallery Images", name: "gallery", widget: "list", fields: [{ label: "Image", name: "image", widget: "image" }] }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  BATHROOM VANITIES
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "vanities"
-    label: "Bathroom Vanities"
-    description: "Bathroom Vanities product page — collections, descriptions, and gallery images."
-    files:
-      - name: "vanities"
-        label: "Bathroom Vanities Content"
-        file: "_data/vanities.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Vanity Collections"
-            name: "collections"
-            widget: "list"
-            summary: "{{fields.name}}"
-            collapsed: true
-            fields:
-              - { label: "Collection Name", name: "name", widget: "string", required: true }
-              - { label: "Description", name: "desc", widget: "text" }
-              - { label: "Main Image", name: "image", widget: "image", required: true }
-              - { label: "Gallery Images", name: "gallery", widget: "list", fields: [{ label: "Image", name: "image", widget: "image" }] }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  PROJECTS
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "projects"
-    label: "Projects"
-    description: "Projects portfolio page — before/after showcase, Canada projects, and global projects."
-    files:
-      - name: "projects"
-        label: "Projects Page Content"
-        file: "_data/projects.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Before & After Showcase"
-            name: "before_after"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Heading", name: "heading", widget: "string", required: true }
-              - { label: "Section Description", name: "desc", widget: "text" }
-              - label: "Showcase Items"
-                name: "items"
-                widget: "list"
-                summary: "{{fields.title}}"
-                collapsed: true
-                fields:
-                  - { label: "Title", name: "title", widget: "string", required: true }
-                  - { label: "Description", name: "desc", widget: "string" }
-                  - { label: "Before Image", name: "before_image", widget: "image" }
-                  - { label: "After Image", name: "after_image", widget: "image", required: true }
-
-          - label: "Canada Projects"
-            name: "canada"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Heading", name: "heading", widget: "string", required: true }
-              - { label: "Section Description", name: "desc", widget: "text" }
-              - label: "Project Items"
-                name: "items"
-                widget: "list"
-                summary: "{{fields.title}}"
-                collapsed: true
-                fields:
-                  - { label: "Project Title", name: "title", widget: "string", required: true }
-                  - { label: "Location", name: "location", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image", required: true }
-
-          - label: "Global Projects"
-            name: "global"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Heading", name: "heading", widget: "string", required: true }
-              - { label: "Section Description", name: "desc", widget: "text" }
-              - label: "Project Items"
-                name: "items"
-                widget: "list"
-                summary: "{{fields.title}}"
-                collapsed: true
-                fields:
-                  - { label: "Project Title", name: "title", widget: "string", required: true }
-                  - { label: "Location", name: "location", widget: "string" }
-                  - { label: "Image", name: "image", widget: "image", required: true }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  CONTACT (MAIN)
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "contact"
-    label: "Contact Page"
-    description: "Main contact page — dealer inquiry form, company info, distributor section, and design quote form."
-    files:
-      - name: "contact"
-        label: "Contact Page Content"
-        file: "_data/contact.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-
-          - label: "Dealer Inquiry Section"
-            name: "dealer_section"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Label", name: "label", widget: "string", hint: "e.g., 'Get in Touch'" }
-              - { label: "Heading (Bold Part)", name: "heading1", widget: "string", required: true }
-              - { label: "Heading (Italic Part)", name: "heading2", widget: "string" }
-              - { label: "Intro Text", name: "intro", widget: "text" }
-
-          - label: "Company Information"
-            name: "company"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Showroom Name", name: "showroom_name", widget: "string", required: true }
-              - { label: "Address Line 1", name: "address1", widget: "string", required: true }
-              - { label: "Address Line 2", name: "address2", widget: "string", required: true }
-              - { label: "Phone Number", name: "phone", widget: "string", required: true }
-              - { label: "Email Address", name: "email", widget: "string", required: true }
-              - { label: "Business Hours Line 1", name: "hours1", widget: "string", required: true }
-              - { label: "Business Hours Line 2", name: "hours2", widget: "string", required: true }
-
-          - label: "About / Distributor Section"
-            name: "distributor"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Heading (Bold Part)", name: "heading1", widget: "string" }
-              - { label: "Section Heading (Italic Part)", name: "heading2", widget: "string" }
-              - { label: "Description", name: "desc", widget: "text" }
-              - { label: "Section Image", name: "image", widget: "image" }
-
-          - label: "Design Quote Section"
-            name: "quote_section"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Offer Label", name: "offer_label", widget: "string", hint: "e.g., 'Exclusive Offer'" }
-              - { label: "Heading (Bold Part)", name: "heading1", widget: "string" }
-              - { label: "Heading (Italic Part)", name: "heading2", widget: "string" }
-              - { label: "Description", name: "desc", widget: "text" }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  CONTACT US (SECONDARY)
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "contact_us"
-    label: "Contact Us Page"
-    description: "Secondary contact page — page heading, intro text, and company information."
-    files:
-      - name: "contact_us"
-        label: "Contact Us Content"
-        file: "_data/contact_us.json"
-        fields:
-          - { label: "Page Label", name: "label", widget: "string", hint: "Uppercase label (e.g., 'GET IN TOUCH')", required: true }
-          - { label: "Heading (Bold Part)", name: "heading1", widget: "string", required: true }
-          - { label: "Heading (Italic Part)", name: "heading2", widget: "string", required: true }
-          - { label: "Intro Text", name: "intro", widget: "text", required: true }
-          - label: "Company Information"
-            name: "company"
-            widget: "object"
-            fields:
-              - { label: "Showroom Name", name: "showroom_name", widget: "string", required: true }
-              - { label: "Address Line 1", name: "address1", widget: "string", required: true }
-              - { label: "Address Line 2", name: "address2", widget: "string", required: true }
-              - { label: "Phone Number", name: "phone", widget: "string", required: true }
-              - { label: "Email Address", name: "email", widget: "string", required: true }
-              - { label: "Business Hours Line 1", name: "hours1", widget: "string", required: true }
-              - { label: "Business Hours Line 2", name: "hours2", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  ABOUT US
+  #  ABOUT US PAGE
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "about_us"
-    label: "About Us"
-    description: "About Us page — company introduction, key statistics, and factory gallery."
+    label: "About Us Page"
+    description: "Content for the About Us page — section heading, introduction, and key statistics."
     files:
       - name: "about_us"
         label: "About Us Content"
         file: "_data/about_us.json"
         fields:
-          - { label: "Page Label", name: "label", widget: "string", hint: "Uppercase label (e.g., 'ABOUT GOLDENHOME')", required: true }
-          - { label: "Page Heading", name: "heading", widget: "string", required: true }
-          - { label: "Intro Paragraph", name: "intro", widget: "text", required: true }
+          - { label: "Section Label", name: "label", widget: "string", required: true }
+          - { label: "Section Heading", name: "heading", widget: "string", required: true }
+          - { label: "Introduction Paragraph", name: "intro", widget: "text", required: true }
           - label: "Key Statistics"
             name: "stats"
             widget: "list"
+            hint: "Four key statistics shown below the intro."
             max: 4
             min: 4
             summary: "{{fields.num}} — {{fields.label}}"
@@ -486,300 +142,51 @@ collections:
             fields:
               - { label: "Number", name: "num", widget: "string", required: true }
               - { label: "Label", name: "label", widget: "string", required: true }
-          - label: "Factory Gallery"
-            name: "gallery"
-            widget: "list"
-            summary: "{{fields.alt}}"
-            collapsed: true
-            fields:
-              - { label: "Image", name: "image", widget: "image", hint: "Recommended: 800x600px, landscape.", required: true }
-              - { label: "Alt Text", name: "alt", widget: "string", required: true }
 
   # ═══════════════════════════════════════════════════════════════════════════
-  #  CATALOG & SPEC BOOK
+  #  CONTACT US PAGE
   # ═══════════════════════════════════════════════════════════════════════════
-  - name: "catalog"
-    label: "Catalog & Spec Book"
-    description: "Downloads page — product catalog and spec book PDFs available for download."
+  - name: "contact_us"
+    label: "Contact Us Page"
+    description: "Content for the Contact Us page — section heading, intro, and showroom contact information."
     files:
-      - name: "catalog"
-        label: "Catalog & Spec Book Content"
-        file: "_data/catalog.json"
+      - name: "contact_us"
+        label: "Contact Us Content"
+        file: "_data/contact_us.json"
         fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Downloadable Documents"
-            name: "downloads"
-            widget: "list"
-            summary: "{{fields.title}}"
-            collapsed: true
-            fields:
-              - { label: "Document Title", name: "title", widget: "string", required: true }
-              - { label: "Edition / Subtitle", name: "edition", widget: "string", hint: "e.g., '2026 Edition'" }
-              - { label: "Description", name: "desc", widget: "text", required: true }
-              - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
-              - { label: "PDF File Path", name: "file_url", widget: "string", hint: "Path to the PDF file (e.g., 'GoldenHome2026Catalog.pdf')", required: true }
-              - { label: "Button Text", name: "btn_text", widget: "string", hint: "e.g., 'Download Catalog'" }
-
-          - { label: "Notice Text", name: "notice", widget: "text", hint: "Disclaimer text shown below the downloads section." }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  INSTRUCTION GUIDELINES
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "instructions"
-    label: "Installation Guides"
-    description: "Installation guides page — video tutorials for cabinet assembly, hardware, vanity, and closet installation."
-    files:
-      - name: "instructions"
-        label: "Installation Guides Content"
-        file: "_data/instructions.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Video Tutorials"
-            name: "videos"
-            widget: "list"
-            summary: "{{fields.title}} ({{fields.category}})"
-            collapsed: true
-            fields:
-              - { label: "Video Title", name: "title", widget: "string", required: true }
-              - label: "Category"
-                name: "category"
-                widget: "select"
-                options: ["Cabinet Assembly", "Hardware", "Vanity", "Closet"]
-                required: true
-              - { label: "Video URL", name: "video_url", widget: "string", hint: "YouTube or Vimeo embed URL", required: true }
-              - { label: "Thumbnail Image", name: "thumbnail", widget: "image" }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  MATERIAL STANDARDS
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "materials"
-    label: "Material Standards"
-    description: "Material standards page — quality panels describing material qualities, moisture resistance, and eco-friendliness."
-    files:
-      - name: "materials"
-        label: "Material Standards Content"
-        file: "_data/materials.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Standards Panels"
-            name: "panels"
-            widget: "list"
-            summary: "{{fields.title}}"
-            collapsed: true
-            fields:
-              - { label: "Panel Title", name: "title", widget: "string", required: true }
-              - { label: "Description", name: "desc", widget: "text", required: true }
-              - { label: "Panel Image", name: "image", widget: "image" }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  ORDER & RETURN POLICY
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "order_policy"
-    label: "Order & Return Policy"
-    description: "Company policy page — order terms, return policy, and cancellation policy."
-    files:
-      - name: "order_policy"
-        label: "Order & Return Policy Content"
-        file: "_data/order_policy.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Policy Sections"
-            name: "sections"
-            widget: "list"
-            summary: "{{fields.title}}"
-            collapsed: true
-            fields:
-              - { label: "Section Title", name: "title", widget: "string", required: true }
-              - { label: "Content", name: "content", widget: "markdown", hint: "Full policy text. Supports bold, italic, and lists." }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  WARRANTY & CERTIFICATION
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "warranty"
-    label: "Warranty & Certification"
-    description: "Warranty page — warranty terms, coverage details, and accreditation logos."
-    files:
-      - name: "warranty"
-        label: "Warranty & Certification Content"
-        file: "_data/warranty.json"
-        fields:
-          - label: "Page Hero"
-            name: "hero"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page Label", name: "label", widget: "string" }
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-
-          - label: "Warranty Sections"
-            name: "sections"
-            widget: "list"
-            summary: "{{fields.title}}"
-            collapsed: true
-            fields:
-              - { label: "Section Title", name: "title", widget: "string", required: true }
-              - { label: "Content", name: "content", widget: "markdown", hint: "Full warranty text. Supports bold, italic, and lists." }
-              - { label: "Highlight Number", name: "highlight_num", widget: "string", hint: "e.g., '5 Years' — leave empty if not applicable" }
-              - { label: "Highlight Label", name: "highlight_label", widget: "string", hint: "e.g., 'Residential Coverage'" }
-
-          - label: "Accreditations"
-            name: "accreditations"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Section Title", name: "title", widget: "string" }
-              - label: "Certification Logos"
-                name: "logos"
-                widget: "list"
-                fields:
-                  - { label: "Logo Image", name: "image", widget: "image", required: true }
-                  - { label: "Alt Text", name: "alt", widget: "string", required: true }
-
-          - label: "Call-to-Action Banner"
-            name: "cta"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Heading", name: "heading", widget: "string", required: true }
-              - { label: "Subheading", name: "sub", widget: "text" }
-              - { label: "Button Text", name: "btn_text", widget: "string", required: true }
-              - { label: "Button Link", name: "btn_link", widget: "string", required: true }
-
-  # ═══════════════════════════════════════════════════════════════════════════
-  #  FORM SETTINGS
-  # ═══════════════════════════════════════════════════════════════════════════
-  - name: "forms"
-    label: "Form Settings"
-    description: "Configure form labels, placeholders, button text, and success messages for all contact forms on the site."
-    files:
-      - name: "forms"
-        label: "Form Configuration"
-        file: "_data/forms.json"
-        fields:
-          - label: "Dealer Inquiry Form"
-            name: "dealer_form"
-            widget: "object"
-            hint: "The main contact form on the Contact page for dealer inquiries."
-            collapsed: false
-            fields:
-              - { label: "Form Title", name: "title", widget: "string", hint: "Heading above the form (e.g., 'Send Us a Message')" }
-              - { label: "Name Field Label", name: "name_label", widget: "string", hint: "Label for the name input" }
-              - { label: "Name Field Placeholder", name: "name_placeholder", widget: "string" }
-              - { label: "Phone Field Label", name: "phone_label", widget: "string" }
-              - { label: "Phone Field Placeholder", name: "phone_placeholder", widget: "string" }
-              - { label: "Email Field Label", name: "email_label", widget: "string" }
-              - { label: "Email Field Placeholder", name: "email_placeholder", widget: "string" }
-              - { label: "Message Field Label", name: "message_label", widget: "string" }
-              - { label: "Message Field Placeholder", name: "message_placeholder", widget: "string" }
-              - { label: "Submit Button Text", name: "submit_text", widget: "string", required: true }
-              - { label: "Success Message", name: "success_message", widget: "text", hint: "Message shown after successful form submission" }
-
-          - label: "Design Quote Form"
-            name: "quote_form"
-            widget: "object"
-            hint: "The subscription/quote form at the bottom of the Contact page."
-            collapsed: false
-            fields:
-              - { label: "Form Title", name: "title", widget: "string", hint: "Heading above the form (e.g., 'Claim Your Free Quote')" }
-              - { label: "Name Field Placeholder", name: "name_placeholder", widget: "string" }
-              - { label: "Phone Field Placeholder", name: "phone_placeholder", widget: "string" }
-              - { label: "Email Field Placeholder", name: "email_placeholder", widget: "string" }
-              - { label: "Submit Button Text", name: "submit_text", widget: "string", required: true }
-              - { label: "Success Message", name: "success_message", widget: "text" }
+          - { label: "Section Label", name: "label", widget: "string", required: true }
+          - { label: "Section Heading", name: "heading", widget: "string", required: true }
+          - { label: "Introduction Text", name: "intro", widget: "text", required: true }
+          - { label: "Showroom Name", name: "showroom_name", widget: "string", hint: "e.g., 'AURORA SHOWROOM'" }
+          - { label: "Address Line 1", name: "address1", widget: "string", required: true }
+          - { label: "Address Line 2", name: "address2", widget: "string", required: true }
+          - { label: "Phone Number", name: "phone", widget: "string", required: true }
+          - { label: "Email Address", name: "email", widget: "string", required: true }
+          - { label: "Business Hours — Days", name: "hours_days", widget: "string", required: true }
+          - { label: "Business Hours — Time", name: "hours_time", widget: "string", required: true }
 
   # ═══════════════════════════════════════════════════════════════════════════
   #  SITE SETTINGS
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "settings"
     label: "Site Settings"
-    description: "Global settings — site name, logos, footer tagline, and navigation links."
+    description: "Global settings — site name, logos, footer tagline, and contact information used across all pages."
     files:
       - name: "settings"
         label: "Global Settings"
         file: "_data/settings.json"
         fields:
-          - { label: "Site Name", name: "site_name", widget: "string", hint: "Used in browser tab title and metadata.", required: true }
-          - { label: "Logo (Dark Version)", name: "logo_dark", widget: "image", hint: "For light backgrounds. SVG or PNG recommended.", required: true }
-          - { label: "Logo (White Version)", name: "logo_white", widget: "image", hint: "For dark backgrounds. SVG or PNG recommended.", required: true }
+          - { label: "Site Name", name: "site_name", widget: "string", required: true }
+          - { label: "Logo (Dark Version)", name: "logo_dark", widget: "image", hint: "For light backgrounds.", required: true }
+          - { label: "Logo (White Version)", name: "logo_white", widget: "image", hint: "For dark backgrounds.", required: true }
           - { label: "Footer Tagline", name: "footer_tagline", widget: "string" }
-          - label: "Footer Navigation Links"
-            name: "footer_links"
-            widget: "list"
-            summary: "{{fields.label}} → {{fields.url}}"
-            collapsed: true
-            fields:
-              - { label: "Link Text", name: "label", widget: "string", required: true }
-              - { label: "Link URL", name: "url", widget: "string", required: true }
+          - { label: "Footer Copyright", name: "footer_copyright", widget: "string" }
+          - { label: "Phone Number", name: "phone", widget: "string", required: true }
+          - { label: "Email Address", name: "email", widget: "string", required: true }
+          - { label: "Address", name: "address", widget: "string", required: true }
+          - { label: "Business Hours — Days", name: "hours_days", widget: "string" }
+          - { label: "Business Hours — Time", name: "hours_time", widget: "string" }
+          - { label: "Instagram URL", name: "social_instagram", widget: "string" }
+          - { label: "Facebook URL", name: "social_facebook", widget: "string" }
+          - { label: "Twitter/X URL", name: "social_twitter", widget: "string" }
+          - { label: "YouTube URL", name: "social_youtube", widget: "string" }

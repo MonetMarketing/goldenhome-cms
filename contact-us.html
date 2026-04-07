@@ -400,8 +400,8 @@
         <div class="contact-info-side">
 
           <div class="info-block">
-            <div class="info-block-label">Aurora Showroom</div>
-            <div class="info-block-value">Unit 3 – 250 Don Hillock Dr #3<br />Aurora, ON L4G 0G9</div>
+            <div class="info-block-label" data-cms="contact-showroom">Aurora Showroom</div>
+            <div class="info-block-value"><span data-cms="contact-address1">Unit 3 – 250 Don Hillock Dr #3</span><br /><span data-cms="contact-address2">Aurora, ON L4G 0G9</span></div>
           </div>
 
           <!-- Inline Map — below address -->
@@ -428,19 +428,19 @@
 
           <div class="info-block">
             <div class="info-block-label">Phone</div>
-            <div class="info-block-value"><a href="tel:9057278800">(905) 727-8800</a></div>
+            <div class="info-block-value"><a id="contact-phone-link" href="tel:9057278800"><span data-cms="contact-phone">(905) 727-8800</span></a></div>
           </div>
 
           <div class="info-block">
             <div class="info-block-label">Email</div>
-            <div class="info-block-value"><a href="mailto:info@goldenhomecabinetry.ca">info@goldenhomecabinetry.ca</a></div>
+            <div class="info-block-value"><a id="contact-email-link" href="mailto:info@goldenhomecabinetry.ca"><span data-cms="contact-email">info@goldenhomecabinetry.ca</span></a></div>
           </div>
 
           <hr class="info-divider" />
 
           <div class="info-block">
             <div class="info-block-label">Business Hours</div>
-            <div class="hours-row">Monday – Friday<span>9:00 AM – 5:00 PM</span></div>
+            <div class="hours-row"><span data-cms="contact-hours-days">Monday – Friday</span><span><span data-cms="contact-hours-time">9:00 AM – 5:00 PM</span></span></div>
           </div>
 
         </div>
@@ -485,8 +485,8 @@
         <div class="footer-col">
           <h4>Contact</h4>
           <p class="footer-contact-item">Phone: (905) 727-8800</p>
-          <p class="footer-contact-item">Email: info@goldenhomecabinetry.ca</p>
-          <p class="footer-contact-item">Unit 3 – 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
+          <p class="footer-contact-item" data-cms="footer-email">Email: info@goldenhomecabinetry.ca</p>
+          <p class="footer-contact-item" data-cms="footer-address">Unit 3 – 250 Don Hillock Dr #3, Aurora, ON L4G 0G9</p>
         </div>
       </div>
       <div class="footer-bottom">
@@ -533,5 +533,7 @@
       document.getElementById('fileNames').textContent = '';
     }
   </script>
+  <script src="/cms-data-loader.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', loadContactUs);</script>
 </body>
 </html>
