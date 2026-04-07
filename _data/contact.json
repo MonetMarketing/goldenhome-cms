@@ -1,0 +1,32 @@
+{
+  "hero": {
+    "heading": "ContactUs"
+  },
+  "dealer_section": {
+    "label": "Get in Touch",
+    "heading1": "Become Our",
+    "heading2": "Dealer",
+    "intro": ""
+  },
+  "company": {
+    "showroom_name": "GoldenHome Cabinetry Canada",
+    "address1": "300 John St",
+    "address2": "Thornhill, ON L3T 5W4",
+    "phone": "(905) 597-5520",
+    "email": "info@goldenhomecabinetry.ca",
+    "hours1": "Mon \u2013 Fri: 10:00 AM \u2013 6:00 PM",
+    "hours2": "Sat: 11:00 AM \u2013 5:00 PM"
+  },
+  "distributor": {
+    "heading1": "Canada",
+    "heading2": "Distributor",
+    "desc": "In 2018, GoldenHome proudly announced the Grand Opening of its first Distribution Center in Canada \u2014 Toronto Distribution Center. This expansion allows GoldenHome to extend its reach to more customers in Canada, and firmly establish the GoldenHome Cabinet brand offering beautiful, high-quality modern cabinetry at affordable prices to more families.",
+    "image": ""
+  },
+  "quote_section": {
+    "offer_label": "Exclusive Offer",
+    "heading1": "Get Your",
+    "heading2": "Free Design Quote",
+    "desc": "Subscribe to GoldenHome and receive a complimentary design consultation."
+  }
+}
