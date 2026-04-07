@@ -1,7 +1,7 @@
 {
   "hero": {
     "heading": "Stock Speed. Custom Precision.",
-    "sub": "Cabinetry designed for your space and delivered from our Toronto warehouse.",
+    "sub": "Cabinetry designed for your space and delivered from our Toronto warehouse.!",
     "image": "/images/hero-main.webp",
     "btn1_text": "Explore Products",
     "btn1_link": "/kitchen-cabinets",
@@ -9,16 +9,44 @@
     "btn2_link": "/projects"
   },
   "services": [
-    { "title": "Kitchen", "desc": "Modern frameless cabinetry with clean European style, wide finish options, and the flexibility to fit real homes." },
-    { "title": "Vanity", "desc": "Moisture-resistant materials and refined finishes that bring both function and elegance to everyday bathroom spaces." },
-    { "title": "Closet", "desc": "From walk-in wardrobes to compact bedroom closets, our systems keep your space organized and the look clean." },
-    { "title": "Semi-Custom Whole-Home Cabinetry", "desc": "Standard dimensions with expanded possibilities — more finishes, materials, and design combinations within a structured system." }
+    {
+      "title": "Kitchen",
+      "desc": "Modern frameless cabinetry with clean European style, wide finish options, and the flexibility to fit real homes."
+    },
+    {
+      "title": "Vanity",
+      "desc": "Moisture-resistant materials and refined finishes that bring both function and elegance to everyday bathroom spaces."
+    },
+    {
+      "title": "Closet",
+      "desc": "From walk-in wardrobes to compact bedroom closets, our systems keep your space organized and the look clean."
+    },
+    {
+      "title": "Semi-Custom Whole-Home Cabinetry",
+      "desc": "Standard dimensions with expanded possibilities — more finishes, materials, and design combinations within a structured system."
+    }
   ],
   "cabinet_series": [
-    { "title": "Classic Series", "desc": "Our Classic Series is a reliable in-stock cabinetry system with timeless finishes and consistent sizing, built to support both everyday projects and semi-custom upgrades.", "image": "/images/cabinet-classic.jpg" },
-    { "title": "Delight Series", "desc": "The Delight Series offers a step up in both finish and design, with a wider selection of colors and materials to suit more refined interiors. It brings added flexibility while maintaining the efficiency and consistency of our core cabinet system.", "image": "/images/cabinet-deluxe.jpg" },
-    { "title": "Grand Series", "desc": "The Grand Series focuses on more modern, design-forward finishes, including a curated selection from AGT and EGGER. It expands the palette with richer textures and contemporary tones, giving designers more freedom to create distinctive spaces.", "image": "/images/cabinet-grand.jpg" },
-    { "title": "Luxury Series", "desc": "New in 2026, the Luxury Series represents our most elevated offering we have so far, featuring advanced lacquer finishes and the new Slim Shaker profile. With refined details and a more sophisticated look, it is designed for projects that demand a higher level of finish and visual impact.", "image": "/images/luxury-series.webp" }
+    {
+      "title": "Classic Series",
+      "desc": "Our Classic Series is a reliable in-stock cabinetry system with timeless finishes and consistent sizing, built to support both everyday projects and semi-custom upgrades.",
+      "image": "/images/cabinet-classic.jpg"
+    },
+    {
+      "title": "Delight Series",
+      "desc": "The Delight Series offers a step up in both finish and design, with a wider selection of colors and materials to suit more refined interiors. It brings added flexibility while maintaining the efficiency and consistency of our core cabinet system.",
+      "image": "/images/cabinet-deluxe.jpg"
+    },
+    {
+      "title": "Grand Series",
+      "desc": "The Grand Series focuses on more modern, design-forward finishes, including a curated selection from AGT and EGGER. It expands the palette with richer textures and contemporary tones, giving designers more freedom to create distinctive spaces.",
+      "image": "/images/cabinet-grand.jpg"
+    },
+    {
+      "title": "Luxury Series",
+      "desc": "New in 2026, the Luxury Series represents our most elevated offering we have so far, featuring advanced lacquer finishes and the new Slim Shaker profile. With refined details and a more sophisticated look, it is designed for projects that demand a higher level of finish and visual impact.",
+      "image": "/images/luxury-series.webp"
+    }
   ],
   "story": {
     "p1": "GoldenHome has been delivering high-quality cabinetry solutions since 1999, building a strong global foundation across multiple markets. Today, GoldenHome Cabinetry Eastern Canada brings that experience closer to home through a growing local manufacturing and supply network based in Ontario.",
@@ -27,10 +55,22 @@
     "image_tag": "Est. in Canada · Locally Installed"
   },
   "stats": [
-    { "num": "25+", "label": "Years of Craft" },
-    { "num": "1000+", "label": "Cabinet Products" },
-    { "num": "2 wk", "label": "Local Delivery" },
-    { "num": "100%", "label": "KCMA Certified" }
+    {
+      "num": "25+",
+      "label": "Years of Craft"
+    },
+    {
+      "num": "1000+",
+      "label": "Cabinet Products"
+    },
+    {
+      "num": "2 wk",
+      "label": "Local Delivery"
+    },
+    {
+      "num": "100%",
+      "label": "KCMA Certified"
+    }
   ],
   "cta": {
     "heading": "Ready to explore your options?",
