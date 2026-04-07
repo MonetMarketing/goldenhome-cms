@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "label": "Support / Company Policies",
+    "heading": "Order & ReturnPolicy",
+    "sub": "Our policies are designed to ensure a smooth, transparent experience for every customer and dealer partner."
+  },
+  "sections": [
+    {
+      "title": "Order",
+      "content": ""
+    },
+    {
+      "title": "Return",
+      "content": ""
+    },
+    {
+      "title": "Cancellation",
+      "content": ""
+    }
+  ],
+  "cta": {
+    "heading": "Havequestions?",
+    "sub": "Our team is happy to walk you through our policies in detail.",
+    "btn_text": "Contact Us",
+    "btn_link": "contact-us.html"
+  }
+}
