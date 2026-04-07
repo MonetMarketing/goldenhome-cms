@@ -1,27 +1,96 @@
 {
-  "hero": {
-    "heading": "Projects",
-    "sub": ""
-  },
-  "before_after": {
-    "heading": "Before & AfterShowcase",
-    "desc": "See the difference a GoldenHome renovation makes \u2014 from empty construction sites to stunning, functional kitchens crafted with precision.",
-    "items": []
-  },
-  "canada": {
-    "heading": "Canada ProjectCooperation",
-    "desc": "From Windsor to Thunder Bay, GoldenHome has partnered with builders and developers across Ontario to deliver precision-crafted cabinetry to thousands of Canadian homes.",
-    "items": []
-  },
-  "global": {
-    "heading": "Global ProjectCooperation",
-    "desc": "GoldenHome is seeking long-term strategic cooperation opportunities in large-scale projects worldwide. With a strong presence in Australia, the Middle East, and Southeast Asia, we bring precision-crafted kitchen solutions to landmark residential and hospitality developments across the globe.",
-    "items": []
-  },
-  "cta": {
-    "heading": "Ready to start yourproject?",
-    "sub": "Contact us today for a free design consultation and discover how GoldenHome can transform your space.",
-    "btn_text": "Get a Free Quote \u2192",
-    "btn_link": "projects.html#"
-  }
+  "page_title": "Projects",
+  "page_intro": "Explore our completed projects across Canada and worldwide.",
+  "sections": [
+    {
+      "title": "Canadian Projects",
+      "projects": [
+        {
+          "name": "Chatham",
+          "image": "/images/projects/canada/canada-chatham.jpg",
+          "location": "Chatham, ON"
+        },
+        {
+          "name": "Gravenhurst",
+          "image": "/images/projects/canada/canada-gravenhurst.png",
+          "location": "Gravenhurst, ON"
+        },
+        {
+          "name": "Guelph",
+          "image": "/images/projects/canada/canada-guelph.png",
+          "location": "Guelph, ON"
+        },
+        {
+          "name": "Kitchener",
+          "image": "/images/projects/canada/canada-kitchener.jpg",
+          "location": "Kitchener, ON"
+        },
+        {
+          "name": "London",
+          "image": "/images/projects/canada/canada-london.png",
+          "location": "London, ON"
+        },
+        {
+          "name": "Oakville",
+          "image": "/images/projects/canada/canada-oakville.jpg",
+          "location": "Oakville, ON"
+        },
+        {
+          "name": "Tecumseh",
+          "image": "/images/projects/canada/canada-tecumseh.png",
+          "location": "Tecumseh, ON"
+        },
+        {
+          "name": "Thunder Bay",
+          "image": "/images/projects/canada/canada-thunderbay.jpg",
+          "location": "Thunder Bay, ON"
+        },
+        {
+          "name": "Waterloo",
+          "image": "/images/projects/canada/canada-waterloo1.png",
+          "location": "Waterloo, ON"
+        },
+        {
+          "name": "Welland",
+          "image": "/images/projects/canada/canada-welland1.png",
+          "location": "Welland, ON"
+        },
+        {
+          "name": "Windsor",
+          "image": "/images/projects/canada/canada-windsor.png",
+          "location": "Windsor, ON"
+        }
+      ]
+    },
+    {
+      "title": "Global Projects",
+      "projects": [
+        {
+          "name": "Project 01",
+          "image": "/images/projects/global/project-01.webp",
+          "location": "International"
+        },
+        {
+          "name": "Project 02",
+          "image": "/images/projects/global/project-02.webp",
+          "location": "International"
+        },
+        {
+          "name": "Project 03",
+          "image": "/images/projects/global/project-03.webp",
+          "location": "International"
+        },
+        {
+          "name": "Project 04",
+          "image": "/images/projects/global/project-04.webp",
+          "location": "International"
+        },
+        {
+          "name": "Project 05",
+          "image": "/images/projects/global/project-05.webp",
+          "location": "International"
+        }
+      ]
+    }
+  ]
 }
