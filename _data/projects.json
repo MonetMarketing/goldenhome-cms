@@ -1,0 +1,27 @@
+{
+  "hero": {
+    "heading": "Projects",
+    "sub": ""
+  },
+  "before_after": {
+    "heading": "Before & AfterShowcase",
+    "desc": "See the difference a GoldenHome renovation makes \u2014 from empty construction sites to stunning, functional kitchens crafted with precision.",
+    "items": []
+  },
+  "canada": {
+    "heading": "Canada ProjectCooperation",
+    "desc": "From Windsor to Thunder Bay, GoldenHome has partnered with builders and developers across Ontario to deliver precision-crafted cabinetry to thousands of Canadian homes.",
+    "items": []
+  },
+  "global": {
+    "heading": "Global ProjectCooperation",
+    "desc": "GoldenHome is seeking long-term strategic cooperation opportunities in large-scale projects worldwide. With a strong presence in Australia, the Middle East, and Southeast Asia, we bring precision-crafted kitchen solutions to landmark residential and hospitality developments across the globe.",
+    "items": []
+  },
+  "cta": {
+    "heading": "Ready to start yourproject?",
+    "sub": "Contact us today for a free design consultation and discover how GoldenHome can transform your space.",
+    "btn_text": "Get a Free Quote \u2192",
+    "btn_link": "projects.html#"
+  }
+}
