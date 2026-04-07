@@ -13,7 +13,7 @@ collections:
   #  HOME
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "homepage"
-    label: "🏠 Home"
+    label: "Home"
     description: "Main landing page — hero banner, product categories, cabinet series, brand story, statistics, and call-to-action."
     files:
       - name: "homepage"
@@ -90,7 +90,7 @@ collections:
   #  PRODUCTS > Kitchen Cabinets
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "kitchen_cabinets"
-    label: "🪵 Products › Kitchen Cabinets"
+    label: "Products › Kitchen Cabinets"
     description: "Content for the Kitchen Cabinets product page — page intro and series descriptions."
     files:
       - name: "kitchen_cabinets"
@@ -117,7 +117,7 @@ collections:
   #  PRODUCTS > Closet & Storage
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "closet"
-    label: "🚪 Products › Closet & Storage"
+    label: "Products › Closet & Storage"
     description: "Content for the Closet & Storage product page."
     files:
       - name: "closet"
@@ -147,7 +147,7 @@ collections:
   #  PRODUCTS > Bathroom Vanities
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "vanities"
-    label: "🛁 Products › Bathroom Vanities"
+    label: "Products › Bathroom Vanities"
     description: "Content for the Bathroom Vanities product page."
     files:
       - name: "vanities"
@@ -177,7 +177,7 @@ collections:
   #  PROJECTS
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "projects"
-    label: "📸 Projects"
+    label: "Projects"
     description: "Content for the Projects showcase page — section headings for Before & After, Canada, and Global sections."
     files:
       - name: "projects"
@@ -226,7 +226,7 @@ collections:
   #  SUPPORT > Instruction Guidelines
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "instructions"
-    label: "📋 Support › Instruction Guidelines"
+    label: "Support › Instruction Guidelines"
     description: "Content for the Installation Guides page — page title, intro text, and CTA banner."
     files:
       - name: "instructions"
@@ -247,7 +247,7 @@ collections:
   #  SUPPORT > Order & Return Policy
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "order_policy"
-    label: "📦 Support › Order & Return Policy"
+    label: "Support › Order & Return Policy"
     description: "Content for the Order & Return Policy page — page title, intro text, and CTA banner."
     files:
       - name: "order_policy"
@@ -268,7 +268,7 @@ collections:
   #  SUPPORT > Warranty & Certification
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "warranty"
-    label: "🏅 Support › Warranty & Certification"
+    label: "Support › Warranty & Certification"
     description: "Content for the Warranty & Certification page — page title, intro text, and CTA banner."
     files:
       - name: "warranty"
@@ -289,7 +289,7 @@ collections:
   #  SUPPORT > Catalog & Spec Book
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "catalog"
-    label: "📚 Support › Catalog & Spec Book"
+    label: "Support › Catalog & Spec Book"
     description: "Content for the Catalog & Spec Book downloads page — page title, intro text, and CTA banner."
     files:
       - name: "catalog"
@@ -312,7 +312,7 @@ collections:
   #  SUPPORT > Material Standards
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "materials"
-    label: "🔩 Support › Material Standards"
+    label: "Support › Material Standards"
     description: "Content for the Material Standards page — page title, intro text, and CTA banner."
     files:
       - name: "materials"
@@ -333,7 +333,7 @@ collections:
   #  CONTACT > Contact Us
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "contact_us"
-    label: "📞 Contact › Contact Us"
+    label: "Contact › Contact Us"
     description: "Content for the Contact Us page — section heading, intro, and showroom contact information."
     files:
       - name: "contact_us"
@@ -355,7 +355,7 @@ collections:
   #  CONTACT > About Us
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "about_us"
-    label: "🏢 Contact › About Us"
+    label: "Contact › About Us"
     description: "Content for the About Us page — section heading, introduction, and key statistics."
     files:
       - name: "about_us"
@@ -381,7 +381,7 @@ collections:
   #  SITE SETTINGS
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "settings"
-    label: "⚙️ Site Settings"
+    label: "Site Settings"
     description: "Global settings — footer tagline, copyright, and contact information used across all pages."
     files:
       - name: "settings"
