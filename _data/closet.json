@@ -1,14 +1,32 @@
 {
-  "hero": {
-    "label": "Our Products",
-    "heading": "Products",
-    "sub": ""
-  },
-  "collections": [],
-  "cta": {
-    "heading": "Ready toexploreyour options?",
-    "sub": "Request a free design quote and discover the materials, styles, and finishes that suit your vision.",
-    "btn_text": "Get Free Design Quote",
-    "btn_link": "index.html#contact"
-  }
+  "page_title": "Products",
+  "page_intro": "Launching soon \u2014 designed to support seamless, whole-home customization with flexible design options.",
+  "features": [
+    {
+      "title": "Custom Design",
+      "description": "Tailored to your space and needs"
+    },
+    {
+      "title": "Premium Materials",
+      "description": "Built with high-quality materials for lasting durability"
+    },
+    {
+      "title": "Smart Storage",
+      "description": "Maximize every inch of your closet space"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "/images/gallery-1.webp",
+      "caption": "Modern closet design"
+    },
+    {
+      "image": "/images/gallery-2.webp",
+      "caption": "Walk-in closet"
+    },
+    {
+      "image": "/images/gallery-3.webp",
+      "caption": "Custom shelving"
+    }
+  ]
 }
