@@ -1,14 +1,8 @@
 {
-  "page_title": "InstallationGuides",
-  "page_intro": "Follow these guidelines for proper cabinet installation.",
-  "sections": [
-    {
-      "title": "AVENTOS HF \u2014 Bi-Fold Lift System (Blum)",
-      "content": ""
-    },
-    {
-      "title": "Needmore help?",
-      "content": "Our design advisors are ready to assist you in person. Book a free consultation at your nearest showroom."
-    }
-  ]
+  "page_title": "Installation <em>Guides</em>",
+  "page_intro": "Step-by-step video tutorials from our experts \u2014 covering everything from cabinet assembly to hardware installation.",
+  "cta": {
+    "heading": "Need <em>more help?</em>",
+    "sub": "Our design advisors are ready to assist you in person. Book a free consultation at your nearest showroom."
+  }
 }

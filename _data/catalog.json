@@ -1,21 +1,10 @@
 {
-  "page_title": "Product Catalog",
-  "page_intro": "Download our complete product catalog and pricebook.",
-  "catalog_image": "/images/pricebook-cover.jpg",
-  "download_text": "Download Catalog",
-  "download_link": "#",
-  "sections": [
-    {
-      "title": "Kitchen Cabinets Catalog",
-      "description": "Complete catalog of our kitchen cabinet collections with specifications and pricing."
-    },
-    {
-      "title": "Vanities Catalog",
-      "description": "Bathroom vanity collections with dimensions and finish options."
-    },
-    {
-      "title": "Closet Systems Catalog",
-      "description": "Custom closet system configurations and pricing guide."
-    }
-  ]
+  "page_title": "Catalog &amp; Spec Book <em>Downloads</em>",
+  "page_intro": "Access our full product catalog and pricing guide \u2014 everything you need to plan your next project with confidence.",
+  "cta": {
+    "heading": "Ready to <em>start designing?</em>",
+    "sub": "Book a free consultation with our design team and bring your vision to life.",
+    "btn_text": "Book a Consultation",
+    "btn_link": "contact-us.html"
+  }
 }

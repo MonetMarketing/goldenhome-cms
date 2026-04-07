@@ -92,5 +92,27 @@
         }
       ]
     }
-  ]
+  ],
+  "hero": {
+    "heading": "Projects",
+    "sub": "Real homes, real transformations \u2014 see what GoldenHome can do for you."
+  },
+  "before_after": {
+    "label": "Transformations",
+    "heading": "Before &amp; After <em>Showcase</em>"
+  },
+  "canada": {
+    "label": "Domestic Projects",
+    "heading": "Canada Project <em>Cooperation</em>"
+  },
+  "global": {
+    "label": "International Projects",
+    "heading": "Global Project <em>Cooperation</em>"
+  },
+  "cta": {
+    "heading": "Ready to start your <em>project</em>?",
+    "sub": "Let our design team bring your vision to life.",
+    "btn_text": "Get a Free Quote",
+    "btn_link": "contact-us.html"
+  }
 }

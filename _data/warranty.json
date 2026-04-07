@@ -1,32 +1,8 @@
 {
-  "page_title": "Warranty &Certification",
-  "page_intro": "Our products are backed by comprehensive warranties and industry certifications.",
-  "warranty_sections": [
-    {
-      "title": "Limited Lifetime Warranty",
-      "content": "Our cabinets come with a limited lifetime warranty covering manufacturing defects."
-    },
-    {
-      "title": "Hardware Warranty",
-      "content": "All hardware components are warranted for 5 years from the date of purchase."
-    },
-    {
-      "title": "Finish Warranty",
-      "content": "Cabinet finishes are warranted against peeling and delamination for 5 years."
-    }
-  ],
-  "certifications": [
-    {
-      "name": "KCMA Certified",
-      "description": "Kitchen Cabinet Manufacturers Association certified for quality and durability."
-    },
-    {
-      "name": "CARB2 Compliant",
-      "description": "Meets California Air Resources Board Phase 2 emission standards."
-    },
-    {
-      "name": "EPA TSCA Title VI",
-      "description": "Compliant with EPA formaldehyde emission standards."
-    }
-  ]
+  "page_title": "Warranty &amp; <em>Certification</em>",
+  "page_intro": "GoldenHome stands behind every cabinet we produce with industry-leading warranty coverage and internationally recognised certifications.",
+  "cta": {
+    "heading": "Have <em>questions?</em>",
+    "sub": "Our team is happy to walk you through our warranty coverage in detail."
+  }
 }

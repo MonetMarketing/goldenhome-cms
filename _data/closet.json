@@ -1,32 +1,14 @@
 {
-  "page_title": "Products",
-  "page_intro": "Launching soon \u2014 designed to support seamless, whole-home customization with flexible design options.",
-  "features": [
-    {
-      "title": "Custom Design",
-      "description": "Tailored to your space and needs"
-    },
-    {
-      "title": "Premium Materials",
-      "description": "Built with high-quality materials for lasting durability"
-    },
-    {
-      "title": "Smart Storage",
-      "description": "Maximize every inch of your closet space"
-    }
-  ],
-  "gallery": [
-    {
-      "image": "/images/gallery-1.webp",
-      "caption": "Modern closet design"
-    },
-    {
-      "image": "/images/gallery-2.webp",
-      "caption": "Walk-in closet"
-    },
-    {
-      "image": "/images/gallery-3.webp",
-      "caption": "Custom shelving"
-    }
-  ]
+  "hero": {
+    "heading": "Products",
+    "sub": "Discover our full range of custom closet and storage solutions."
+  },
+  "section_heading": "Closet <em>Collections</em>",
+  "section_desc": "From walk-in wardrobes to reach-in closets, our systems are built to maximize your space.",
+  "cta": {
+    "heading": "Ready to <em>explore</em> your options?",
+    "sub": "Visit our showroom or book a free design consultation.",
+    "btn_text": "Book a Consultation",
+    "btn_link": "contact-us.html"
+  }
 }

@@ -302,3 +302,290 @@ function loadKitchenCabinets() {
 
   loadSettings();
 }
+
+// ─── Closet & Storage ────────────────────────────────────────────────────────
+
+function loadCloset() {
+  fetch('/_data/closet.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      // Page hero
+      if (d.hero) {
+        var heroH1 = document.querySelector('.page-hero h1');
+        if (heroH1 && d.hero.heading) heroH1.textContent = d.hero.heading;
+
+        var heroSub = document.querySelector('.page-hero p');
+        if (heroSub && d.hero.sub) heroSub.textContent = d.hero.sub;
+      }
+
+      // Section heading
+      var sectionH2 = document.querySelector('.closets-section h2');
+      if (sectionH2 && d.section_heading) {
+        sectionH2.innerHTML = d.section_heading;
+      }
+
+      var sectionDesc = document.querySelector('.closets-section .section-desc');
+      if (sectionDesc && d.section_desc) sectionDesc.textContent = d.section_desc;
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+
+        var ctaBtn = document.querySelector('.cta-banner .btn');
+        if (ctaBtn) {
+          if (d.cta.btn_text) ctaBtn.textContent = d.cta.btn_text;
+          if (d.cta.btn_link) ctaBtn.href = d.cta.btn_link;
+        }
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
+
+// ─── Bathroom Vanities ───────────────────────────────────────────────────────
+
+function loadVanities() {
+  fetch('/_data/vanities.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      // Page hero
+      if (d.hero) {
+        var heroH1 = document.querySelector('.page-hero h1');
+        if (heroH1 && d.hero.heading) heroH1.textContent = d.hero.heading;
+
+        var heroSub = document.querySelector('.page-hero p');
+        if (heroSub && d.hero.sub) heroSub.textContent = d.hero.sub;
+      }
+
+      // Section heading
+      var sectionH2 = document.querySelector('.vanities-section h2');
+      if (sectionH2 && d.section_heading) {
+        sectionH2.innerHTML = d.section_heading;
+      }
+
+      var sectionDesc = document.querySelector('.vanities-section .section-desc');
+      if (sectionDesc && d.section_desc) sectionDesc.textContent = d.section_desc;
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+
+        var ctaBtn = document.querySelector('.cta-banner .btn');
+        if (ctaBtn) {
+          if (d.cta.btn_text) ctaBtn.textContent = d.cta.btn_text;
+          if (d.cta.btn_link) ctaBtn.href = d.cta.btn_link;
+        }
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
+
+// ─── Projects ────────────────────────────────────────────────────────────────
+
+function loadProjects() {
+  fetch('/_data/projects.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      // Page hero
+      if (d.hero) {
+        var heroH1 = document.querySelector('.page-hero h1');
+        if (heroH1 && d.hero.heading) heroH1.textContent = d.hero.heading;
+
+        var heroSub = document.querySelector('.page-hero p');
+        if (heroSub && d.hero.sub) heroSub.textContent = d.hero.sub;
+      }
+
+      // Before & After section
+      if (d.before_after) {
+        var baLabel = document.querySelector('.before-after-section .label');
+        if (baLabel && d.before_after.label) baLabel.textContent = d.before_after.label;
+
+        var baH2 = document.querySelector('.before-after-section h2');
+        if (baH2 && d.before_after.heading) baH2.innerHTML = d.before_after.heading;
+      }
+
+      // Canada section
+      if (d.canada) {
+        var caLabel = document.querySelector('.canada-section .label');
+        if (caLabel && d.canada.label) caLabel.textContent = d.canada.label;
+
+        var caH2 = document.querySelector('.canada-section h2');
+        if (caH2 && d.canada.heading) caH2.innerHTML = d.canada.heading;
+      }
+
+      // Global section
+      if (d.global) {
+        var glLabel = document.querySelector('.global-section .label');
+        if (glLabel && d.global.label) glLabel.textContent = d.global.label;
+
+        var glH2 = document.querySelector('.global-section h2');
+        if (glH2 && d.global.heading) glH2.innerHTML = d.global.heading;
+      }
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+
+        var ctaBtn = document.querySelector('.cta-banner .btn');
+        if (ctaBtn) {
+          if (d.cta.btn_text) ctaBtn.textContent = d.cta.btn_text;
+          if (d.cta.btn_link) ctaBtn.href = d.cta.btn_link;
+        }
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
+
+// ─── Catalog & Spec Book ─────────────────────────────────────────────────────
+
+function loadCatalog() {
+  fetch('/_data/catalog.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      // Page hero
+      var heroH1 = document.querySelector('.page-hero h1');
+      if (heroH1 && d.page_title) heroH1.innerHTML = d.page_title;
+
+      var heroSub = document.querySelector('.page-hero p');
+      if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+
+        var ctaBtn = document.querySelector('.cta-banner .btn');
+        if (ctaBtn) {
+          if (d.cta.btn_text) ctaBtn.textContent = d.cta.btn_text;
+          if (d.cta.btn_link) ctaBtn.href = d.cta.btn_link;
+        }
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
+
+// ─── Instruction Guidelines ──────────────────────────────────────────────────
+
+function loadInstructions() {
+  fetch('/_data/instructions.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var heroH1 = document.querySelector('.page-hero h1');
+      if (heroH1 && d.page_title) heroH1.innerHTML = d.page_title;
+
+      var heroSub = document.querySelector('.page-hero p');
+      if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
+
+// ─── Material Standards ──────────────────────────────────────────────────────
+
+function loadMaterials() {
+  fetch('/_data/materials.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var heroH1 = document.querySelector('.page-hero h1');
+      if (heroH1 && d.page_title) heroH1.innerHTML = d.page_title;
+
+      var heroSub = document.querySelector('.page-hero p');
+      if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
+
+// ─── Order & Return Policy ───────────────────────────────────────────────────
+
+function loadOrderPolicy() {
+  fetch('/_data/order_policy.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var heroH1 = document.querySelector('.page-hero h1');
+      if (heroH1 && d.page_title) heroH1.innerHTML = d.page_title;
+
+      var heroSub = document.querySelector('.page-hero p');
+      if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
+
+// ─── Warranty & Certification ────────────────────────────────────────────────
+
+function loadWarranty() {
+  fetch('/_data/warranty.json')
+    .then(function(r) { return r.json(); })
+    .then(function(d) {
+      var heroH1 = document.querySelector('.page-hero h1');
+      if (heroH1 && d.page_title) heroH1.innerHTML = d.page_title;
+
+      var heroSub = document.querySelector('.page-hero p');
+      if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
+
+      // CTA Banner
+      if (d.cta) {
+        var ctaH2 = document.querySelector('.cta-banner h2');
+        if (ctaH2 && d.cta.heading) ctaH2.innerHTML = d.cta.heading;
+
+        var ctaP = document.querySelector('.cta-banner p');
+        if (ctaP && d.cta.sub) ctaP.textContent = d.cta.sub;
+      }
+    })
+    .catch(function() {});
+
+  loadSettings();
+}
