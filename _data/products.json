@@ -1,24 +1,24 @@
 {
-  "hero": {
-    "label": "Our Products",
-    "heading": "Products",
-    "sub": ""
-  },
-  "kitchen_series": [],
-  "closets": {
-    "heading": "ClosetCollections",
-    "desc": "Launching soon \u2014 designed to support seamless, whole-home customization with flexible design options.",
-    "items": []
-  },
-  "vanities": {
-    "heading": "VanityCollections",
-    "desc": "Our brand-new vanity collections are launching soon and are designed to support seamless, whole-home customization with flexible design options. Stay tuned.",
-    "items": []
-  },
-  "cta": {
-    "heading": "Ready toexploreyour options?",
-    "sub": "Request a free design quote and discover the materials, styles, and finishes that suit your vision.",
-    "btn_text": "Get Free Design Quote",
-    "btn_link": "index.html#contact"
-  }
+  "page_title": "Products",
+  "page_intro": "Explore our complete range of kitchen cabinets, closet systems, and bathroom vanities.",
+  "categories": [
+    {
+      "name": "Kitchen Cabinets",
+      "description": "Premium kitchen cabinet collections featuring modern and traditional designs.",
+      "image": "/images/gallery-kitchen.jpg",
+      "link": "/kitchen-cabinets.html"
+    },
+    {
+      "name": "Closet Systems",
+      "description": "Custom closet solutions for organized living spaces.",
+      "image": "/images/gallery-1.webp",
+      "link": "/closet.html"
+    },
+    {
+      "name": "Bathroom Vanities",
+      "description": "Elegant bathroom vanity collections in various styles.",
+      "image": "/images/vanities/glossy-white-1.jpg",
+      "link": "/vanities.html"
+    }
+  ]
 }
