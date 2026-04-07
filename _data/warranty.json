@@ -1,0 +1,31 @@
+{
+  "hero": {
+    "label": "Support / Company Policies",
+    "heading": "Warranty &Certification",
+    "sub": "GoldenHome stands behind every cabinet we produce with industry-leading warranty coverage and internationally recognized certifications."
+  },
+  "sections": [
+    {
+      "title": "Limited Warranty",
+      "content": "",
+      "highlight_num": "",
+      "highlight_label": ""
+    },
+    {
+      "title": "\"Solid Wood Shaker\" Limited Warranty \u2014 1 Year",
+      "content": "",
+      "highlight_num": "",
+      "highlight_label": ""
+    }
+  ],
+  "accreditations": {
+    "title": "Our Accreditations",
+    "logos": []
+  },
+  "cta": {
+    "heading": "Havequestions?",
+    "sub": "Our team is happy to walk you through our warranty coverage in detail.",
+    "btn_text": "Contact Us",
+    "btn_link": "contact-us.html"
+  }
+}
