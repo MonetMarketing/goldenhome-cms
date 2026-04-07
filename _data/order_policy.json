@@ -1,27 +1,14 @@
 {
-  "hero": {
-    "label": "Support / Company Policies",
-    "heading": "Order & ReturnPolicy",
-    "sub": "Our policies are designed to ensure a smooth, transparent experience for every customer and dealer partner."
-  },
+  "page_title": "Order & ReturnPolicy",
+  "page_intro": "Please review our ordering and return policies before placing your order.",
   "sections": [
     {
       "title": "Order",
-      "content": ""
+      "content": "All purchase orders and change of orders are subject to acceptance by GH, and no order will be binding upon GH until accepted and acknowledged by writing by GH."
     },
     {
-      "title": "Return",
-      "content": ""
-    },
-    {
-      "title": "Cancellation",
-      "content": ""
+      "title": "Havequestions?",
+      "content": "Our team is happy to walk you through our policies in detail."
     }
-  ],
-  "cta": {
-    "heading": "Havequestions?",
-    "sub": "Our team is happy to walk you through our policies in detail.",
-    "btn_text": "Contact Us",
-    "btn_link": "contact-us.html"
-  }
+  ]
 }
