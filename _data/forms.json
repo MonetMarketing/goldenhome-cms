@@ -1,0 +1,23 @@
+{
+  "dealer_form": {
+    "title": "Send Us a Message",
+    "name_label": "Full Name",
+    "name_placeholder": "Your full name",
+    "phone_label": "Phone Number",
+    "phone_placeholder": "Your phone number",
+    "email_label": "Email Address",
+    "email_placeholder": "Your email address",
+    "message_label": "Message",
+    "message_placeholder": "Tell us about your project or inquiry...",
+    "submit_text": "Send Message",
+    "success_message": "Thank you for your inquiry! We will get back to you within 1-2 business days."
+  },
+  "quote_form": {
+    "title": "Claim Your Free Quote",
+    "name_placeholder": "Your name",
+    "phone_placeholder": "Phone number",
+    "email_placeholder": "Email address",
+    "submit_text": "Get Free Quote",
+    "success_message": "Thank you! Our design team will contact you shortly with your free consultation details."
+  }
+}
