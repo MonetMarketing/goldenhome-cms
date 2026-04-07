@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "label": "Support",
+    "heading": "MaterialStandards",
+    "sub": "Every GoldenHome cabinet is engineered to the highest material standards \u2014 because quality should never be a compromise."
+  },
+  "panels": [],
+  "cta": {
+    "heading": "Experience thedifference",
+    "sub": "See our material quality in person. Visit a showroom or book a free in-home design consultation.",
+    "btn_text": "Get Free Design Quote",
+    "btn_link": "about-us.html#subscribe"
+  }
+}
