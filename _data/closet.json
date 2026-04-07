@@ -1,0 +1,14 @@
+{
+  "hero": {
+    "label": "Our Products",
+    "heading": "Products",
+    "sub": ""
+  },
+  "collections": [],
+  "cta": {
+    "heading": "Ready toexploreyour options?",
+    "sub": "Request a free design quote and discover the materials, styles, and finishes that suit your vision.",
+    "btn_text": "Get Free Design Quote",
+    "btn_link": "index.html#contact"
+  }
+}
