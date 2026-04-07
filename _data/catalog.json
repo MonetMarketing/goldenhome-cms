@@ -1,32 +1,21 @@
 {
-  "hero": {
-    "label": "Support",
-    "heading": "Catalog & Spec BookDownloads",
-    "sub": "Access our full product catalog and pricing guide \u2014 everything you need to plan your next project with confidence."
-  },
-  "downloads": [
+  "page_title": "Product Catalog",
+  "page_intro": "Download our complete product catalog and pricebook.",
+  "catalog_image": "/images/pricebook-cover.jpg",
+  "download_text": "Download Catalog",
+  "download_link": "#",
+  "sections": [
     {
-      "title": "Product Catalog",
-      "edition": "",
-      "desc": "Browse our complete collection of kitchen cabinets, bathroom vanities, and closet systems. Featuring hundreds of door styles, finish options, and configuration possibilities \u2014 all with detailed specifications and photography.",
-      "thumbnail": "",
-      "file_url": "GoldenHome2026Catalog.pdf",
-      "btn_text": "Download Catalog"
+      "title": "Kitchen Cabinets Catalog",
+      "description": "Complete catalog of our kitchen cabinet collections with specifications and pricing."
     },
     {
-      "title": "Price Book / Order Form",
-      "edition": "",
-      "desc": "You can review our prices in details and order form from our sales rep through contact forms.",
-      "thumbnail": "",
-      "file_url": "contact-us.html",
-      "btn_text": "Contact Us"
+      "title": "Vanities Catalog",
+      "description": "Bathroom vanity collections with dimensions and finish options."
+    },
+    {
+      "title": "Closet Systems Catalog",
+      "description": "Custom closet system configurations and pricing guide."
     }
-  ],
-  "notice": "Pricing and availability are subject to change. For the most current pricing, product availability, or to request a custom quote, please contact your GoldenHome sales representative directly atinfo@goldenhomecabinetry.caor call(905) 727-8800.",
-  "cta": {
-    "heading": "Ready tostart designing?",
-    "sub": "Book a free consultation with our design team and bring your vision to life.",
-    "btn_text": "Get Free Design Quote",
-    "btn_link": "about-us.html#subscribe"
-  }
+  ]
 }
