@@ -5,9 +5,187 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="noindex" />
   <title>GoldenHome CMS</title>
+
+  <!-- Netlify Identity Widget (required for login) -->
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <!-- Custom Admin Styles -->
+  <style>
+    /* ── Login Screen Branding ── */
+    [data-netlify-identity-menu] {
+      display: none !important;
+    }
+
+    /* ── Global Admin Overrides ── */
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    }
+
+    /* ── Sidebar / Navigation ── */
+    [class*="SidebarContainer"] {
+      background: #1a1a1a !important;
+    }
+
+    [class*="SidebarNavList"] a {
+      color: #e0e0e0 !important;
+      font-size: 14px !important;
+      padding: 10px 20px !important;
+      border-left: 3px solid transparent !important;
+      transition: all 0.2s ease !important;
+    }
+
+    [class*="SidebarNavList"] a:hover,
+    [class*="SidebarNavList"] a[class*="active"] {
+      background: rgba(255, 255, 255, 0.08) !important;
+      border-left-color: #4CAF50 !important;
+      color: #ffffff !important;
+    }
+
+    /* ── Top Bar ── */
+    [class*="AppHeaderContent"] {
+      background: #ffffff !important;
+      border-bottom: 1px solid #e8e8e8 !important;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05) !important;
+    }
+
+    /* ── Editor Panel ── */
+    [class*="EditorContainer"],
+    [class*="ViewContainer"] {
+      background: #fafafa !important;
+    }
+
+    /* ── Cards & List Items ── */
+    [class*="ListCard"],
+    [class*="ObjectWidgetTopBar"] {
+      border-radius: 6px !important;
+      border: 1px solid #e8e8e8 !important;
+      transition: box-shadow 0.2s ease !important;
+    }
+
+    [class*="ListCard"]:hover {
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08) !important;
+    }
+
+    /* ── Buttons ── */
+    [class*="ToolbarButton"],
+    button[class*="Button"] {
+      border-radius: 4px !important;
+    }
+
+    /* ── Field Hints ── */
+    [class*="ControlHint"] {
+      color: #888 !important;
+      font-size: 12px !important;
+      font-style: italic !important;
+      margin-top: 4px !important;
+    }
+
+    /* ── Collection Description ── */
+    [class*="CollectionDescription"] {
+      color: #666 !important;
+      font-size: 13px !important;
+      padding: 8px 0 !important;
+    }
+
+    /* ── Publish Button ── */
+    [class*="PublishButton"] {
+      background: #2d6a2e !important;
+      border-radius: 6px !important;
+    }
+
+    [class*="PublishButton"]:hover {
+      background: #388e3c !important;
+    }
+
+    /* ── Image Widgets ── */
+    [class*="ImageWidget"] img {
+      border-radius: 4px !important;
+      max-height: 200px !important;
+      object-fit: contain !important;
+    }
+
+    /* ── Text Area ── */
+    textarea {
+      border-radius: 4px !important;
+      border: 1px solid #ddd !important;
+      padding: 10px !important;
+      font-size: 14px !important;
+      line-height: 1.6 !important;
+    }
+
+    textarea:focus {
+      border-color: #4CAF50 !important;
+      outline: none !important;
+      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15) !important;
+    }
+
+    /* ── Input Fields ── */
+    input[type="text"] {
+      border-radius: 4px !important;
+      border: 1px solid #ddd !important;
+      padding: 8px 10px !important;
+      font-size: 14px !important;
+    }
+
+    input[type="text"]:focus {
+      border-color: #4CAF50 !important;
+      outline: none !important;
+      box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.15) !important;
+    }
+
+    /* ── Collapsed Object Headers ── */
+    [class*="TopBarContainer"] {
+      background: #f5f5f5 !important;
+      border-radius: 6px 6px 0 0 !important;
+      padding: 8px 12px !important;
+    }
+
+    /* ── Loading Screen ── */
+    [class*="AppMainContainer"] {
+      min-height: 100vh;
+    }
+  </style>
 </head>
 <body>
+  <!-- Decap CMS v3 -->
   <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+  <!-- Custom Preview Styles -->
+  <script>
+    // Register a simple preview style for all collections
+    if (window.CMS) {
+      CMS.registerPreviewStyle(`
+        body {
+          font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+          padding: 20px;
+          max-width: 800px;
+          margin: 0 auto;
+          color: #333;
+          line-height: 1.6;
+        }
+        h1 { font-size: 28px; color: #1a1a1a; margin-bottom: 8px; }
+        h2 { font-size: 22px; color: #333; margin-top: 24px; }
+        h3 { font-size: 18px; color: #555; }
+        p { margin: 8px 0; }
+        img { max-width: 100%; height: auto; border-radius: 8px; margin: 12px 0; }
+        .stat { display: inline-block; margin-right: 24px; text-align: center; }
+        .stat-num { font-size: 32px; font-weight: bold; color: #2d6a2e; }
+        .stat-label { font-size: 13px; color: #888; }
+      `, { raw: true });
+    }
+  </script>
+
+  <!-- Redirect to admin after login from main site -->
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", function(user) {
+        if (!user) {
+          window.netlifyIdentity.on("login", function() {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
 </body>
 </html>
