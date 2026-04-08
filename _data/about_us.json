@@ -20,38 +20,14 @@
       "label": "Door Styles"
     }
   ],
-  "factory_images": [
-    {
-      "src": "images/about-factory-1.jpg",
-      "alt": "GoldenHome manufacturing facility"
-    },
-    {
-      "src": "images/about-factory-2.jpg",
-      "alt": "GoldenHome production line"
-    },
-    {
-      "src": "images/about-factory-3.jpg",
-      "alt": "GoldenHome CNC machinery"
-    },
-    {
-      "src": "images/about-factory-4.jpg",
-      "alt": "GoldenHome quality control"
-    },
-    {
-      "src": "images/about-factory-5.jpg",
-      "alt": "GoldenHome warehouse"
-    },
-    {
-      "src": "images/factory/factory-machine-1.jpg",
-      "alt": "HOMAG precision machinery"
-    },
-    {
-      "src": "images/factory/factory-machine-2.jpg",
-      "alt": "HOMAG automated production"
-    },
-    {
-      "src": "images/factory/factory-machine-3.jpg",
-      "alt": "GoldenHome precision cutting"
-    }
-  ]
+  "factory_images": {
+    "img1": "/images/factory-1.jpg",
+    "img2": "/images/factory-2.jpg",
+    "img3": "/images/factory-3.jpg",
+    "img4": "/images/factory-4.jpg",
+    "img5": "/images/factory-5.jpg",
+    "img6": "/images/factory-6.jpg",
+    "img7": "/images/factory-7.jpg",
+    "img8": "/images/factory-8.jpg"
+  }
 }

@@ -55,7 +55,16 @@ collections:
             fields:
               - { label: "Series Name", name: "title", widget: "string", required: true }
               - { label: "Series Description", name: "desc", widget: "text", required: true }
-              - { label: "Series Image", name: "image", widget: "image", hint: "Card image. Recommended: 600x400px", required: true }
+          - label: "Cabinet Series Images"
+            name: "cabinet_series_images"
+            widget: "object"
+            hint: "One image per series. Upload in order: Classic, Delight, Grand, Luxury."
+            collapsed: true
+            fields:
+              - { label: "Classic Series Image", name: "classic", widget: "image", hint: "Card image. Recommended: 600x400px" }
+              - { label: "Delight Series Image", name: "delight", widget: "image", hint: "Card image. Recommended: 600x400px" }
+              - { label: "Grand Series Image", name: "grand", widget: "image", hint: "Card image. Recommended: 600x400px" }
+              - { label: "Luxury Series Image", name: "luxury", widget: "image", hint: "Card image. Recommended: 600x400px" }
           - label: "Brand Story"
             name: "story"
             widget: "object"
@@ -82,15 +91,12 @@ collections:
             hint: "Six gallery images shown in the homepage showcase section."
             collapsed: true
             fields:
-              - label: "Gallery Images"
-                name: "images"
-                widget: "list"
-                max: 6
-                min: 6
-                summary: "{{fields.alt}}"
-                fields:
-                  - { label: "Image", name: "src", widget: "image", hint: "Recommended: 800x600px", required: true }
-                  - { label: "Alt Text", name: "alt", widget: "string", required: true }
+              - { label: "Gallery Image 1", name: "img1", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Gallery Image 2", name: "img2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Gallery Image 3", name: "img3", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Gallery Image 4", name: "img4", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Gallery Image 5", name: "img5", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Gallery Image 6", name: "img6", widget: "image", hint: "Recommended: 800x600px" }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -148,21 +154,18 @@ collections:
               - { label: "Subheading", name: "sub", widget: "string" }
           - { label: "Section Heading (HTML allowed, e.g. Closet <em>Collections</em>)", name: "section_heading", widget: "string" }
           - { label: "Section Description", name: "section_desc", widget: "text" }
-          - label: "Closet Collections — Images"
-            name: "collections"
-            widget: "list"
-            hint: "Each collection has a name and up to 3 gallery images. The 'id' must match the HTML (do not change)."
-            summary: "{{fields.name}}"
+          - label: "Closet Collection Images"
+            name: "closet_images"
+            widget: "object"
+            hint: "Upload images for each closet collection."
             collapsed: true
             fields:
-              - { label: "Collection ID (do not change)", name: "id", widget: "string", required: true }
-              - { label: "Collection Name", name: "name", widget: "string", required: true }
-              - label: "Gallery Images (max 3)"
-                name: "images"
-                widget: "list"
-                max: 3
-                fields:
-                  - { label: "Image", name: "image", widget: "image", hint: "Recommended: 800x600px", required: true }
+              - { label: "Egger White — Image 1", name: "egger_1", widget: "image", hint: "Main image. Recommended: 800x600px" }
+              - { label: "Egger White — Image 2", name: "egger_2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Egger White — Image 3", name: "egger_3", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Sheer Beauty — Image 1", name: "sheer_1", widget: "image", hint: "Main image. Recommended: 800x600px" }
+              - { label: "Sheer Beauty — Image 2", name: "sheer_2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Sheer Beauty — Image 3", name: "sheer_3", widget: "image", hint: "Recommended: 800x600px" }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -193,21 +196,22 @@ collections:
               - { label: "Subheading", name: "sub", widget: "string" }
           - { label: "Section Heading (HTML allowed, e.g. Vanity <em>Collections</em>)", name: "section_heading", widget: "string" }
           - { label: "Section Description", name: "section_desc", widget: "text" }
-          - label: "Vanity Collections — Images"
-            name: "collections"
-            widget: "list"
-            hint: "Each collection has a name and up to 2 gallery images. The 'id' must match the HTML (do not change)."
-            summary: "{{fields.name}}"
+          - label: "Vanity Collection Images"
+            name: "vanity_images"
+            widget: "object"
+            hint: "Upload images for each vanity collection."
             collapsed: true
             fields:
-              - { label: "Collection ID (do not change)", name: "id", widget: "string", required: true }
-              - { label: "Collection Name", name: "name", widget: "string", required: true }
-              - label: "Gallery Images (max 2)"
-                name: "images"
-                widget: "list"
-                max: 2
-                fields:
-                  - { label: "Image", name: "image", widget: "image", hint: "Recommended: 800x600px", required: true }
+              - { label: "Glossy White — Image 1", name: "glossy_1", widget: "image", hint: "Main image. Recommended: 800x600px" }
+              - { label: "Glossy White — Image 2", name: "glossy_2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "White Shaker — Image 1", name: "shaker_1", widget: "image", hint: "Main image. Recommended: 800x600px" }
+              - { label: "White Shaker — Image 2", name: "shaker_2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Walnut — Image 1", name: "walnut_1", widget: "image", hint: "Main image. Recommended: 800x600px" }
+              - { label: "Walnut — Image 2", name: "walnut_2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Dark Wood — Image 1", name: "darkwood_1", widget: "image", hint: "Main image. Recommended: 800x600px" }
+              - { label: "Dark Wood — Image 2", name: "darkwood_2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Rustic Oak — Image 1", name: "rusticoak_1", widget: "image", hint: "Main image. Recommended: 800x600px" }
+              - { label: "Rustic Oak — Image 2", name: "rusticoak_2", widget: "image", hint: "Recommended: 800x600px" }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -370,15 +374,13 @@ collections:
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
           - label: "Section Images"
             name: "section_images"
-            widget: "list"
+            widget: "object"
             hint: "Three images shown alongside the material standard sections."
-            max: 3
-            min: 3
-            summary: "{{fields.alt}}"
             collapsed: true
             fields:
-              - { label: "Image", name: "src", widget: "image", hint: "Recommended: 600x400px", required: true }
-              - { label: "Alt Text", name: "alt", widget: "string", required: true }
+              - { label: "Section Image 1", name: "img1", widget: "image", hint: "Recommended: 600x400px" }
+              - { label: "Section Image 2", name: "img2", widget: "image", hint: "Recommended: 600x400px" }
+              - { label: "Section Image 3", name: "img3", widget: "image", hint: "Recommended: 600x400px" }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -436,14 +438,18 @@ collections:
               - { label: "Label", name: "label", widget: "string", required: true }
           - label: "Factory & Facility Images"
             name: "factory_images"
-            widget: "list"
+            widget: "object"
             hint: "Up to 8 images shown in the factory/facility gallery section."
-            max: 8
-            summary: "{{fields.alt}}"
             collapsed: true
             fields:
-              - { label: "Image", name: "src", widget: "image", hint: "Recommended: 800x600px", required: true }
-              - { label: "Alt Text", name: "alt", widget: "string", required: true }
+              - { label: "Factory Image 1", name: "img1", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Factory Image 2", name: "img2", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Factory Image 3", name: "img3", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Factory Image 4", name: "img4", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Factory Image 5", name: "img5", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Factory Image 6", name: "img6", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Factory Image 7", name: "img7", widget: "image", hint: "Recommended: 800x600px" }
+              - { label: "Factory Image 8", name: "img8", widget: "image", hint: "Recommended: 800x600px" }
 
   # ═══════════════════════════════════════════════════════════════════════════
   #  SITE SETTINGS

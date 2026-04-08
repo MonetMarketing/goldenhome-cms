@@ -109,13 +109,21 @@ function loadHomepage() {
         var cabinetCards = document.querySelectorAll('.cabinet-card');
         d.cabinet_series.forEach(function(series, i) {
           if (cabinetCards[i]) {
-            var img = cabinetCards[i].querySelector('.cabinet-card-img');
             var h3 = cabinetCards[i].querySelector('h3');
             var p = cabinetCards[i].querySelector('p');
-            if (img && series.image) img.src = series.image;
             if (h3 && series.title) h3.textContent = series.title;
             if (p && series.desc) p.textContent = series.desc;
           }
+        });
+      }
+
+      // Cabinet series images (flat object)
+      if (d.cabinet_series_images) {
+        var csi = d.cabinet_series_images;
+        var seriesKeys = ['classic', 'delight', 'grand', 'luxury'];
+        var cabinetImgs = document.querySelectorAll('.cabinet-card .cabinet-card-img');
+        seriesKeys.forEach(function(key, i) {
+          if (cabinetImgs[i] && csi[key]) cabinetImgs[i].src = csi[key];
         });
       }
 
@@ -142,18 +150,13 @@ function loadHomepage() {
         });
       }
 
-      // Gallery images
-      if (d.gallery && d.gallery.images && d.gallery.images.length) {
-        var galleryImgs = document.querySelectorAll('.gallery-grid img, .gallery-mosaic img, .projects-grid img, .homepage-gallery img');
-        // Try more generic selector if specific ones don't match
-        if (!galleryImgs.length) {
-          galleryImgs = document.querySelectorAll('section img[src*="gallery"]');
-        }
-        d.gallery.images.forEach(function(item, i) {
-          if (galleryImgs[i] && item.src) {
-            galleryImgs[i].src = item.src;
-            if (item.alt) galleryImgs[i].alt = item.alt;
-          }
+      // Gallery images (flat object)
+      if (d.gallery) {
+        var g = d.gallery;
+        var galleryImgs = document.querySelectorAll('.gallery-grid img, .gallery-mosaic img, .homepage-gallery img');
+        var flatKeys = ['img1','img2','img3','img4','img5','img6'];
+        flatKeys.forEach(function(key, i) {
+          if (galleryImgs[i] && g[key]) galleryImgs[i].src = g[key];
         });
       }
 
@@ -270,18 +273,13 @@ function loadAboutUs() {
         });
       }
 
-      // Factory images
-      if (d.factory_images && d.factory_images.length) {
+      // Factory images (flat object)
+      if (d.factory_images) {
+        var fi = d.factory_images;
         var factoryImgs = document.querySelectorAll('.factory-gallery img, .factory-grid img, .about-gallery img, .facility-images img');
-        // Fallback: any img in sections with factory/about class
-        if (!factoryImgs.length) {
-          factoryImgs = document.querySelectorAll('section img[src*="factory"], section img[src*="about-factory"]');
-        }
-        d.factory_images.forEach(function(item, i) {
-          if (factoryImgs[i] && item.src) {
-            factoryImgs[i].src = item.src;
-            if (item.alt) factoryImgs[i].alt = item.alt;
-          }
+        var fiKeys = ['img1','img2','img3','img4','img5','img6','img7','img8'];
+        fiKeys.forEach(function(key, i) {
+          if (factoryImgs[i] && fi[key]) factoryImgs[i].src = fi[key];
         });
       }
     })
@@ -357,21 +355,19 @@ function loadCloset() {
       var sectionDesc = document.querySelector('.closets-section .section-desc');
       if (sectionDesc && d.section_desc) sectionDesc.textContent = d.section_desc;
 
-      // Collection images — Closet
-      if (d.collections && d.collections.length) {
-        d.collections.forEach(function(col) {
-          if (!col.id || !col.images || !col.images.length) return;
-          var mainImg = document.getElementById('main-' + col.id);
-          var thumbs = document.querySelectorAll('[data-collection="' + col.id + '"] .collection-thumb, #collection-' + col.id + ' .collection-thumb');
-          // Fallback: find thumbs near the main image
-          if (!thumbs.length && mainImg) {
-            var parent = mainImg.closest('.collection-block, .collection-item, section');
-            if (parent) thumbs = parent.querySelectorAll('.collection-thumb');
-          }
-          if (mainImg && col.images[0]) mainImg.src = col.images[0];
-          thumbs.forEach(function(thumb, ti) {
-            if (col.images[ti]) thumb.src = col.images[ti];
-          });
+      // Closet collection images (flat object)
+      if (d.closet_images) {
+        var ci = d.closet_images;
+        // Map flat keys to main image IDs and thumbnail selectors
+        var closetMap = [
+          { main: 'main-egger', thumbs: '[data-collection="egger"] .collection-thumb', imgs: [ci.egger_1, ci.egger_2, ci.egger_3] },
+          { main: 'main-sheer', thumbs: '[data-collection="sheer"] .collection-thumb', imgs: [ci.sheer_1, ci.sheer_2, ci.sheer_3] }
+        ];
+        closetMap.forEach(function(col) {
+          var mainImg = document.getElementById(col.main);
+          if (mainImg && col.imgs[0]) mainImg.src = col.imgs[0];
+          var thumbEls = document.querySelectorAll(col.thumbs);
+          thumbEls.forEach(function(th, ti) { if (col.imgs[ti]) th.src = col.imgs[ti]; });
         });
       }
 
@@ -419,23 +415,21 @@ function loadVanities() {
       var sectionDesc = document.querySelector('.vanities-section .section-desc');
       if (sectionDesc && d.section_desc) sectionDesc.textContent = d.section_desc;
 
-      // Collection images — Vanities
-      if (d.collections && d.collections.length) {
-        d.collections.forEach(function(col) {
-          if (!col.id || !col.images || !col.images.length) return;
-          var mainImg = document.getElementById('main-vanity-' + col.id.replace(/-/g, '').substring(0, 2));
-          // Try full id pattern too
-          if (!mainImg) mainImg = document.getElementById('main-vanity-' + col.id);
-          if (!mainImg) mainImg = document.getElementById('main-' + col.id);
-          var thumbs = document.querySelectorAll('[data-collection="' + col.id + '"] .collection-thumb');
-          if (!thumbs.length && mainImg) {
-            var parent = mainImg.closest('.collection-block, .collection-item, section, .vanity-item');
-            if (parent) thumbs = parent.querySelectorAll('.collection-thumb');
-          }
-          if (mainImg && col.images[0]) mainImg.src = col.images[0];
-          thumbs.forEach(function(thumb, ti) {
-            if (col.images[ti]) thumb.src = col.images[ti];
-          });
+      // Vanity collection images (flat object)
+      if (d.vanity_images) {
+        var vi = d.vanity_images;
+        var vanityMap = [
+          { main: 'main-glossy', thumbs: '[data-collection="glossy"] .collection-thumb', imgs: [vi.glossy_1, vi.glossy_2] },
+          { main: 'main-shaker', thumbs: '[data-collection="shaker"] .collection-thumb', imgs: [vi.shaker_1, vi.shaker_2] },
+          { main: 'main-walnut', thumbs: '[data-collection="walnut"] .collection-thumb', imgs: [vi.walnut_1, vi.walnut_2] },
+          { main: 'main-darkwood', thumbs: '[data-collection="darkwood"] .collection-thumb', imgs: [vi.darkwood_1, vi.darkwood_2] },
+          { main: 'main-rusticoak', thumbs: '[data-collection="rusticoak"] .collection-thumb', imgs: [vi.rusticoak_1, vi.rusticoak_2] }
+        ];
+        vanityMap.forEach(function(col) {
+          var mainImg = document.getElementById(col.main);
+          if (mainImg && col.imgs[0]) mainImg.src = col.imgs[0];
+          var thumbEls = document.querySelectorAll(col.thumbs);
+          thumbEls.forEach(function(th, ti) { if (col.imgs[ti]) th.src = col.imgs[ti]; });
         });
       }
 
@@ -602,17 +596,15 @@ function loadMaterials() {
       var heroSub = document.querySelector('.page-hero p');
       if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
 
-      // Section images
-      if (d.section_images && d.section_images.length) {
+      // Section images (flat object)
+      if (d.section_images) {
+        var si = d.section_images;
         var sectionImgs = document.querySelectorAll('.material-section img, .standards-section img, .material-grid img');
         if (!sectionImgs.length) {
           sectionImgs = document.querySelectorAll('section img[src*="std-"]');
         }
-        d.section_images.forEach(function(item, i) {
-          if (sectionImgs[i] && item.src) {
-            sectionImgs[i].src = item.src;
-            if (item.alt) sectionImgs[i].alt = item.alt;
-          }
+        ['img1','img2','img3'].forEach(function(key, i) {
+          if (sectionImgs[i] && si[key]) sectionImgs[i].src = si[key];
         });
       }
 

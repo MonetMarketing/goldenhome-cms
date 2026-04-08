@@ -29,23 +29,19 @@
   "cabinet_series": [
     {
       "title": "Classic Series",
-      "desc": "Our Classic Series is a reliable in-stock cabinetry system with timeless finishes and consistent sizing, built to support both everyday projects and semi-custom upgrades.",
-      "image": "/images/cabinet-classic.jpg"
+      "desc": "Our Classic Series is a reliable in-stock cabinetry system with timeless finishes and consistent sizing, built to support both everyday projects and semi-custom upgrades."
     },
     {
       "title": "Delight Series",
-      "desc": "The Delight Series offers a step up in both finish and design, with a wider selection of colors and materials to suit more refined interiors. It brings added flexibility while maintaining the efficiency and consistency of our core cabinet system.",
-      "image": "/images/cabinet-deluxe.jpg"
+      "desc": "The Delight Series offers a step up in both finish and design, with a wider selection of colors and materials to suit more refined interiors. It brings added flexibility while maintaining the efficiency and consistency of our core cabinet system."
     },
     {
       "title": "Grand Series",
-      "desc": "The Grand Series focuses on more modern, design-forward finishes, including a curated selection from AGT and EGGER. It expands the palette with richer textures and contemporary tones, giving designers more freedom to create distinctive spaces.",
-      "image": "/images/cabinet-grand.jpg"
+      "desc": "The Grand Series focuses on more modern, design-forward finishes, including a curated selection from AGT and EGGER. It expands the palette with richer textures and contemporary tones, giving designers more freedom to create distinctive spaces."
     },
     {
       "title": "Luxury Series",
-      "desc": "New in 2026, the Luxury Series represents our most elevated offering we have so far, featuring advanced lacquer finishes and the new Slim Shaker profile. With refined details and a more sophisticated look, it is designed for projects that demand a higher level of finish and visual impact.",
-      "image": "/images/luxury-series.webp"
+      "desc": "New in 2026, the Luxury Series represents our most elevated offering we have so far, featuring advanced lacquer finishes and the new Slim Shaker profile. With refined details and a more sophisticated look, it is designed for projects that demand a higher level of finish and visual impact."
     }
   ],
   "story": {
@@ -79,31 +75,17 @@
     "btn_link": "/about-us#subscribe"
   },
   "gallery": {
-    "images": [
-      {
-        "src": "images/gallery-3.webp",
-        "alt": "Blue Island Kitchen"
-      },
-      {
-        "src": "images/gallery-5.webp",
-        "alt": "Modern White Kitchen"
-      },
-      {
-        "src": "images/gallery-4.webp",
-        "alt": "Classic Shaker Kitchen"
-      },
-      {
-        "src": "images/gallery-1.webp",
-        "alt": "White Shaker Kitchen"
-      },
-      {
-        "src": "images/gallery-2.webp",
-        "alt": "Coffee Bar Cabinetry"
-      },
-      {
-        "src": "images/gallery-6.webp",
-        "alt": "Modern White Kitchen Niagara Falls"
-      }
-    ]
+    "img1": "/images/gallery-1.jpg",
+    "img2": "/images/gallery-2.jpg",
+    "img3": "/images/gallery-3.jpg",
+    "img4": "/images/gallery-4.jpg",
+    "img5": "/images/gallery-5.jpg",
+    "img6": "/images/gallery-6.jpg"
+  },
+  "cabinet_series_images": {
+    "classic": "/images/cabinet-classic.jpg",
+    "delight": "/images/cabinet-delight.jpg",
+    "grand": "/images/cabinet-grand.jpg",
+    "luxury": "/images/cabinet-luxury.jpg"
   }
 }
