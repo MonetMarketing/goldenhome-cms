@@ -339,7 +339,9 @@
             <h2>Become Our <em>Dealer</em></h2>
             <p style="margin-top: 16px;">Have a question about our products, a project inquiry, or need design advice? Fill out the form and our team will get back to you within one business day.</p>
           </div>
-          <form id="contactForm" onsubmit="handleContactSubmit(event)">
+          <form id="contactForm" name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" onsubmit="handleContactSubmit(event)">
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;"><input name="bot-field" /></p>
             <div class="form-row">
               <div>
                 <label for="cf-name">Full Name</label>
@@ -528,9 +530,21 @@
 
     function handleContactSubmit(e) {
       e.preventDefault();
-      showToast('Your message has been sent. We\'ll be in touch within one business day.');
-      e.target.reset();
-      document.getElementById('fileNames').textContent = '';
+      var form = e.target;
+      var data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      })
+      .then(function() {
+        showToast('Your message has been sent. We\'ll be in touch within one business day.');
+        form.reset();
+        document.getElementById('fileNames').textContent = '';
+      })
+      .catch(function() {
+        showToast('Something went wrong. Please email us directly.');
+      });
     }
   </script>
   <script src="/cms-data-loader.js"></script>

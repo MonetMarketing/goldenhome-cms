@@ -580,7 +580,9 @@
         <div class="subscribe-form-wrap">
           <h3>Claim Your Free Quote</h3>
           <p>Enter your details below and a design specialist will reach out within 24 hours.</p>
-          <form id="subscribeForm" class="subscribe-form" onsubmit="handleSubscribeSubmit(event)">
+          <form id="subscribeForm" name="quote-request" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="subscribe-form" onsubmit="handleSubscribeSubmit(event)">
+            <input type="hidden" name="form-name" value="quote-request" />
+            <p style="display:none;"><input name="bot-field" /></p>
             <div class="form-group">
               <label for="sf-name">Full Name</label>
               <input type="text" id="sf-name" name="name" placeholder="Jane Smith" required />
@@ -736,9 +738,21 @@
 
     function handleSubscribeSubmit(e) {
       e.preventDefault();
-      showToast('You\'ve successfully subscribed and unlocked your Free Design Quote! Our team will reach out within 24 hours.');
-      e.target.reset();
-      document.getElementById('sfFileNames').textContent = '';
+      var form = e.target;
+      var data = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(data).toString()
+      })
+      .then(function() {
+        showToast('You\'ve successfully submitted your Free Design Quote request! Our team will reach out within 24 hours.');
+        form.reset();
+        document.getElementById('sfFileNames').textContent = '';
+      })
+      .catch(function() {
+        showToast('Something went wrong. Please email us directly.');
+      });
     }
   </script>
   <script src="/cms-data-loader.js"></script>
