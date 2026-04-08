@@ -23,7 +23,7 @@
     },
     {
       "title": "Semi-Custom Whole-Home Cabinetry",
-      "desc": "Standard dimensions with expanded possibilities — more finishes, materials, and design combinations within a structured system."
+      "desc": "Standard dimensions with expanded possibilities \u2014 more finishes, materials, and design combinations within a structured system."
     }
   ],
   "cabinet_series": [
@@ -52,7 +52,7 @@
     "p1": "GoldenHome has been delivering high-quality cabinetry solutions since 1999, building a strong global foundation across multiple markets. Today, GoldenHome Cabinetry Eastern Canada brings that experience closer to home through a growing local manufacturing and supply network based in Ontario.",
     "p2": "With integrated warehousing and local production capabilities, we are able to support projects with greater speed, flexibility, and consistency. From in-stock cabinetry to locally customized solutions, our approach is designed to meet the needs of contractors, designers, and homeowners across Canada.",
     "image": "/images/gallery-kitchen.jpg",
-    "image_tag": "Est. in Canada · Locally Installed"
+    "image_tag": "Est. in Canada \u00b7 Locally Installed"
   },
   "stats": [
     {
@@ -77,5 +77,33 @@
     "sub": "Request a free design quote and discover the materials, styles, and finishes that suit your vision.",
     "btn_text": "Get Free Design Quote",
     "btn_link": "/about-us#subscribe"
+  },
+  "gallery": {
+    "images": [
+      {
+        "src": "images/gallery-3.webp",
+        "alt": "Blue Island Kitchen"
+      },
+      {
+        "src": "images/gallery-5.webp",
+        "alt": "Modern White Kitchen"
+      },
+      {
+        "src": "images/gallery-4.webp",
+        "alt": "Classic Shaker Kitchen"
+      },
+      {
+        "src": "images/gallery-1.webp",
+        "alt": "White Shaker Kitchen"
+      },
+      {
+        "src": "images/gallery-2.webp",
+        "alt": "Coffee Bar Cabinetry"
+      },
+      {
+        "src": "images/gallery-6.webp",
+        "alt": "Modern White Kitchen Niagara Falls"
+      }
+    ]
   }
 }

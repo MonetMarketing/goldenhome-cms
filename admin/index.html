@@ -187,5 +187,41 @@
       });
     }
   </script>
+
+  <!-- User Management Button — fixed in sidebar bottom corner -->
+  <script>
+    (function() {
+      function injectUserMgmtButton() {
+        if (document.getElementById('cms-user-mgmt-btn')) return;
+        var sidebar = document.querySelector('[class*="SidebarContainer"]');
+        if (!sidebar) return;
+
+        var wrapper = document.createElement('div');
+        wrapper.id = 'cms-user-mgmt-btn';
+        wrapper.style.cssText = 'position:fixed;bottom:20px;left:0;width:220px;padding:0 16px;z-index:9999;box-sizing:border-box;';
+
+        var link = document.createElement('a');
+        link.href = 'https://app.netlify.com/projects/goldenhome-cms/configuration/identity';
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.title = 'Manage CMS users in Netlify Identity';
+        link.style.cssText = 'display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:6px;color:#b0b0b0;font-size:13px;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;text-decoration:none;cursor:pointer;';
+        link.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>User Management';
+
+        link.onmouseover = function() { this.style.background = 'rgba(255,255,255,0.13)'; this.style.color = '#fff'; };
+        link.onmouseout = function() { this.style.background = 'rgba(255,255,255,0.07)'; this.style.color = '#b0b0b0'; };
+
+        wrapper.appendChild(link);
+        document.body.appendChild(wrapper);
+      }
+
+      var attempts = 0;
+      var poll = setInterval(function() {
+        attempts++;
+        injectUserMgmtButton();
+        if (document.getElementById('cms-user-mgmt-btn') || attempts > 60) clearInterval(poll);
+      }, 500);
+    })();
+  </script>
 </body>
 </html>

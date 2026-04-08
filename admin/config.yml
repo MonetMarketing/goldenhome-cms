@@ -76,6 +76,21 @@ collections:
             fields:
               - { label: "Number", name: "num", widget: "string", hint: "The statistic (e.g., '25+', '1000+')", required: true }
               - { label: "Label", name: "label", widget: "string", required: true }
+          - label: "Homepage Gallery"
+            name: "gallery"
+            widget: "object"
+            hint: "Six gallery images shown in the homepage showcase section."
+            collapsed: true
+            fields:
+              - label: "Gallery Images"
+                name: "images"
+                widget: "list"
+                max: 6
+                min: 6
+                summary: "{{fields.alt}}"
+                fields:
+                  - { label: "Image", name: "src", widget: "image", hint: "Recommended: 800x600px", required: true }
+                  - { label: "Alt Text", name: "alt", widget: "string", required: true }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -133,6 +148,21 @@ collections:
               - { label: "Subheading", name: "sub", widget: "string" }
           - { label: "Section Heading (HTML allowed, e.g. Closet <em>Collections</em>)", name: "section_heading", widget: "string" }
           - { label: "Section Description", name: "section_desc", widget: "text" }
+          - label: "Closet Collections — Images"
+            name: "collections"
+            widget: "list"
+            hint: "Each collection has a name and up to 3 gallery images. The 'id' must match the HTML (do not change)."
+            summary: "{{fields.name}}"
+            collapsed: true
+            fields:
+              - { label: "Collection ID (do not change)", name: "id", widget: "string", required: true }
+              - { label: "Collection Name", name: "name", widget: "string", required: true }
+              - label: "Gallery Images (max 3)"
+                name: "images"
+                widget: "list"
+                max: 3
+                fields:
+                  - { label: "Image", name: "image", widget: "image", hint: "Recommended: 800x600px", required: true }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -163,6 +193,21 @@ collections:
               - { label: "Subheading", name: "sub", widget: "string" }
           - { label: "Section Heading (HTML allowed, e.g. Vanity <em>Collections</em>)", name: "section_heading", widget: "string" }
           - { label: "Section Description", name: "section_desc", widget: "text" }
+          - label: "Vanity Collections — Images"
+            name: "collections"
+            widget: "list"
+            hint: "Each collection has a name and up to 2 gallery images. The 'id' must match the HTML (do not change)."
+            summary: "{{fields.name}}"
+            collapsed: true
+            fields:
+              - { label: "Collection ID (do not change)", name: "id", widget: "string", required: true }
+              - { label: "Collection Name", name: "name", widget: "string", required: true }
+              - label: "Gallery Images (max 2)"
+                name: "images"
+                widget: "list"
+                max: 2
+                fields:
+                  - { label: "Image", name: "image", widget: "image", hint: "Recommended: 800x600px", required: true }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -290,7 +335,7 @@ collections:
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "catalog"
     label: "Support › Catalog & Spec Book"
-    description: "Content for the Catalog & Spec Book downloads page — page title, intro text, and CTA banner."
+    description: "Content for the Catalog & Spec Book downloads page — page title, intro text, cover images, and CTA banner."
     files:
       - name: "catalog"
         label: "Catalog & Spec Book Content"
@@ -298,6 +343,8 @@ collections:
         fields:
           - { label: "Page Title (HTML allowed)", name: "page_title", widget: "string", required: true }
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
+          - { label: "Catalog Cover Image", name: "catalog_cover", widget: "image", hint: "Cover image for the product catalog PDF card. Recommended: 400x560px (portrait)." }
+          - { label: "Price Book Cover Image", name: "pricebook_cover", widget: "image", hint: "Cover image for the price book PDF card. Recommended: 400x560px (portrait)." }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -313,7 +360,7 @@ collections:
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "materials"
     label: "Support › Material Standards"
-    description: "Content for the Material Standards page — page title, intro text, and CTA banner."
+    description: "Content for the Material Standards page — page title, intro text, section images, and CTA banner."
     files:
       - name: "materials"
         label: "Material Standards Content"
@@ -321,6 +368,17 @@ collections:
         fields:
           - { label: "Page Title (HTML allowed)", name: "page_title", widget: "string", required: true }
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
+          - label: "Section Images"
+            name: "section_images"
+            widget: "list"
+            hint: "Three images shown alongside the material standard sections."
+            max: 3
+            min: 3
+            summary: "{{fields.alt}}"
+            collapsed: true
+            fields:
+              - { label: "Image", name: "src", widget: "image", hint: "Recommended: 600x400px", required: true }
+              - { label: "Alt Text", name: "alt", widget: "string", required: true }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -356,7 +414,7 @@ collections:
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "about_us"
     label: "Contact › About Us"
-    description: "Content for the About Us page — section heading, introduction, and key statistics."
+    description: "Content for the About Us page — section heading, introduction, key statistics, and factory images."
     files:
       - name: "about_us"
         label: "About Us Content"
@@ -376,6 +434,16 @@ collections:
             fields:
               - { label: "Number", name: "num", widget: "string", required: true }
               - { label: "Label", name: "label", widget: "string", required: true }
+          - label: "Factory & Facility Images"
+            name: "factory_images"
+            widget: "list"
+            hint: "Up to 8 images shown in the factory/facility gallery section."
+            max: 8
+            summary: "{{fields.alt}}"
+            collapsed: true
+            fields:
+              - { label: "Image", name: "src", widget: "image", hint: "Recommended: 800x600px", required: true }
+              - { label: "Alt Text", name: "alt", widget: "string", required: true }
 
   # ═══════════════════════════════════════════════════════════════════════════
   #  SITE SETTINGS

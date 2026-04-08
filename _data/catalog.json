@@ -6,5 +6,7 @@
     "sub": "Book a free consultation with our design team and bring your vision to life.",
     "btn_text": "Book a Consultation",
     "btn_link": "contact-us.html"
-  }
+  },
+  "catalog_cover": "images/catalog-cover.jpg",
+  "pricebook_cover": "images/pricebook-cover.jpg"
 }

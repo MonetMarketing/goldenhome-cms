@@ -4,5 +4,19 @@
   "cta": {
     "heading": "Experience the <em>difference</em>",
     "sub": "See our material quality in person. Visit a showroom or book a free in-home design consultation."
-  }
+  },
+  "section_images": [
+    {
+      "src": "images/std-material.webp",
+      "alt": "Premium plywood cabinet material"
+    },
+    {
+      "src": "images/std-moisture.webp",
+      "alt": "Moisture resistant bathroom cabinet"
+    },
+    {
+      "src": "images/std-eco.webp",
+      "alt": "Eco-friendly kitchen cabinet"
+    }
+  ]
 }

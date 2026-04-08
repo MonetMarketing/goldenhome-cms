@@ -142,6 +142,21 @@ function loadHomepage() {
         });
       }
 
+      // Gallery images
+      if (d.gallery && d.gallery.images && d.gallery.images.length) {
+        var galleryImgs = document.querySelectorAll('.gallery-grid img, .gallery-mosaic img, .projects-grid img, .homepage-gallery img');
+        // Try more generic selector if specific ones don't match
+        if (!galleryImgs.length) {
+          galleryImgs = document.querySelectorAll('section img[src*="gallery"]');
+        }
+        d.gallery.images.forEach(function(item, i) {
+          if (galleryImgs[i] && item.src) {
+            galleryImgs[i].src = item.src;
+            if (item.alt) galleryImgs[i].alt = item.alt;
+          }
+        });
+      }
+
       // CTA Banner
       if (d.cta) {
         var ctaH2 = document.querySelector('.cta-banner h2');
@@ -254,6 +269,21 @@ function loadAboutUs() {
           if (statLabels[i] && stat.label) statLabels[i].textContent = stat.label;
         });
       }
+
+      // Factory images
+      if (d.factory_images && d.factory_images.length) {
+        var factoryImgs = document.querySelectorAll('.factory-gallery img, .factory-grid img, .about-gallery img, .facility-images img');
+        // Fallback: any img in sections with factory/about class
+        if (!factoryImgs.length) {
+          factoryImgs = document.querySelectorAll('section img[src*="factory"], section img[src*="about-factory"]');
+        }
+        d.factory_images.forEach(function(item, i) {
+          if (factoryImgs[i] && item.src) {
+            factoryImgs[i].src = item.src;
+            if (item.alt) factoryImgs[i].alt = item.alt;
+          }
+        });
+      }
     })
     .catch(function() {});
 
@@ -327,6 +357,24 @@ function loadCloset() {
       var sectionDesc = document.querySelector('.closets-section .section-desc');
       if (sectionDesc && d.section_desc) sectionDesc.textContent = d.section_desc;
 
+      // Collection images — Closet
+      if (d.collections && d.collections.length) {
+        d.collections.forEach(function(col) {
+          if (!col.id || !col.images || !col.images.length) return;
+          var mainImg = document.getElementById('main-' + col.id);
+          var thumbs = document.querySelectorAll('[data-collection="' + col.id + '"] .collection-thumb, #collection-' + col.id + ' .collection-thumb');
+          // Fallback: find thumbs near the main image
+          if (!thumbs.length && mainImg) {
+            var parent = mainImg.closest('.collection-block, .collection-item, section');
+            if (parent) thumbs = parent.querySelectorAll('.collection-thumb');
+          }
+          if (mainImg && col.images[0]) mainImg.src = col.images[0];
+          thumbs.forEach(function(thumb, ti) {
+            if (col.images[ti]) thumb.src = col.images[ti];
+          });
+        });
+      }
+
       // CTA Banner
       if (d.cta) {
         var ctaH2 = document.querySelector('.cta-banner h2');
@@ -370,6 +418,26 @@ function loadVanities() {
 
       var sectionDesc = document.querySelector('.vanities-section .section-desc');
       if (sectionDesc && d.section_desc) sectionDesc.textContent = d.section_desc;
+
+      // Collection images — Vanities
+      if (d.collections && d.collections.length) {
+        d.collections.forEach(function(col) {
+          if (!col.id || !col.images || !col.images.length) return;
+          var mainImg = document.getElementById('main-vanity-' + col.id.replace(/-/g, '').substring(0, 2));
+          // Try full id pattern too
+          if (!mainImg) mainImg = document.getElementById('main-vanity-' + col.id);
+          if (!mainImg) mainImg = document.getElementById('main-' + col.id);
+          var thumbs = document.querySelectorAll('[data-collection="' + col.id + '"] .collection-thumb');
+          if (!thumbs.length && mainImg) {
+            var parent = mainImg.closest('.collection-block, .collection-item, section, .vanity-item');
+            if (parent) thumbs = parent.querySelectorAll('.collection-thumb');
+          }
+          if (mainImg && col.images[0]) mainImg.src = col.images[0];
+          thumbs.forEach(function(thumb, ti) {
+            if (col.images[ti]) thumb.src = col.images[ti];
+          });
+        });
+      }
 
       // CTA Banner
       if (d.cta) {
@@ -466,6 +534,16 @@ function loadCatalog() {
       var heroSub = document.querySelector('.page-hero p');
       if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
 
+      // Catalog cover images
+      if (d.catalog_cover) {
+        var catCoverImg = document.querySelector('img[src*="catalog-cover"], .catalog-card img, .download-card:first-child img');
+        if (catCoverImg) catCoverImg.src = d.catalog_cover;
+      }
+      if (d.pricebook_cover) {
+        var pbCoverImg = document.querySelector('img[src*="pricebook-cover"], .pricebook-card img, .download-card:last-child img');
+        if (pbCoverImg) pbCoverImg.src = d.pricebook_cover;
+      }
+
       // CTA Banner
       if (d.cta) {
         var ctaH2 = document.querySelector('.cta-banner h2');
@@ -523,6 +601,20 @@ function loadMaterials() {
 
       var heroSub = document.querySelector('.page-hero p');
       if (heroSub && d.page_intro) heroSub.textContent = d.page_intro;
+
+      // Section images
+      if (d.section_images && d.section_images.length) {
+        var sectionImgs = document.querySelectorAll('.material-section img, .standards-section img, .material-grid img');
+        if (!sectionImgs.length) {
+          sectionImgs = document.querySelectorAll('section img[src*="std-"]');
+        }
+        d.section_images.forEach(function(item, i) {
+          if (sectionImgs[i] && item.src) {
+            sectionImgs[i].src = item.src;
+            if (item.alt) sectionImgs[i].alt = item.alt;
+          }
+        });
+      }
 
       // CTA Banner
       if (d.cta) {

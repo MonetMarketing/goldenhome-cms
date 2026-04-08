@@ -10,5 +10,25 @@
     "sub": "Visit our showroom or book a free design consultation.",
     "btn_text": "Book a Consultation",
     "btn_link": "contact-us.html"
-  }
+  },
+  "collections": [
+    {
+      "id": "egger-white",
+      "name": "Egger White",
+      "images": [
+        "images/closets/egger-white/1.webp",
+        "images/closets/egger-white/2.webp",
+        "images/closets/egger-white/3.webp"
+      ]
+    },
+    {
+      "id": "sheer-beauty",
+      "name": "Sheer Beauty",
+      "images": [
+        "images/closets/sheer-beauty/1.webp",
+        "images/closets/sheer-beauty/2.webp",
+        "images/closets/sheer-beauty/3.webp"
+      ]
+    }
+  ]
 }
