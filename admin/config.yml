@@ -118,9 +118,9 @@ collections:
         label: "Kitchen Cabinets Content"
         file: "_data/kitchen_cabinets.json"
         fields:
-          - { label: "Section Label", name: "label", widget: "string", hint: "Small uppercase label (e.g., 'Kitchen Cabinetry')", required: true }
-          - { label: "Page Heading", name: "heading", widget: "string", required: true }
-          - { label: "Page Introduction", name: "intro", widget: "text", required: true }
+          - { label: "Section Label", name: "label", widget: "string", hint: "Small uppercase label (e.g., 'Kitchen Cabinetry')", required: false }
+          - { label: "Page Heading", name: "heading", widget: "string", required: false }
+          - { label: "Page Introduction", name: "intro", widget: "text", required: false }
           - label: "Series Content"
             name: "series"
             widget: "object"
@@ -141,8 +141,8 @@ collections:
                 collapsed: true
                 fields:
                   - { label: "Color Name", name: "name", widget: "string", required: false }
-                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
-                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px", required: false }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", required: false, field: { label: "Rendering Image", name: "rendering", widget: "image", required: false } }
               - { label: "Delight Series Title", name: "delight_title", widget: "string" }
               - { label: "Delight Color Count", name: "delight_color_count", widget: "string" }
               - { label: "Delight Series Description", name: "delight_desc", widget: "text" }
@@ -154,8 +154,8 @@ collections:
                 collapsed: true
                 fields:
                   - { label: "Color Name", name: "name", widget: "string", required: false }
-                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
-                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px", required: false }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", required: false, field: { label: "Rendering Image", name: "rendering", widget: "image", required: false } }
               - { label: "Grand Series Title", name: "grand_title", widget: "string" }
               - { label: "Grand Color Count", name: "grand_color_count", widget: "string" }
               - { label: "Grand Series Description", name: "grand_desc", widget: "text" }
@@ -167,8 +167,8 @@ collections:
                 collapsed: true
                 fields:
                   - { label: "Color Name", name: "name", widget: "string", required: false }
-                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
-                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px", required: false }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", required: false, field: { label: "Rendering Image", name: "rendering", widget: "image", required: false } }
               - { label: "Luxury Series Title", name: "luxury_title", widget: "string" }
               - { label: "Luxury Color Count", name: "luxury_color_count", widget: "string" }
               - { label: "Luxury Series Description", name: "luxury_desc", widget: "text" }
@@ -180,8 +180,8 @@ collections:
                 collapsed: true
                 fields:
                   - { label: "Color Name", name: "name", widget: "string", required: false }
-                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
-                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px", required: false }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", required: false, field: { label: "Rendering Image", name: "rendering", widget: "image", required: false } }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
