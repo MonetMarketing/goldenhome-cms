@@ -4,5 +4,25 @@
   "cta": {
     "heading": "Have <em>questions?</em>",
     "sub": "Our team is happy to walk you through our policies in detail."
+  },
+  "body": {
+    "order_title": "Order",
+    "order_content": "All purchase orders and change of orders are subject to acceptance by GH, and no order will be binding upon GH until accepted and acknowledged by writing by GH.\n\nA signed cabinet term & condition sheet, purchase order with product list, quantity and drawings must be provided at the time of order. The lead time of order begins when a **50% down payment** is received.",
+    "return_title": "Return",
+    "return_accepted_items": "- Return for stock items is within **14 days** of purchase.\n- Returned items must be in original condition, original packing or repackaged to acceptable condition, unused, uninstalled, unmarked, and in 100% new and re-saleable condition.",
+    "return_restock_fee_1_pct": "25%",
+    "return_restock_fee_1_label": "RTA Products (brand new / original condition)",
+    "return_restock_fee_2_pct": "50%",
+    "return_restock_fee_2_label": "Assembled Products (approved by warehouse manager)",
+    "return_not_accepted_items": "- No return will be granted for Discontinued Products or Custom Special Orders.\n- GH will not accept returns for filler and moulding pieces or cabinets that were previously installed or have screw or nail holes.\n- No return on any installed products. No return on modified or altered products, or where cabinet doors have handles, knobs, or holes drilled.",
+    "return_highlight": "All change of orders will not be accepted until a written supplement is duly executed by both Parties. **Only store credit will be provided.** GH reserves the right not to accept any returns and/or cancellations after careful inspection.",
+    "cancel_title": "Cancellation",
+    "cancel_content": "Once the order leaves the warehouse, assembled items may not be canceled. No cancellation will be granted for non-stock items.\n\nCancellation of an order before delivery or pick-up that qualifies will be subject to the following fees:",
+    "cancel_fee_1_pct": "25%",
+    "cancel_fee_1_label": "Non-Assembled Products",
+    "cancel_fee_2_pct": "50%",
+    "cancel_fee_2_label": "Assembled Products",
+    "cancel_footer": "Freight for non-assembled products that are returned to GH has to be paid by the Dealer.",
+    "cancel_highlight": "Thank you for your continued business with us, and we look forward to assisting your business."
   }
 }

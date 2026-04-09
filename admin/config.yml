@@ -3,8 +3,8 @@ backend:
   branch: main
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
-site_url: https://goldenhome-cms.netlify.app
-display_url: https://goldenhome-cms.netlify.app
+site_url: https://goldenhomecabinetrycanada.com
+display_url: https://goldenhomecabinetrycanada.com
 logo_url: /images/logo-dark.png
 locale: "en"
 collections:
@@ -111,8 +111,8 @@ collections:
   #  PRODUCTS > Kitchen Cabinets
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "kitchen_cabinets"
-    label: "Products › Kitchen Cabinets"
-    description: "Content for the Kitchen Cabinets product page — page intro and series descriptions."
+    label: "Products > Kitchen Cabinets"
+    description: "Content for the Kitchen Cabinets product page — section intro and series descriptions."
     files:
       - name: "kitchen_cabinets"
         label: "Kitchen Cabinets Content"
@@ -121,24 +121,38 @@ collections:
           - { label: "Section Label", name: "label", widget: "string", hint: "Small uppercase label (e.g., 'Kitchen Cabinetry')", required: true }
           - { label: "Page Heading", name: "heading", widget: "string", required: true }
           - { label: "Page Introduction", name: "intro", widget: "text", required: true }
-          - label: "Cabinet Series"
+          - label: "Series Content"
             name: "series"
-            widget: "list"
-            hint: "Descriptions for each cabinet series tab. The 'id' must match: classic, delight, grand, or luxury."
-            max: 4
-            min: 4
-            summary: "{{fields.name}}"
+            widget: "object"
+            hint: "Text content for each cabinet series tab."
+            collapsed: false
+            fields:
+              - { label: "Section Category Label", name: "section_category", widget: "string", hint: "e.g., 'Kitchen Cabinetry'" }
+              - { label: "Section Heading (HTML allowed)", name: "section_heading", widget: "string", hint: "e.g., 'Kitchen <em>Cabinets</em>'" }
+              - { label: "Section Intro Text", name: "section_intro", widget: "text" }
+              - { label: "Classic Series Title", name: "classic_title", widget: "string" }
+              - { label: "Classic Series Description", name: "classic_desc", widget: "text" }
+              - { label: "Delight Series Title", name: "delight_title", widget: "string" }
+              - { label: "Delight Series Description", name: "delight_desc", widget: "text" }
+              - { label: "Grand Series Title", name: "grand_title", widget: "string" }
+              - { label: "Grand Series Description", name: "grand_desc", widget: "text" }
+              - { label: "Luxury Series Title", name: "luxury_title", widget: "string" }
+              - { label: "Luxury Series Description", name: "luxury_desc", widget: "text" }
+          - label: "Call-to-Action Banner"
+            name: "cta"
+            widget: "object"
             collapsed: true
             fields:
-              - { label: "Series ID (do not change)", name: "id", widget: "string", hint: "Must be: classic, delight, grand, or luxury", required: true }
-              - { label: "Series Name", name: "name", widget: "string", required: true }
-              - { label: "Series Description", name: "desc", widget: "text", required: true }
+              - { label: "Heading (HTML allowed)", name: "heading", widget: "string" }
+              - { label: "Subtext", name: "sub", widget: "string" }
+              - { label: "Button Text", name: "btn_text", widget: "string" }
+              - { label: "Button Link", name: "btn_link", widget: "string" }
 
   # ═══════════════════════════════════════════════════════════════════════════
   #  PRODUCTS > Closet & Storage
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "closet"
-    label: "Products › Closet & Storage"
+    label: "Products > Closet & Storage"
     description: "Content for the Closet & Storage product page."
     files:
       - name: "closet"
@@ -152,8 +166,18 @@ collections:
             fields:
               - { label: "Page Heading", name: "heading", widget: "string", required: true }
               - { label: "Subheading", name: "sub", widget: "string" }
-          - { label: "Section Heading (HTML allowed, e.g. Closet <em>Collections</em>)", name: "section_heading", widget: "string" }
+          - { label: "Section Heading (HTML allowed)", name: "section_heading", widget: "string" }
           - { label: "Section Description", name: "section_desc", widget: "text" }
+          - label: "Collection Names & Descriptions"
+            name: "collections"
+            widget: "object"
+            hint: "Names and descriptions for each closet collection."
+            collapsed: false
+            fields:
+              - { label: "Egger White — Collection Name", name: "egger_name", widget: "string" }
+              - { label: "Egger White — Description", name: "egger_desc", widget: "text" }
+              - { label: "Sheer Beauty — Collection Name", name: "sheer_name", widget: "string" }
+              - { label: "Sheer Beauty — Description", name: "sheer_desc", widget: "text" }
           - label: "Closet Collection Images"
             name: "closet_images"
             widget: "object"
@@ -180,7 +204,7 @@ collections:
   #  PRODUCTS > Bathroom Vanities
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "vanities"
-    label: "Products › Bathroom Vanities"
+    label: "Products > Bathroom Vanities"
     description: "Content for the Bathroom Vanities product page."
     files:
       - name: "vanities"
@@ -194,8 +218,19 @@ collections:
             fields:
               - { label: "Page Heading", name: "heading", widget: "string", required: true }
               - { label: "Subheading", name: "sub", widget: "string" }
-          - { label: "Section Heading (HTML allowed, e.g. Vanity <em>Collections</em>)", name: "section_heading", widget: "string" }
+          - { label: "Section Heading (HTML allowed)", name: "section_heading", widget: "string" }
           - { label: "Section Description", name: "section_desc", widget: "text" }
+          - label: "Collection Names"
+            name: "collections"
+            widget: "object"
+            hint: "Names for each vanity collection tab."
+            collapsed: false
+            fields:
+              - { label: "Collection 1 Name", name: "glossy_name", widget: "string" }
+              - { label: "Collection 2 Name", name: "shaker_name", widget: "string" }
+              - { label: "Collection 3 Name", name: "walnut_name", widget: "string" }
+              - { label: "Collection 4 Name", name: "darkwood_name", widget: "string" }
+              - { label: "Collection 5 Name", name: "rusticoak_name", widget: "string" }
           - label: "Vanity Collection Images"
             name: "vanity_images"
             widget: "object"
@@ -227,7 +262,7 @@ collections:
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "projects"
     label: "Projects"
-    description: "Content for the Projects showcase page — section headings for Before & After, Canada, and Global sections."
+    description: "Content for the Projects showcase page — section headings."
     files:
       - name: "projects"
         label: "Projects Page Content"
@@ -275,15 +310,26 @@ collections:
   #  SUPPORT > Instruction Guidelines
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "instructions"
-    label: "Support › Instruction Guidelines"
-    description: "Content for the Installation Guides page — page title, intro text, and CTA banner."
+    label: "Support > Instruction Guidelines"
+    description: "Content for the Installation Guides page — page title, intro text, video tutorials, and CTA banner."
     files:
       - name: "instructions"
         label: "Instruction Guidelines Content"
         file: "_data/instructions.json"
         fields:
-          - { label: "Page Title (HTML allowed, e.g. Installation <em>Guides</em>)", name: "page_title", widget: "string", required: true }
+          - { label: "Page Title (HTML allowed)", name: "page_title", widget: "string", required: true }
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
+          - label: "Video Tutorials"
+            name: "videos"
+            widget: "list"
+            hint: "YouTube video tutorials. Add, remove, or reorder videos."
+            summary: "{{fields.title}}"
+            collapsed: true
+            fields:
+              - { label: "Video Title", name: "title", widget: "string", required: true }
+              - { label: "Category Tag", name: "tag", widget: "string", hint: "e.g., Hardware, Cabinet Assembly, Closet, Vanity", required: true }
+              - { label: "Category ID", name: "category", widget: "string", hint: "Lowercase: hardware, cabinet, closet, or vanity", required: true }
+              - { label: "YouTube Video ID", name: "youtube_id", widget: "string", hint: "The ID from the YouTube URL, e.g., 'YZ_rpeFcXow'", required: true }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -296,8 +342,8 @@ collections:
   #  SUPPORT > Order & Return Policy
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "order_policy"
-    label: "Support › Order & Return Policy"
-    description: "Content for the Order & Return Policy page — page title, intro text, and CTA banner."
+    label: "Support > Order & Return Policy"
+    description: "Full content for the Order & Return Policy page including all policy sections."
     files:
       - name: "order_policy"
         label: "Order & Return Policy Content"
@@ -305,6 +351,29 @@ collections:
         fields:
           - { label: "Page Title (HTML allowed)", name: "page_title", widget: "string", required: true }
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
+          - label: "Policy Body Content"
+            name: "body"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Order Section Title", name: "order_title", widget: "string" }
+              - { label: "Order Section Content", name: "order_content", widget: "text", hint: "Use line breaks for paragraphs." }
+              - { label: "Return Section Title", name: "return_title", widget: "string" }
+              - { label: "Accepted Returns (Markdown list)", name: "return_accepted_items", widget: "text", hint: "Use '- ' for bullet points, **bold** for emphasis." }
+              - { label: "Restocking Fee 1 — Percentage", name: "return_restock_fee_1_pct", widget: "string" }
+              - { label: "Restocking Fee 1 — Label", name: "return_restock_fee_1_label", widget: "string" }
+              - { label: "Restocking Fee 2 — Percentage", name: "return_restock_fee_2_pct", widget: "string" }
+              - { label: "Restocking Fee 2 — Label", name: "return_restock_fee_2_label", widget: "string" }
+              - { label: "Not Accepted Returns (Markdown list)", name: "return_not_accepted_items", widget: "text", hint: "Use '- ' for bullet points." }
+              - { label: "Return Highlight Box", name: "return_highlight", widget: "text", hint: "Important notice text shown in a highlight box." }
+              - { label: "Cancellation Section Title", name: "cancel_title", widget: "string" }
+              - { label: "Cancellation Content", name: "cancel_content", widget: "text" }
+              - { label: "Cancellation Fee 1 — Percentage", name: "cancel_fee_1_pct", widget: "string" }
+              - { label: "Cancellation Fee 1 — Label", name: "cancel_fee_1_label", widget: "string" }
+              - { label: "Cancellation Fee 2 — Percentage", name: "cancel_fee_2_pct", widget: "string" }
+              - { label: "Cancellation Fee 2 — Label", name: "cancel_fee_2_label", widget: "string" }
+              - { label: "Cancellation Footer Text", name: "cancel_footer", widget: "text" }
+              - { label: "Cancellation Highlight Box", name: "cancel_highlight", widget: "text" }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -317,8 +386,8 @@ collections:
   #  SUPPORT > Warranty & Certification
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "warranty"
-    label: "Support › Warranty & Certification"
-    description: "Content for the Warranty & Certification page — page title, intro text, and CTA banner."
+    label: "Support > Warranty & Certification"
+    description: "Full content for the Warranty & Certification page including all warranty sections."
     files:
       - name: "warranty"
         label: "Warranty & Certification Content"
@@ -326,6 +395,20 @@ collections:
         fields:
           - { label: "Page Title (HTML allowed)", name: "page_title", widget: "string", required: true }
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
+          - label: "Warranty Body Content"
+            name: "body"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Section 1 Title", name: "section1_title", widget: "string" }
+              - { label: "Section 1 Content", name: "section1_content", widget: "text" }
+              - { label: "Section 1 Highlight Box", name: "section1_highlight", widget: "text" }
+              - { label: "Section 1 Footer Text", name: "section1_footer", widget: "text" }
+              - { label: "Section 2 Title", name: "section2_title", widget: "string" }
+              - { label: "Section 2 Items (Markdown list)", name: "section2_items", widget: "text" }
+              - { label: "Section 2 Highlight Box", name: "section2_highlight", widget: "text" }
+              - { label: "Section 3 Title (Accreditations)", name: "section3_title", widget: "string" }
+              - { label: "Section 3 Content", name: "section3_content", widget: "text", hint: "Leave empty if accreditations are shown as logos only." }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -338,8 +421,8 @@ collections:
   #  SUPPORT > Catalog & Spec Book
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "catalog"
-    label: "Support › Catalog & Spec Book"
-    description: "Content for the Catalog & Spec Book downloads page — page title, intro text, cover images, and CTA banner."
+    label: "Support > Catalog & Spec Book"
+    description: "Content for the Catalog & Spec Book downloads page."
     files:
       - name: "catalog"
         label: "Catalog & Spec Book Content"
@@ -347,8 +430,24 @@ collections:
         fields:
           - { label: "Page Title (HTML allowed)", name: "page_title", widget: "string", required: true }
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
-          - { label: "Catalog Cover Image", name: "catalog_cover", widget: "image", hint: "Cover image for the product catalog PDF card. Recommended: 400x560px (portrait)." }
-          - { label: "Price Book Cover Image", name: "pricebook_cover", widget: "image", hint: "Cover image for the price book PDF card. Recommended: 400x560px (portrait)." }
+          - { label: "Catalog Cover Image", name: "catalog_cover", widget: "image", hint: "Cover image for the product catalog card. Recommended: 400x560px (portrait)." }
+          - { label: "Price Book Cover Image", name: "pricebook_cover", widget: "image", hint: "Cover image for the price book card. Recommended: 400x560px (portrait)." }
+          - label: "Download Cards Content"
+            name: "downloads"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Catalog Title", name: "catalog_title", widget: "string" }
+              - { label: "Catalog Year/Edition", name: "catalog_year", widget: "string" }
+              - { label: "Catalog Description", name: "catalog_desc", widget: "text" }
+              - { label: "Catalog File Format", name: "catalog_format", widget: "string" }
+              - { label: "Catalog File Size", name: "catalog_filesize", widget: "string" }
+              - { label: "Catalog Edition Label", name: "catalog_edition", widget: "string" }
+              - { label: "Catalog PDF Filename", name: "catalog_file", widget: "string", hint: "e.g., GoldenHome2026Catalog.pdf" }
+              - { label: "Price Book Title", name: "pricebook_title", widget: "string" }
+              - { label: "Price Book Description", name: "pricebook_desc", widget: "text" }
+              - { label: "Notice Title", name: "notice_title", widget: "string" }
+              - { label: "Notice Text", name: "notice_text", widget: "text" }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -363,8 +462,8 @@ collections:
   #  SUPPORT > Material Standards
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "materials"
-    label: "Support › Material Standards"
-    description: "Content for the Material Standards page — page title, intro text, section images, and CTA banner."
+    label: "Support > Material Standards"
+    description: "Content for the Material Standards page — section text, tags, images, and CTA."
     files:
       - name: "materials"
         label: "Material Standards Content"
@@ -372,6 +471,20 @@ collections:
         fields:
           - { label: "Page Title (HTML allowed)", name: "page_title", widget: "string", required: true }
           - { label: "Page Intro", name: "page_intro", widget: "text", required: true }
+          - label: "Material Sections Content"
+            name: "sections"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Section 1 Title (HTML allowed)", name: "section1_title", widget: "string" }
+              - { label: "Section 1 Description", name: "section1_desc", widget: "text" }
+              - { label: "Section 1 Tags (comma-separated)", name: "section1_tags", widget: "string", hint: "e.g., Multi-Layer Plywood, Cross-Grain, Superior Strength" }
+              - { label: "Section 2 Title (HTML allowed)", name: "section2_title", widget: "string" }
+              - { label: "Section 2 Description", name: "section2_desc", widget: "text" }
+              - { label: "Section 2 Tags (comma-separated)", name: "section2_tags", widget: "string" }
+              - { label: "Section 3 Title (HTML allowed)", name: "section3_title", widget: "string" }
+              - { label: "Section 3 Description", name: "section3_desc", widget: "text" }
+              - { label: "Section 3 Tags (comma-separated)", name: "section3_tags", widget: "string" }
           - label: "Section Images"
             name: "section_images"
             widget: "object"
@@ -393,7 +506,7 @@ collections:
   #  CONTACT > Contact Us
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "contact_us"
-    label: "Contact › Contact Us"
+    label: "Contact > Contact Us"
     description: "Content for the Contact Us page — section heading, intro, and showroom contact information."
     files:
       - name: "contact_us"
@@ -415,7 +528,7 @@ collections:
   #  CONTACT > About Us
   # ═══════════════════════════════════════════════════════════════════════════
   - name: "about_us"
-    label: "Contact › About Us"
+    label: "Contact > About Us"
     description: "Content for the About Us page — section heading, introduction, key statistics, and factory images."
     files:
       - name: "about_us"
@@ -434,7 +547,7 @@ collections:
             summary: "{{fields.num}} — {{fields.label}}"
             collapsed: true
             fields:
-              - { label: "Number", name: "num", widget: "string", required: true }
+              - { label: "Number", name: "num", widget: "string", hint: "The statistic (e.g., '25+', '1000+')", required: true }
               - { label: "Label", name: "label", widget: "string", required: true }
           - label: "Factory & Facility Images"
             name: "factory_images"

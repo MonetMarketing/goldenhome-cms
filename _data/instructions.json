@@ -4,5 +4,67 @@
   "cta": {
     "heading": "Need <em>more help?</em>",
     "sub": "Our design advisors are ready to assist you in person. Book a free consultation at your nearest showroom."
-  }
+  },
+  "videos": [
+    {
+      "title": "AVENTOS HF \u2014 Bi-Fold Lift System (Blum)",
+      "tag": "Hardware",
+      "category": "hardware",
+      "youtube_id": "YZ_rpeFcXow"
+    },
+    {
+      "title": "BTC18 Trash Can Assembly",
+      "tag": "Cabinet Assembly",
+      "category": "cabinet",
+      "youtube_id": "JgPZ0HRhYEs"
+    },
+    {
+      "title": "AVENTOS HK Top \u2014 Stay Lift System (Blum)",
+      "tag": "Hardware",
+      "category": "hardware",
+      "youtube_id": "vtsuGgrjW-g"
+    },
+    {
+      "title": "Regular Cabinet Assembly",
+      "tag": "Cabinet Assembly",
+      "category": "cabinet",
+      "youtube_id": "WRFKvBMIq7c"
+    },
+    {
+      "title": "Cabinet Installation Guide",
+      "tag": "Cabinet Assembly",
+      "category": "cabinet",
+      "youtube_id": "Ef4SAZ7rKzM"
+    },
+    {
+      "title": "Lazy Susan Assembly",
+      "tag": "Cabinet Assembly",
+      "category": "cabinet",
+      "youtube_id": "5nBTKGITusE"
+    },
+    {
+      "title": "Pantry Pull-Out Tray Installation",
+      "tag": "Cabinet Assembly",
+      "category": "cabinet",
+      "youtube_id": "oFtcthP-Iu0"
+    },
+    {
+      "title": "Closet Installation Guide",
+      "tag": "Closet",
+      "category": "closet",
+      "youtube_id": "Ck8v9RuB1Ck"
+    },
+    {
+      "title": "Vanity Set With Drawer Assembly",
+      "tag": "Vanity",
+      "category": "vanity",
+      "youtube_id": "G8LpFud3X4k"
+    },
+    {
+      "title": "Vanity Set Assembly",
+      "tag": "Vanity",
+      "category": "vanity",
+      "youtube_id": "vz1d3IbHcME"
+    }
+  ]
 }

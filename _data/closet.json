@@ -18,5 +18,11 @@
     "sheer_1": "/images/closets/sheer-beauty/1.webp",
     "sheer_2": "/images/closets/sheer-beauty/2.webp",
     "sheer_3": "/images/closets/sheer-beauty/3.webp"
+  },
+  "collections": {
+    "egger_name": "Egger White",
+    "egger_desc": "A clean, bright white finish that brings a sense of openness and modern simplicity to any closet space.",
+    "sheer_name": "Sheer Beauty",
+    "sheer_desc": "A warm, natural wood tone that adds depth and comfort, creating a relaxed and inviting living environment."
   }
 }

@@ -8,5 +8,18 @@
     "btn_link": "contact-us.html"
   },
   "catalog_cover": "images/catalog-cover.jpg",
-  "pricebook_cover": "images/pricebook-cover.jpg"
+  "pricebook_cover": "images/pricebook-cover.jpg",
+  "downloads": {
+    "catalog_title": "Product Catalog",
+    "catalog_year": "2026 Edition",
+    "catalog_desc": "Browse our complete collection of kitchen cabinets, bathroom vanities, and closet systems. Featuring hundreds of door styles, finish options, and configuration possibilities \u2014 all with detailed specifications and photography.",
+    "catalog_format": "PDF",
+    "catalog_filesize": "3.1 MB",
+    "catalog_edition": "2026",
+    "catalog_file": "GoldenHome2026Catalog.pdf",
+    "pricebook_title": "Price Book / Order Form",
+    "pricebook_desc": "You can review our prices in details and order form from our sales rep through contact forms.",
+    "notice_title": "For Trade Partners & Dealers",
+    "notice_text": "Pricing and availability are subject to change. For the most current pricing, product availability, or to request a custom quote, please contact your GoldenHome sales representative directly at info@goldenhomecabinetry.ca or call (905) 727-8800."
+  }
 }

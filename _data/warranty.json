@@ -4,5 +4,16 @@
   "cta": {
     "heading": "Have <em>questions?</em>",
     "sub": "Our team is happy to walk you through our warranty coverage in detail."
+  },
+  "body": {
+    "section1_title": "Limited Warranty",
+    "section1_content": "GoldenHome Cabinetry warrants that its Cabinets and Parts should be free of substantial defects in materials and workmanship for a period of **5 years** following the acquisition date for Residential Customers and **1 year** for Commercial Customers. The warranty period begins on the Purchase Date.\n\nThis Limited Warranty applies to Domestic use only and covers defects in materials and workmanship. Labor and shipping are not included. Indoor Use Only. All warranty actions are through the original Dealer where purchased.",
+    "section1_highlight": "In the event of an issue, GoldenHome will examine the product and at its sole discretion will determine if the warranty applies. If the product is no longer available, GoldenHome will substitute a similar product. Color match is not guaranteed as all cabinets will change over time.",
+    "section1_footer": "Please follow all Assembly, Installation, and Care Instructions. This warranty does not cover normal wear and tear, water damage, outdoor use, or damage from misuse or abuse. The original Proof of Purchase receipt is required.",
+    "section2_title": "\"Solid Wood Shaker\" Limited Warranty \u2014 1 Year",
+    "section2_items": "- Any modifications to the hardware structure or finish by anyone not specifically authorized by GoldenHome Cabinetry will void this limited warranty.\n- Natural wood colors, grain patterns and characteristics may vary based on naturally occurring wood characteristics, and are subject to subtle changes over time.\n- Door joints may respond to environmental conditions. Gaps that may form at interior joints due to environmental conditions are not covered.\n- Wood expansion and contraction continue to occur year after year as it compensates and adapts to changing atmospheric humidity and temperature conditions.",
+    "section2_highlight": "This warranty does not cover damage caused by improper handling, storage, chemicals, abrasives, or citrus cleaning products. Temperatures outside 50\u201385\u00b0F and humidity outside 30\u201355% are considered extreme conditions and are not covered.",
+    "section3_title": "Our Accreditations",
+    "section3_content": ""
   }
 }

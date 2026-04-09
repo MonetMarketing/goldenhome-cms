@@ -2,26 +2,17 @@
   "label": "Kitchen Cabinetry",
   "heading": "Kitchen Cabinets",
   "intro": "Factory-direct kitchen cabinetry in four distinct series \u2014 each offering a unique aesthetic with consistent quality, KCMA certification, and 2-week local delivery from our Aurora warehouse.",
-  "series": [
-    {
-      "id": "classic",
-      "name": "Classic Series",
-      "desc": "As the versatile foundation of kitchen design, classic cabinetry avoids unnecessary frills to prioritize stylistic harmony. This minimalist approach grants you the freedom to infuse your own personality through an endless array of complementary design elements."
-    },
-    {
-      "id": "delight",
-      "name": "Delight Series",
-      "desc": "Our signature 5-sides MDF shaker doors with 3/4\" frame and 3/8\" MDF core. Painted finishes on exterior and all edges. Crack-resistant."
-    },
-    {
-      "id": "grand",
-      "name": "Grand Series",
-      "desc": "More choices from AGT colours are available now. Scant 3/4 inch thick MDF board, with PET laminate on the exterior and melamine laminate on the interior, ABS banding of matching colour on all edges."
-    },
-    {
-      "id": "luxury",
-      "name": "Luxury Series",
-      "desc": "You don't want to miss the brand new luxury series. Constructed with a solid 3/4\" thickness. The door is built for strength and stability, with a solid feel that pairs clean design with long-lasting performance."
-    }
-  ]
+  "series": {
+    "classic_title": "Classic Series",
+    "classic_desc": "As the versatile foundation of kitchen design, classic cabinetry avoids unnecessary frills to prioritize stylistic harmony. This minimalist approach grants you the freedom to infuse your own personality through an endless array of complementary design elements.",
+    "delight_title": "Delight Series",
+    "delight_desc": "Our signature 5-sides MDF shaker doors with 3/4\" frame and 3/8\" MDF core. Painted finishes on exterior and all edges. Crack-resistant.",
+    "grand_title": "Grand Series",
+    "grand_desc": "More choices from AGT colours are available now. Scant 3/4 inch thick MDF board, with PET laminate on the exterior and melamine laminate on the interior, ABS banding of matching colour on all edges.",
+    "luxury_title": "Luxury Series",
+    "luxury_desc": "You don't want to miss the brand new luxury series. Constructed with a solid 3/4\" thickness. The door is built for strength and stability, with a solid feel that pairs clean design with long-lasting performance.",
+    "section_category": "Kitchen Cabinetry",
+    "section_heading": "Kitchen <em>Cabinets</em>",
+    "section_intro": "Select a series below to explore available door colours and room renderings. Click any colour swatch to preview how it looks in a real kitchen setting."
+  }
 }

@@ -22,5 +22,12 @@
     "darkwood_2": "/images/vanities/dark-wood-2.jpg",
     "rusticoak_1": "/images/vanities/rustic-oak-1.jpg",
     "rusticoak_2": "/images/vanities/rustic-oak-1.jpg"
+  },
+  "collections": {
+    "glossy_name": "Glossy White",
+    "shaker_name": "White Shaker",
+    "walnut_name": "Walnut",
+    "darkwood_name": "Dark Wood",
+    "rusticoak_name": "Rustic Oak"
   }
 }

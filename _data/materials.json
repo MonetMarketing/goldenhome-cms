@@ -9,5 +9,16 @@
     "img1": "/images/std-material.webp",
     "img2": "/images/std-moisture.webp",
     "img3": "/images/std-eco.webp"
+  },
+  "sections": {
+    "section1_title": "Premium <em>Plywood</em>",
+    "section1_desc": "Our cabinets are constructed with premium-grade plywood \u2014 not particle board. Multi-layer cross-grain construction provides superior strength, screw-holding power, and long-term durability that stands up to daily use.",
+    "section1_tags": "Multi-Layer Plywood, Cross-Grain, Superior Strength",
+    "section2_title": "Moisture <em>Resistant</em>",
+    "section2_desc": "Engineered for kitchens and bathrooms, our sealed melamine finish on all surfaces prevents water penetration, protecting against warping, swelling, and mold \u2014 so your cabinets stay beautiful for the long term.",
+    "section2_tags": "Sealed Melamine, Anti-Warp, Mold Resistant",
+    "section3_title": "Environmentally <em>Friendly</em>",
+    "section3_desc": "All GoldenHome materials are CARB II compliant \u2014 meeting California's strict formaldehyde emission standards. Eco-friendly finishes and responsibly sourced materials mean a healthier home and a healthier planet.",
+    "section3_tags": "CARB II Compliant, Low Emission, Responsible Sourcing"
   }
 }
