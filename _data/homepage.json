@@ -1,6 +1,6 @@
 {
   "hero": {
-    "heading": "Stock Speed. Custom Precision.",
+    "heading": "Stock Speed. Custom Precision...",
     "sub": "Cabinetry designed for your space and delivered from our Toronto warehouse.",
     "image": "/images/hero-main.webp",
     "btn1_text": "Explore Products",
@@ -23,7 +23,7 @@
     },
     {
       "title": "Semi-Custom Whole-Home Cabinetry",
-      "desc": "Standard dimensions with expanded possibilities \u2014 more finishes, materials, and design combinations within a structured system."
+      "desc": "Standard dimensions with expanded possibilities — more finishes, materials, and design combinations within a structured system."
     }
   ],
   "cabinet_series": [
@@ -48,7 +48,7 @@
     "p1": "GoldenHome has been delivering high-quality cabinetry solutions since 1999, building a strong global foundation across multiple markets. Today, GoldenHome Cabinetry Eastern Canada brings that experience closer to home through a growing local manufacturing and supply network based in Ontario.",
     "p2": "With integrated warehousing and local production capabilities, we are able to support projects with greater speed, flexibility, and consistency. From in-stock cabinetry to locally customized solutions, our approach is designed to meet the needs of contractors, designers, and homeowners across Canada.",
     "image": "/images/gallery-kitchen.jpg",
-    "image_tag": "Est. in Canada \u00b7 Locally Installed"
+    "image_tag": "Est. in Canada · Locally Installed"
   },
   "stats": [
     {
