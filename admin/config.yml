@@ -140,7 +140,7 @@ collections:
                 summary: "{{fields.name}}"
                 collapsed: true
                 fields:
-                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Color Name", name: "name", widget: "string", required: false }
                   - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
                   - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
               - { label: "Delight Series Title", name: "delight_title", widget: "string" }
@@ -153,7 +153,7 @@ collections:
                 summary: "{{fields.name}}"
                 collapsed: true
                 fields:
-                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Color Name", name: "name", widget: "string", required: false }
                   - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
                   - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
               - { label: "Grand Series Title", name: "grand_title", widget: "string" }
@@ -166,7 +166,7 @@ collections:
                 summary: "{{fields.name}}"
                 collapsed: true
                 fields:
-                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Color Name", name: "name", widget: "string", required: false }
                   - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
                   - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
               - { label: "Luxury Series Title", name: "luxury_title", widget: "string" }
@@ -179,7 +179,7 @@ collections:
                 summary: "{{fields.name}}"
                 collapsed: true
                 fields:
-                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Color Name", name: "name", widget: "string", required: false }
                   - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
                   - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
           - label: "Call-to-Action Banner"
