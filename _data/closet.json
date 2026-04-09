@@ -12,11 +12,11 @@
     "btn_link": "contact-us.html"
   },
   "closet_images": {
-    "egger_1": "/images/uploads/screenshot-2026-04-08-at-7.01.04 pm.png",
-    "egger_2": "/images/closet-egger-2.jpg",
-    "egger_3": "/images/closet-egger-3.jpg",
-    "sheer_1": "/images/uploads/screenshot-2026-04-08-at-7.00.42 pm.png",
-    "sheer_2": "/images/closet-sheer-2.jpg",
-    "sheer_3": "/images/closet-sheer-3.jpg"
+    "egger_1": "/images/closets/egger-white/1.webp",
+    "egger_2": "/images/closets/egger-white/2.webp",
+    "egger_3": "/images/closets/egger-white/3.webp",
+    "sheer_1": "/images/closets/sheer-beauty/1.webp",
+    "sheer_2": "/images/closets/sheer-beauty/2.webp",
+    "sheer_3": "/images/closets/sheer-beauty/3.webp"
   }
 }

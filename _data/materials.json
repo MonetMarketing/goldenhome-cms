@@ -6,8 +6,8 @@
     "sub": "See our material quality in person. Visit a showroom or book a free in-home design consultation."
   },
   "section_images": {
-    "img1": "/images/material-std-1.jpg",
-    "img2": "/images/material-std-2.jpg",
-    "img3": "/images/material-std-3.jpg"
+    "img1": "/images/std-material.webp",
+    "img2": "/images/std-moisture.webp",
+    "img3": "/images/std-eco.webp"
   }
 }

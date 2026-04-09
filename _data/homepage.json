@@ -75,17 +75,17 @@
     "btn_link": "/about-us#subscribe"
   },
   "gallery": {
-    "img1": "/images/gallery-1.jpg",
-    "img2": "/images/gallery-2.jpg",
-    "img3": "/images/gallery-3.jpg",
-    "img4": "/images/gallery-4.jpg",
-    "img5": "/images/gallery-5.jpg",
-    "img6": "/images/gallery-6.jpg"
+    "img1": "/images/gallery-3.webp",
+    "img2": "/images/gallery-5.webp",
+    "img3": "/images/gallery-4.webp",
+    "img4": "/images/gallery-1.webp",
+    "img5": "/images/gallery-2.webp",
+    "img6": "/images/gallery-6.webp"
   },
   "cabinet_series_images": {
     "classic": "/images/cabinet-classic.jpg",
-    "delight": "/images/cabinet-delight.jpg",
+    "delight": "/images/cabinet-deluxe.jpg",
     "grand": "/images/cabinet-grand.jpg",
-    "luxury": "/images/cabinet-luxury.jpg"
+    "luxury": "/images/luxury-series.webp"
   }
 }

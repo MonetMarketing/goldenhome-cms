@@ -12,15 +12,15 @@
     "btn_link": "contact-us.html"
   },
   "vanity_images": {
-    "glossy_1": "/images/vanity-glossy-1.jpg",
-    "glossy_2": "/images/vanity-glossy-2.jpg",
-    "shaker_1": "/images/vanity-shaker-1.jpg",
-    "shaker_2": "/images/vanity-shaker-2.jpg",
-    "walnut_1": "/images/vanity-walnut-1.jpg",
-    "walnut_2": "/images/vanity-walnut-2.jpg",
-    "darkwood_1": "/images/vanity-darkwood-1.jpg",
-    "darkwood_2": "/images/vanity-darkwood-2.jpg",
-    "rusticoak_1": "/images/vanity-rusticoak-1.jpg",
-    "rusticoak_2": "/images/vanity-rusticoak-2.jpg"
+    "glossy_1": "/images/vanities/glossy-white-1.jpg",
+    "glossy_2": "/images/vanities/glossy-white-2.jpg",
+    "shaker_1": "/images/vanities/white-shaker-1.jpg",
+    "shaker_2": "/images/vanities/white-shaker-2.jpg",
+    "walnut_1": "/images/vanities/walnut-1.jpg",
+    "walnut_2": "/images/vanities/walnut-2.jpg",
+    "darkwood_1": "/images/vanities/dark-wood-1.jpg",
+    "darkwood_2": "/images/vanities/dark-wood-2.jpg",
+    "rusticoak_1": "/images/vanities/rustic-oak-1.jpg",
+    "rusticoak_2": "/images/vanities/rustic-oak-1.jpg"
   }
 }
