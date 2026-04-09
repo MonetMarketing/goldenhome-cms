@@ -7,21 +7,21 @@
   "section_desc": "Elegant, functional bathroom vanities crafted to elevate your space.",
   "cta": {
     "heading": "Ready to <em>explore</em> your options?",
-    "sub": "Visit our showroom or book a free design consultation.",
-    "btn_text": "Book a Consultation",
-    "btn_link": "contact-us.html"
+    "sub": "Request a free design quote and discover the materials, styles, and finishes that suit your vision.",
+    "btn_text": "Get Free Design Quote",
+    "btn_link": "https://goldenhomecabinetrycanada.com/#contact"
   },
   "vanity_images": {
     "glossy_1": "/images/vanities/glossy-white-1.jpg",
     "glossy_2": "/images/vanities/glossy-white-2.jpg",
-    "shaker_1": "/images/vanities/white-shaker-1.jpg",
-    "shaker_2": "/images/vanities/white-shaker-2.jpg",
-    "walnut_1": "/images/vanities/walnut-1.jpg",
-    "walnut_2": "/images/vanities/walnut-2.jpg",
+    "rusticoak_1": "/images/vanities/rustic-oak-1.jpg",
+    "rusticoak_2": "/images/vanities/rustic-oak-1.jpg",
     "darkwood_1": "/images/vanities/dark-wood-1.jpg",
     "darkwood_2": "/images/vanities/dark-wood-2.jpg",
-    "rusticoak_1": "/images/vanities/rustic-oak-1.jpg",
-    "rusticoak_2": "/images/vanities/rustic-oak-1.jpg"
+    "walnut_1": "/images/vanities/walnut-1.jpg",
+    "walnut_2": "/images/vanities/walnut-2.jpg",
+    "shaker_1": "/images/vanities/white-shaker-1.jpg",
+    "shaker_2": "/images/vanities/white-shaker-2.jpg"
   },
   "collections": {
     "glossy_name": "Glossy White",
