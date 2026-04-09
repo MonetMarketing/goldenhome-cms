@@ -124,20 +124,64 @@ collections:
           - label: "Series Content"
             name: "series"
             widget: "object"
-            hint: "Text content for each cabinet series tab."
+            hint: "Text content and images for each cabinet series tab."
             collapsed: false
             fields:
               - { label: "Section Category Label", name: "section_category", widget: "string", hint: "e.g., 'Kitchen Cabinetry'" }
               - { label: "Section Heading (HTML allowed)", name: "section_heading", widget: "string", hint: "e.g., 'Kitchen <em>Cabinets</em>'" }
               - { label: "Section Intro Text", name: "section_intro", widget: "text" }
               - { label: "Classic Series Title", name: "classic_title", widget: "string" }
+              - { label: "Classic Color Count", name: "classic_color_count", widget: "string", hint: "e.g., '4 door colours available'" }
               - { label: "Classic Series Description", name: "classic_desc", widget: "text" }
+              - label: "Classic Door Colors"
+                name: "classic_colors"
+                widget: "list"
+                hint: "Door color swatches and room renderings for Classic series."
+                summary: "{{fields.name}}"
+                collapsed: true
+                fields:
+                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
               - { label: "Delight Series Title", name: "delight_title", widget: "string" }
+              - { label: "Delight Color Count", name: "delight_color_count", widget: "string" }
               - { label: "Delight Series Description", name: "delight_desc", widget: "text" }
+              - label: "Delight Door Colors"
+                name: "delight_colors"
+                widget: "list"
+                hint: "Door color swatches and room renderings for Delight series."
+                summary: "{{fields.name}}"
+                collapsed: true
+                fields:
+                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
               - { label: "Grand Series Title", name: "grand_title", widget: "string" }
+              - { label: "Grand Color Count", name: "grand_color_count", widget: "string" }
               - { label: "Grand Series Description", name: "grand_desc", widget: "text" }
+              - label: "Grand Door Colors"
+                name: "grand_colors"
+                widget: "list"
+                hint: "Door color swatches and room renderings for Grand series."
+                summary: "{{fields.name}}"
+                collapsed: true
+                fields:
+                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
               - { label: "Luxury Series Title", name: "luxury_title", widget: "string" }
+              - { label: "Luxury Color Count", name: "luxury_color_count", widget: "string" }
               - { label: "Luxury Series Description", name: "luxury_desc", widget: "text" }
+              - label: "Luxury Door Colors"
+                name: "luxury_colors"
+                widget: "list"
+                hint: "Door color swatches and room renderings for Luxury series."
+                summary: "{{fields.name}}"
+                collapsed: true
+                fields:
+                  - { label: "Color Name", name: "name", widget: "string", required: true }
+                  - { label: "Swatch Image", name: "swatch", widget: "image", hint: "Door color swatch thumbnail. Recommended: 240x320px" }
+                  - { label: "Room Renderings", name: "renderings", widget: "list", hint: "Room rendering images for this color.", field: { label: "Rendering Image", name: "rendering", widget: "image" } }
           - label: "Call-to-Action Banner"
             name: "cta"
             widget: "object"
@@ -443,7 +487,7 @@ collections:
               - { label: "Catalog File Format", name: "catalog_format", widget: "string" }
               - { label: "Catalog File Size", name: "catalog_filesize", widget: "string" }
               - { label: "Catalog Edition Label", name: "catalog_edition", widget: "string" }
-              - { label: "Catalog PDF Filename", name: "catalog_file", widget: "string", hint: "e.g., GoldenHome2026Catalog.pdf" }
+              - { label: "Catalog Download File (PDF)", name: "catalog_file", widget: "file", hint: "Upload the catalog PDF file. This is the file users download when clicking 'Download Catalog'." }
               - { label: "Price Book Title", name: "pricebook_title", widget: "string" }
               - { label: "Price Book Description", name: "pricebook_desc", widget: "text" }
               - { label: "Notice Title", name: "notice_title", widget: "string" }

@@ -332,21 +332,73 @@ function loadKitchenCabinets() {
           if (si) si.textContent = s.section_intro;
         }
 
-        // Series panels — title + description
+        // Series panels — title, color count, description, and door colors
         var seriesMap = [
-          { panel: 'panel-classic', title: s.classic_title, desc: s.classic_desc },
-          { panel: 'panel-delight', title: s.delight_title, desc: s.delight_desc },
-          { panel: 'panel-grand', title: s.grand_title, desc: s.grand_desc },
-          { panel: 'panel-luxury', title: s.luxury_title, desc: s.luxury_desc }
+          { key: 'classic', panel: 'panel-classic', title: s.classic_title, count: s.classic_color_count, desc: s.classic_desc, colors: s.classic_colors },
+          { key: 'delight', panel: 'panel-delight', title: s.delight_title, count: s.delight_color_count, desc: s.delight_desc, colors: s.delight_colors },
+          { key: 'grand', panel: 'panel-grand', title: s.grand_title, count: s.grand_color_count, desc: s.grand_desc, colors: s.grand_colors },
+          { key: 'luxury', panel: 'panel-luxury', title: s.luxury_title, count: s.luxury_color_count, desc: s.luxury_desc, colors: s.luxury_colors }
         ];
         seriesMap.forEach(function(item) {
           var panel = document.getElementById(item.panel);
-          if (panel) {
-            var titleEl = panel.querySelector('.series-title');
-            if (titleEl && item.title) titleEl.textContent = item.title;
+          if (!panel) return;
 
-            var descEl = panel.querySelector('.series-desc');
-            if (descEl && item.desc) descEl.textContent = item.desc;
+          var titleEl = panel.querySelector('.series-title');
+          if (titleEl && item.title) titleEl.textContent = item.title;
+
+          var countEl = panel.querySelector('.series-color-count');
+          if (countEl && item.count) countEl.textContent = item.count;
+
+          var descEl = panel.querySelector('.series-desc');
+          if (descEl && item.desc) descEl.textContent = item.desc;
+
+          // Rebuild door color grid from JSON if colors array exists
+          if (item.colors && item.colors.length) {
+            var grid = document.getElementById('colors-' + item.key);
+            if (grid) {
+              // Preserve the AGT/EGGER logo item for Grand series
+              var logoItem = grid.querySelector('.door-color-item--logo');
+              grid.innerHTML = '';
+
+              item.colors.forEach(function(color, ci) {
+                var div = document.createElement('div');
+                div.className = 'door-color-item' + (ci === 0 ? ' active' : '');
+                div.setAttribute('onclick', "selectColor('" + item.key + "', this)");
+
+                var img = document.createElement('img');
+                img.loading = 'lazy';
+                img.className = 'door-color-img';
+                img.src = color.swatch;
+                img.alt = color.name;
+                img.setAttribute('data-renderings', JSON.stringify(color.renderings || []));
+
+                var nameDiv = document.createElement('div');
+                nameDiv.className = 'door-color-name';
+                nameDiv.textContent = color.name;
+
+                div.appendChild(img);
+                div.appendChild(nameDiv);
+                grid.appendChild(div);
+              });
+
+              // Re-append logo item for Grand series
+              if (logoItem) grid.appendChild(logoItem);
+
+              // Set main rendering image from first color with renderings
+              var mainFull = document.getElementById('main-full-' + item.key);
+              var firstWithRenderings = item.colors.find(function(c) { return c.renderings && c.renderings.length > 0; });
+              if (mainFull && firstWithRenderings) {
+                mainFull.src = firstWithRenderings.renderings[0];
+                mainFull.style.visibility = 'visible';
+              } else if (mainFull) {
+                mainFull.src = '';
+                mainFull.style.visibility = 'hidden';
+              }
+
+              // Reinitialize thumbnails for this series
+              if (typeof initThumbs === 'function') initThumbs(item.key);
+              if (typeof attachMainLightbox === 'function') attachMainLightbox(item.key);
+            }
           }
         });
       }
@@ -649,7 +701,9 @@ function loadCatalog() {
         var catLink = document.getElementById('cms-catalog-download-link');
         if (catLink && dl.catalog_file) {
           catLink.href = dl.catalog_file;
-          catLink.setAttribute('download', dl.catalog_file);
+          // Extract filename from path for download attribute
+          var fileName = dl.catalog_file.split('/').pop();
+          catLink.setAttribute('download', fileName);
         }
 
         var pbTitle = document.getElementById('cms-pricebook-title');

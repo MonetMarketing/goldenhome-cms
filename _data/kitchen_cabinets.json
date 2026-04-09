@@ -3,16 +3,178 @@
   "heading": "Kitchen Cabinets",
   "intro": "Factory-direct kitchen cabinetry in four distinct series \u2014 each offering a unique aesthetic with consistent quality, KCMA certification, and 2-week local delivery from our Aurora warehouse.",
   "series": {
-    "classic_title": "Classic Series",
-    "classic_desc": "As the versatile foundation of kitchen design, classic cabinetry avoids unnecessary frills to prioritize stylistic harmony. This minimalist approach grants you the freedom to infuse your own personality through an endless array of complementary design elements.",
-    "delight_title": "Delight Series",
-    "delight_desc": "Our signature 5-sides MDF shaker doors with 3/4\" frame and 3/8\" MDF core. Painted finishes on exterior and all edges. Crack-resistant.",
-    "grand_title": "Grand Series",
-    "grand_desc": "More choices from AGT colours are available now. Scant 3/4 inch thick MDF board, with PET laminate on the exterior and melamine laminate on the interior, ABS banding of matching colour on all edges.",
-    "luxury_title": "Luxury Series",
-    "luxury_desc": "You don't want to miss the brand new luxury series. Constructed with a solid 3/4\" thickness. The door is built for strength and stability, with a solid feel that pairs clean design with long-lasting performance.",
     "section_category": "Kitchen Cabinetry",
     "section_heading": "Kitchen <em>Cabinets</em>",
-    "section_intro": "Select a series below to explore available door colours and room renderings. Click any colour swatch to preview how it looks in a real kitchen setting."
+    "section_intro": "Select a series below to explore available door colours and room renderings. Click any colour swatch to preview how it looks in a real kitchen setting.",
+    "classic_title": "Classic Series",
+    "classic_color_count": "4 door colours available",
+    "classic_desc": "As the versatile foundation of kitchen design, classic cabinetry avoids unnecessary frills to prioritize stylistic harmony. This minimalist approach grants you the freedom to infuse your own personality through an endless array of complementary design elements.",
+    "classic_colors": [
+      {
+        "name": "Bianca Wood",
+        "swatch": "images/door-colors/classic/bianca-wood.webp",
+        "renderings": ["images/renderings/classic/bianca-wood/bianca-wood-1.jpg","images/renderings/classic/bianca-wood/bianca-wood-2.jpg"]
+      },
+      {
+        "name": "Matte White",
+        "swatch": "images/door-colors/classic/matte-white.webp",
+        "renderings": ["images/renderings/classic/matte-white/matte-white-1.jpg","images/renderings/classic/matte-white/matte-white-2.jpg"]
+      },
+      {
+        "name": "Walnut",
+        "swatch": "images/door-colors/classic/walnut.webp",
+        "renderings": ["images/renderings/classic/walnut/walnut-1.jpg","images/renderings/classic/walnut/walnut-2.jpg","images/renderings/classic/walnut/walnut-3.jpg","images/renderings/classic-walnut-4.jpg","images/renderings/classic-walnut-5.jpg","images/renderings/classic-walnut-6.png"]
+      },
+      {
+        "name": "Rustic Oak",
+        "swatch": "images/door-colors/classic/rustic-oak.webp",
+        "renderings": ["images/renderings/classic/rustic-oak/rustic-oak-1.jpg","images/renderings/classic/rustic-oak/rustic-oak-2.jpg","images/renderings/classic/rustic-oak/rustic-oak-3.jpg","images/renderings/classic-rustic-oak-4.jpg","images/renderings/classic-rustic-oak-5.jpg","images/renderings/classic-rustic-oak-6.jpg","images/renderings/classic-rustic-oak-7.jpg","images/renderings/classic-rustic-oak-8.jpg","images/renderings/classic-rustic-oak-9.jpg"]
+      }
+    ],
+    "delight_title": "Delight Series",
+    "delight_color_count": "4 door colours available",
+    "delight_desc": "Our signature 5-sides MDF shaker doors with 3/4\" frame and 3/8\" MDF core. Painted finishes on exterior and all edges. Crack-resistant.",
+    "delight_colors": [
+      {
+        "name": "Glossy White",
+        "swatch": "images/door-colors/delight/glossy-white.webp",
+        "renderings": ["images/renderings/delight/glossy-white/glossy-white-1.jpg","images/renderings/delight/glossy-white/glossy-white-2.jpg","images/renderings/delight-glossy-white-grey-1.jpg","images/renderings/delight-glossy-white-grey-2.jpg","images/renderings/delight-glossy-white-grey-3.jpg"]
+      },
+      {
+        "name": "White Shaker",
+        "swatch": "images/door-colors/delight/white-shaker.webp",
+        "renderings": ["images/renderings/delight/white-shaker/white-shaker-1.jpg","images/renderings/delight/white-shaker/white-shaker-2.jpg","images/renderings/delight/white-shaker/white-shaker-3.jpg","images/renderings/delight-ws-gs-1.png","images/renderings/delight-ws-gs-2.png","images/renderings/delight-ws-gs-3.png","images/renderings/delight-ws-gs-4.png"]
+      },
+      {
+        "name": "Grey Shaker",
+        "swatch": "images/door-colors/delight/grey-shaker.webp",
+        "renderings": ["images/renderings/delight-ws-gs-1.png","images/renderings/delight-ws-gs-2.png","images/renderings/delight-ws-gs-3.png","images/renderings/delight-ws-gs-4.png"]
+      },
+      {
+        "name": "Slim Shaker White",
+        "swatch": "images/door-slim-shaker-white.webp",
+        "renderings": []
+      }
+    ],
+    "grand_title": "Grand Series",
+    "grand_color_count": "19 door colours available \u00b7 More AGT colours on request",
+    "grand_desc": "More choices from AGT colours are available now. Scant 3/4 inch thick MDF board, with PET laminate on the exterior and melamine laminate on the interior, ABS banding of matching colour on all edges.",
+    "grand_colors": [
+      {
+        "name": "Glossy Anthracite Grey",
+        "swatch": "images/door-colors/grand/glossy-anthracite-grey.webp",
+        "renderings": []
+      },
+      {
+        "name": "Glossy Ivory",
+        "swatch": "images/door-colors/grand/glossy-ivory.webp",
+        "renderings": ["images/renderings/grand/glossy-ivory/glossy-ivory-1.png","images/renderings/grand-glossy-white-glossy-ivory.png"]
+      },
+      {
+        "name": "Glossy Light Grey",
+        "swatch": "images/door-colors/grand/glossy-light-grey.webp",
+        "renderings": ["images/renderings/grand/glossy-light-grey/glossy-light-grey-1.png","images/renderings/grand-glossy-light-grey-sahara-oak.png"]
+      },
+      {
+        "name": "Glossy Pebble Grey",
+        "swatch": "images/door-colors/grand/glossy-pebble-grey.webp",
+        "renderings": ["images/renderings/grand/glossy-pebble-grey/glossy-pebble-grey-1.png"]
+      },
+      {
+        "name": "Matte Ivory",
+        "swatch": "images/door-colors/grand/matte-ivory.webp",
+        "renderings": ["images/renderings/grand/matte-ivory/matte-ivory-1.png","images/renderings/grand/matte-ivory/matte-ivory-2.png","images/renderings/grand/matte-ivory/matte-ivory-3.png"]
+      },
+      {
+        "name": "Soft Touch White",
+        "swatch": "images/door-colors/grand/soft-touch-white.webp",
+        "renderings": []
+      },
+      {
+        "name": "Matte Jet Black",
+        "swatch": "images/door-colors/grand/matte-jet-black.webp",
+        "renderings": ["images/renderings/grand/matte-jet-black/matte-jet-black-1.png","images/renderings/grand/matte-jet-black/matte-jet-black-2.png","images/renderings/grand/matte-jet-black/matte-jet-black-3.png","images/renderings/grand-matte-jet-black-rustic-oak-1.png","images/renderings/grand-matte-jet-black-rustic-oak-2.png","images/renderings/grand-matte-jet-black-rustic-oak-3.png"]
+      },
+      {
+        "name": "Matte Navy Blue",
+        "swatch": "images/door-colors/grand/navy-blue.webp",
+        "renderings": ["images/renderings/grand/navy-blue/navy-blue-1.png","images/renderings/grand/navy-blue/navy-blue-2.png","images/renderings/grand/navy-blue/navy-blue-3.png","images/renderings/grand-matte-white-matte-navy-blue.png"]
+      },
+      {
+        "name": "Matte Pebble Grey",
+        "swatch": "images/door-matte-pebble-grey.webp",
+        "renderings": ["images/renderings/grand-matte-pebble-grey-vicenza-oak.png"]
+      },
+      {
+        "name": "Alpine White",
+        "swatch": "images/door-alpine-white.webp",
+        "renderings": []
+      },
+      {
+        "name": "Light Tennessee Walnut",
+        "swatch": "images/door-light-tennessee-walnut.webp",
+        "renderings": []
+      },
+      {
+        "name": "Natural Rossini Elm",
+        "swatch": "images/door-natural-rossini-elm.webp",
+        "renderings": []
+      },
+      {
+        "name": "ST9 Black",
+        "swatch": "images/door-colors/grand/st9-black.webp",
+        "renderings": []
+      },
+      {
+        "name": "Matte Anthracite Grey",
+        "swatch": "images/door-colors/grand/matte-anthracite-grey.webp",
+        "renderings": ["images/renderings/grand/matte-anthracite-grey/matte-anthracite-grey-1.png","images/renderings/grand-matte-ivory-matte-anthracite.png"]
+      },
+      {
+        "name": "Matte Light Grey",
+        "swatch": "images/door-matte-light-grey.webp",
+        "renderings": ["images/renderings/grand-matte-light-grey-vicenza-oak.png"]
+      },
+      {
+        "name": "Natural Casella Oak",
+        "swatch": "images/door-natural-casella-oak.webp",
+        "renderings": []
+      },
+      {
+        "name": "Sahara Oak",
+        "swatch": "images/door-colors/grand/sahara-oak.webp",
+        "renderings": ["images/renderings/grand/sahara-oak/sahara-oak-1.png","images/renderings/grand/sahara-oak/sahara-oak-2.png","images/renderings/grand/sahara-oak/sahara-oak-3.png","images/renderings/grand-glossy-light-grey-sahara-oak.png"]
+      },
+      {
+        "name": "Vicenza Oak",
+        "swatch": "images/door-colors/grand/vicenza-oak.webp",
+        "renderings": ["images/renderings/grand/vicenza-oak/vicenza-oak-1.png","images/renderings/grand-matte-ivory-vicenza-oak-1.png","images/renderings/grand-matte-ivory-vicenza-oak-2.png","images/renderings/grand-matte-ivory-vicenza-oak-3.png","images/renderings/grand-matte-light-grey-vicenza-oak.png"]
+      },
+      {
+        "name": "Kendal Oak",
+        "swatch": "images/door-colors/grand/kendal-oak.webp",
+        "renderings": ["images/renderings/grand/kendal-oak/kendal-oak-1.png","images/renderings/grand-glossy-pebble-grey-kendal-oak.png"]
+      }
+    ],
+    "luxury_title": "Luxury Series",
+    "luxury_color_count": "3 door colours available \u00b7 New in 2026",
+    "luxury_desc": "You don't want to miss the brand new luxury series. Constructed with a solid 3/4\" thickness. The door is built for strength and stability, with a solid feel that pairs clean design with long-lasting performance.",
+    "luxury_colors": [
+      {
+        "name": "Fashionista",
+        "swatch": "images/door-colors/luxury/fashionista.webp",
+        "renderings": ["images/renderings/luxury/fashionista/fashionista-1.png","images/renderings/luxury/fashionista/fashionista-2.png"]
+      },
+      {
+        "name": "Free Spirit",
+        "swatch": "images/door-colors/luxury/free-spirit.webp",
+        "renderings": ["images/renderings/luxury/free-spirit/free-spirit-1.png","images/renderings/luxury/free-spirit/free-spirit-2.png"]
+      },
+      {
+        "name": "Sheer Beauty",
+        "swatch": "images/door-colors/luxury/sheer-beauty.webp",
+        "renderings": ["images/renderings/luxury/sheer-beauty/sheer-beauty-1.png","images/renderings/luxury/sheer-beauty/sheer-beauty-2.png"]
+      }
+    ]
   }
 }
