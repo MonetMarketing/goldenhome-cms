@@ -95,7 +95,7 @@
   ],
   "hero": {
     "heading": "Projects",
-    "sub": "Real homes, real transformations \u2014 see what GoldenHome can do for you."
+    "sub": "Real homes, real transformations — see what GoldenHome can do for you."
   },
   "before_after": {
     "label": "Transformations",
@@ -113,6 +113,6 @@
     "heading": "Ready to start your <em>project</em>?",
     "sub": "Let our design team bring your vision to life.",
     "btn_text": "Get a Free Quote",
-    "btn_link": "contact-us.html"
+    "btn_link": "https://goldenhomecabinetrycanada.com/#contact"
   }
 }
