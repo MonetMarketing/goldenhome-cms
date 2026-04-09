@@ -221,8 +221,10 @@
       },
       {
         "name": "Slim Shaker White",
-        "swatch": "images/door-slim-shaker-white.webp",
-        "renderings": []
+        "swatch": "/images/uploads/slim-shaker-white.png",
+        "renderings": [
+          "/images/uploads/slim-shaker-white.png"
+        ]
       }
     ],
     "delight_desc": "Our signature 5-sides MDF shaker doors with 3/4\" frame and 3/8\" MDF core. Painted finishes on exterior and all edges. Crack-resistant.",
