@@ -1,33 +1,33 @@
 {
   "label": "Kitchen Cabinetry",
   "heading": "Kitchen Cabinets",
-  "intro": "Factory-direct kitchen cabinetry in four distinct series — each offering a unique aesthetic with consistent quality, KCMA certification, and 2-week local delivery from our Aurora warehouse.",
+  "intro": "Factory-direct kitchen cabinetry in four distinct series \u2014 each offering a unique aesthetic with consistent quality, KCMA certification, and 2-week local delivery from our Aurora warehouse.",
   "series": {
-    "grand_color_count": "19 door colours available · More AGT colours on request",
-    "luxury_color_count": "3 door colours available · New in 2026",
+    "grand_color_count": "19 door colours available \u00b7 More AGT colours on request",
+    "luxury_color_count": "3 door colours available \u00b7 New in 2026",
     "luxury_colors": [
       {
         "name": "Fashionista",
         "swatch": "images/door-colors/luxury/fashionista.webp",
         "renderings": [
-          "images/renderings/luxury/fashionista/fashionista-1.png",
-          "images/renderings/luxury/fashionista/fashionista-2.png"
+          "images/renderings-optimized/luxury-fashionista-fashionista-1.webp",
+          "images/renderings-optimized/luxury-fashionista-fashionista-2.webp"
         ]
       },
       {
         "name": "Free Spirit",
         "swatch": "images/door-colors/luxury/free-spirit.webp",
         "renderings": [
-          "images/renderings/luxury/free-spirit/free-spirit-1.png",
-          "images/renderings/luxury/free-spirit/free-spirit-2.png"
+          "images/renderings-optimized/luxury-free-spirit-free-spirit-1.webp",
+          "images/renderings-optimized/luxury-free-spirit-free-spirit-2.webp"
         ]
       },
       {
         "name": "Sheer Beauty",
         "swatch": "images/door-colors/luxury/sheer-beauty.webp",
         "renderings": [
-          "images/renderings/luxury/sheer-beauty/sheer-beauty-1.png",
-          "images/renderings/luxury/sheer-beauty/sheer-beauty-2.png"
+          "images/renderings-optimized/luxury-sheer-beauty-sheer-beauty-1.webp",
+          "images/renderings-optimized/luxury-sheer-beauty-sheer-beauty-2.webp"
         ]
       }
     ],
@@ -41,32 +41,32 @@
         "name": "Glossy Ivory",
         "swatch": "images/door-colors/grand/glossy-ivory.webp",
         "renderings": [
-          "/images/uploads/screenshot-2026-04-09-at-3.38.39 pm.png",
-          "images/renderings/grand-glossy-white-glossy-ivory.png"
+          "/images/renderings-optimized/uploads-screenshot-2026-04-09-at-3.38.39\u202fpm.webp",
+          "images/renderings-optimized/grand-glossy-white-glossy-ivory.webp"
         ]
       },
       {
         "name": "Glossy Light Grey",
         "swatch": "images/door-colors/grand/glossy-light-grey.webp",
         "renderings": [
-          "images/renderings/grand/glossy-light-grey/glossy-light-grey-1.png",
-          "images/renderings/grand-glossy-light-grey-sahara-oak.png"
+          "images/renderings-optimized/grand-glossy-light-grey-glossy-light-grey-1.webp",
+          "images/renderings-optimized/grand-glossy-light-grey-sahara-oak.webp"
         ]
       },
       {
         "name": "Glossy Pebble Grey",
         "swatch": "images/door-colors/grand/glossy-pebble-grey.webp",
         "renderings": [
-          "images/renderings/grand/glossy-pebble-grey/glossy-pebble-grey-1.png"
+          "images/renderings-optimized/grand-glossy-pebble-grey-glossy-pebble-grey-1.webp"
         ]
       },
       {
         "name": "Matte Ivory",
         "swatch": "images/door-colors/grand/matte-ivory.webp",
         "renderings": [
-          "images/renderings/grand/matte-ivory/matte-ivory-1.png",
-          "images/renderings/grand/matte-ivory/matte-ivory-2.png",
-          "images/renderings/grand/matte-ivory/matte-ivory-3.png"
+          "images/renderings-optimized/grand-matte-ivory-matte-ivory-1.webp",
+          "images/renderings-optimized/grand-matte-ivory-matte-ivory-2.webp",
+          "images/renderings-optimized/grand-matte-ivory-matte-ivory-3.webp"
         ]
       },
       {
@@ -78,29 +78,29 @@
         "name": "Matte Jet Black",
         "swatch": "images/door-colors/grand/matte-jet-black.webp",
         "renderings": [
-          "images/renderings/grand/matte-jet-black/matte-jet-black-1.png",
-          "images/renderings/grand/matte-jet-black/matte-jet-black-2.png",
-          "images/renderings/grand/matte-jet-black/matte-jet-black-3.png",
-          "images/renderings/grand-matte-jet-black-rustic-oak-1.png",
-          "images/renderings/grand-matte-jet-black-rustic-oak-2.png",
-          "images/renderings/grand-matte-jet-black-rustic-oak-3.png"
+          "images/renderings-optimized/grand-matte-jet-black-matte-jet-black-1.webp",
+          "images/renderings-optimized/grand-matte-jet-black-matte-jet-black-2.webp",
+          "images/renderings-optimized/grand-matte-jet-black-matte-jet-black-3.webp",
+          "images/renderings-optimized/grand-matte-jet-black-rustic-oak-1.webp",
+          "images/renderings-optimized/grand-matte-jet-black-rustic-oak-2.webp",
+          "images/renderings-optimized/grand-matte-jet-black-rustic-oak-3.webp"
         ]
       },
       {
         "name": "Matte Navy Blue",
         "swatch": "images/door-colors/grand/navy-blue.webp",
         "renderings": [
-          "images/renderings/grand/navy-blue/navy-blue-1.png",
-          "images/renderings/grand/navy-blue/navy-blue-2.png",
-          "images/renderings/grand/navy-blue/navy-blue-3.png",
-          "images/renderings/grand-matte-white-matte-navy-blue.png"
+          "images/renderings-optimized/grand-navy-blue-navy-blue-1.webp",
+          "images/renderings-optimized/grand-navy-blue-navy-blue-2.webp",
+          "images/renderings-optimized/grand-navy-blue-navy-blue-3.webp",
+          "images/renderings-optimized/grand-matte-white-matte-navy-blue.webp"
         ]
       },
       {
         "name": "Matte Pebble Grey",
         "swatch": "images/door-matte-pebble-grey.webp",
         "renderings": [
-          "images/renderings/grand-matte-pebble-grey-vicenza-oak.png"
+          "images/renderings-optimized/grand-matte-pebble-grey-vicenza-oak.webp"
         ]
       },
       {
@@ -127,15 +127,15 @@
         "name": "Matte Anthracite Grey",
         "swatch": "images/door-colors/grand/matte-anthracite-grey.webp",
         "renderings": [
-          "images/renderings/grand/matte-anthracite-grey/matte-anthracite-grey-1.png",
-          "images/renderings/grand-matte-ivory-matte-anthracite.png"
+          "images/renderings-optimized/grand-matte-anthracite-grey-matte-anthracite-grey-1.webp",
+          "images/renderings-optimized/grand-matte-ivory-matte-anthracite.webp"
         ]
       },
       {
         "name": "Matte Light Grey",
         "swatch": "images/door-matte-light-grey.webp",
         "renderings": [
-          "images/renderings/grand-matte-light-grey-vicenza-oak.png"
+          "images/renderings-optimized/grand-matte-light-grey-vicenza-oak.webp"
         ]
       },
       {
@@ -147,29 +147,29 @@
         "name": "Sahara Oak",
         "swatch": "images/door-colors/grand/sahara-oak.webp",
         "renderings": [
-          "images/renderings/grand/sahara-oak/sahara-oak-1.png",
-          "images/renderings/grand/sahara-oak/sahara-oak-2.png",
-          "images/renderings/grand/sahara-oak/sahara-oak-3.png",
-          "images/renderings/grand-glossy-light-grey-sahara-oak.png"
+          "images/renderings-optimized/grand-sahara-oak-sahara-oak-1.webp",
+          "images/renderings-optimized/grand-sahara-oak-sahara-oak-2.webp",
+          "images/renderings-optimized/grand-sahara-oak-sahara-oak-3.webp",
+          "images/renderings-optimized/grand-glossy-light-grey-sahara-oak.webp"
         ]
       },
       {
         "name": "Vicenza Oak",
         "swatch": "images/door-colors/grand/vicenza-oak.webp",
         "renderings": [
-          "images/renderings/grand/vicenza-oak/vicenza-oak-1.png",
-          "images/renderings/grand-matte-ivory-vicenza-oak-1.png",
-          "images/renderings/grand-matte-ivory-vicenza-oak-2.png",
-          "images/renderings/grand-matte-ivory-vicenza-oak-3.png",
-          "images/renderings/grand-matte-light-grey-vicenza-oak.png"
+          "images/renderings-optimized/grand-vicenza-oak-vicenza-oak-1.webp",
+          "images/renderings-optimized/grand-matte-ivory-vicenza-oak-1.webp",
+          "images/renderings-optimized/grand-matte-ivory-vicenza-oak-2.webp",
+          "images/renderings-optimized/grand-matte-ivory-vicenza-oak-3.webp",
+          "images/renderings-optimized/grand-matte-light-grey-vicenza-oak.webp"
         ]
       },
       {
         "name": "Kendal Oak",
         "swatch": "images/door-colors/grand/kendal-oak.webp",
         "renderings": [
-          "images/renderings/grand/kendal-oak/kendal-oak-1.png",
-          "images/renderings/grand-glossy-pebble-grey-kendal-oak.png"
+          "images/renderings-optimized/grand-kendal-oak-kendal-oak-1.webp",
+          "images/renderings-optimized/grand-glossy-pebble-grey-kendal-oak.webp"
         ]
       }
     ],
@@ -189,41 +189,41 @@
         "name": "Glossy White",
         "swatch": "images/door-colors/delight/glossy-white.webp",
         "renderings": [
-          "images/renderings/delight/glossy-white/glossy-white-1.jpg",
-          "images/renderings/delight/glossy-white/glossy-white-2.jpg",
-          "images/renderings/delight-glossy-white-grey-1.jpg",
-          "images/renderings/delight-glossy-white-grey-2.jpg",
-          "images/renderings/delight-glossy-white-grey-3.jpg"
+          "images/renderings-optimized/delight-glossy-white-glossy-white-1.webp",
+          "images/renderings-optimized/delight-glossy-white-glossy-white-2.webp",
+          "images/renderings-optimized/delight-glossy-white-grey-1.webp",
+          "images/renderings-optimized/delight-glossy-white-grey-2.webp",
+          "images/renderings-optimized/delight-glossy-white-grey-3.webp"
         ]
       },
       {
         "name": "White Shaker",
         "swatch": "images/door-colors/delight/white-shaker.webp",
         "renderings": [
-          "images/renderings/delight/white-shaker/white-shaker-1.jpg",
-          "images/renderings/delight/white-shaker/white-shaker-2.jpg",
-          "images/renderings/delight/white-shaker/white-shaker-3.jpg",
-          "images/renderings/delight-ws-gs-1.png",
-          "images/renderings/delight-ws-gs-2.png",
-          "images/renderings/delight-ws-gs-3.png",
-          "images/renderings/delight-ws-gs-4.png"
+          "images/renderings-optimized/delight-white-shaker-white-shaker-1.webp",
+          "images/renderings-optimized/delight-white-shaker-white-shaker-2.webp",
+          "images/renderings-optimized/delight-white-shaker-white-shaker-3.webp",
+          "images/renderings-optimized/delight-ws-gs-1.webp",
+          "images/renderings-optimized/delight-ws-gs-2.webp",
+          "images/renderings-optimized/delight-ws-gs-3.webp",
+          "images/renderings-optimized/delight-ws-gs-4.webp"
         ]
       },
       {
         "name": "Grey Shaker",
         "swatch": "images/door-colors/delight/grey-shaker.webp",
         "renderings": [
-          "images/renderings/delight-ws-gs-1.png",
-          "images/renderings/delight-ws-gs-2.png",
-          "images/renderings/delight-ws-gs-3.png",
-          "images/renderings/delight-ws-gs-4.png"
+          "images/renderings-optimized/delight-ws-gs-1.webp",
+          "images/renderings-optimized/delight-ws-gs-2.webp",
+          "images/renderings-optimized/delight-ws-gs-3.webp",
+          "images/renderings-optimized/delight-ws-gs-4.webp"
         ]
       },
       {
         "name": "Slim Shaker White",
         "swatch": "/images/uploads/white-slim-shaker.png",
         "renderings": [
-          "/images/uploads/slim-shaker-white.png"
+          "/images/renderings-optimized/uploads-slim-shaker-white.webp"
         ]
       }
     ],
@@ -233,43 +233,43 @@
         "name": "Bianca Wood",
         "swatch": "images/door-colors/classic/bianca-wood.webp",
         "renderings": [
-          "images/renderings/classic/bianca-wood/bianca-wood-1.jpg",
-          "images/renderings/classic/bianca-wood/bianca-wood-2.jpg"
+          "images/renderings-optimized/classic-bianca-wood-bianca-wood-1.webp",
+          "images/renderings-optimized/classic-bianca-wood-bianca-wood-2.webp"
         ]
       },
       {
         "name": "Matte White",
         "swatch": "images/door-colors/classic/matte-white.webp",
         "renderings": [
-          "images/renderings/classic/matte-white/matte-white-1.jpg",
-          "images/renderings/classic/matte-white/matte-white-2.jpg"
+          "images/renderings-optimized/classic-matte-white-matte-white-1.webp",
+          "images/renderings-optimized/classic-matte-white-matte-white-2.webp"
         ]
       },
       {
         "name": "Walnut",
         "swatch": "images/door-colors/classic/walnut.webp",
         "renderings": [
-          "images/renderings/classic/walnut/walnut-1.jpg",
-          "images/renderings/classic/walnut/walnut-2.jpg",
-          "images/renderings/classic/walnut/walnut-3.jpg",
-          "images/renderings/classic-walnut-4.jpg",
-          "images/renderings/classic-walnut-5.jpg",
-          "images/renderings/classic-walnut-6.png"
+          "images/renderings-optimized/classic-walnut-walnut-1.webp",
+          "images/renderings-optimized/classic-walnut-walnut-2.webp",
+          "images/renderings-optimized/classic-walnut-walnut-3.webp",
+          "images/renderings-optimized/classic-walnut-4.webp",
+          "images/renderings-optimized/classic-walnut-5.webp",
+          "images/renderings-optimized/classic-walnut-6.webp"
         ]
       },
       {
         "name": "Rustic Oak",
         "swatch": "images/door-colors/classic/rustic-oak.webp",
         "renderings": [
-          "images/renderings/classic/rustic-oak/rustic-oak-1.jpg",
-          "images/renderings/classic/rustic-oak/rustic-oak-2.jpg",
-          "images/renderings/classic/rustic-oak/rustic-oak-3.jpg",
-          "images/renderings/classic-rustic-oak-4.jpg",
-          "images/renderings/classic-rustic-oak-5.jpg",
-          "images/renderings/classic-rustic-oak-6.jpg",
-          "images/renderings/classic-rustic-oak-7.jpg",
-          "images/renderings/classic-rustic-oak-8.jpg",
-          "images/renderings/classic-rustic-oak-9.jpg"
+          "images/renderings-optimized/classic-rustic-oak-rustic-oak-1.webp",
+          "images/renderings-optimized/classic-rustic-oak-rustic-oak-2.webp",
+          "images/renderings-optimized/classic-rustic-oak-rustic-oak-3.webp",
+          "images/renderings-optimized/classic-rustic-oak-4.webp",
+          "images/renderings-optimized/classic-rustic-oak-5.webp",
+          "images/renderings-optimized/classic-rustic-oak-6.webp",
+          "images/renderings-optimized/classic-rustic-oak-7.webp",
+          "images/renderings-optimized/classic-rustic-oak-8.webp",
+          "images/renderings-optimized/classic-rustic-oak-9.webp"
         ]
       }
     ],
