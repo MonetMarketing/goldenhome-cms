@@ -1,10 +1,10 @@
 {
   "label": "Kitchen Cabinetry",
   "heading": "Kitchen Cabinets",
-  "intro": "Factory-direct kitchen cabinetry in four distinct series \u2014 each offering a unique aesthetic with consistent quality, KCMA certification, and 2-week local delivery from our Aurora warehouse.",
+  "intro": "Factory-direct kitchen cabinetry in four distinct series — each offering a unique aesthetic with consistent quality, KCMA certification, and 2-week local delivery from our Aurora warehouse.",
   "series": {
-    "grand_color_count": "19 door colours available \u00b7 More AGT colours on request",
-    "luxury_color_count": "3 door colours available \u00b7 New in 2026",
+    "grand_color_count": "19 door colours available · More AGT colours on request",
+    "luxury_color_count": "3 door colours available · New in 2026",
     "luxury_colors": [
       {
         "name": "Fashionista",
@@ -41,7 +41,7 @@
         "name": "Glossy Ivory",
         "swatch": "images/door-colors/grand/glossy-ivory.webp",
         "renderings": [
-          "/images/renderings-optimized/uploads-screenshot-2026-04-09-at-3.38.39\u202fpm.webp",
+          "/images/renderings-optimized/uploads-screenshot-2026-04-09-at-3.38.39 pm.webp",
           "images/renderings-optimized/grand-glossy-white-glossy-ivory.webp"
         ]
       },
@@ -221,7 +221,7 @@
       },
       {
         "name": "Slim Shaker White",
-        "swatch": "/images/uploads/white-slim-shaker.png",
+        "swatch": "/images/uploads/2.png",
         "renderings": [
           "/images/renderings-optimized/uploads-slim-shaker-white.webp"
         ]
