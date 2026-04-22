@@ -72,7 +72,9 @@
       {
         "name": "Soft Touch White",
         "swatch": "images/door-colors/grand/soft-touch-white.webp",
-        "renderings": []
+        "renderings": [
+          "/images/uploads/soft-touch-white.png"
+        ]
       },
       {
         "name": "Matte Jet Black",
@@ -106,17 +108,23 @@
       {
         "name": "Alpine White",
         "swatch": "images/door-alpine-white.webp",
-        "renderings": []
+        "renderings": [
+          "/images/uploads/alpine-white.png"
+        ]
       },
       {
         "name": "Light Tennessee Walnut",
         "swatch": "images/door-light-tennessee-walnut.webp",
-        "renderings": []
+        "renderings": [
+          "/images/uploads/light-tennesse-walnut.png"
+        ]
       },
       {
         "name": "Natural Rossini Elm",
         "swatch": "images/door-natural-rossini-elm.webp",
-        "renderings": []
+        "renderings": [
+          "/images/uploads/natural-rossini-eim.png"
+        ]
       },
       {
         "name": "ST9 Black",
@@ -141,7 +149,9 @@
       {
         "name": "Natural Casella Oak",
         "swatch": "images/door-natural-casella-oak.webp",
-        "renderings": []
+        "renderings": [
+          "/images/uploads/natural-casella-oak.png"
+        ]
       },
       {
         "name": "Sahara Oak",
